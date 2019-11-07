@@ -1,0 +1,20 @@
+.social {
+  @media(--l) {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+
+    & .title {
+      grid-column: 4 / 12;
+      margin-bottom: calc(var(--yr) * calc(var(--s2) * 5));
+    }
+
+    & .text {
+      grid-column: 7 / 14;
+      margin-bottom: calc(var(--yr) * calc(var(--s4) * 2));
+    }
+
+    & .description {
+      grid-column: 4 / 9;
+    }
+  }
+}

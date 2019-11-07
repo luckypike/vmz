@@ -1,0 +1,32 @@
+.industrial {
+  @media(--l) {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+
+    & .title {
+      grid-column: 4 / 12;
+      margin-bottom: calc(var(--yr) * var(--s3));
+    }
+
+    & .text {
+      grid-column: 4 / 12;
+      margin-bottom: calc(var(--yr) * calc(var(--s3) * 2));
+    }
+
+    & .first, & .second {
+      grid-column: 4 / 9;
+      height: 562px;
+      background-color: var(--gr_color);
+
+      & .text {
+        margin-top: calc(var(--yr) * calc(var(--s3) * 2));
+        margin-left: calc(var(--yr) * 11.25);
+        margin-right: calc(var(--yr) * 11.25);
+      }
+    }
+
+    & .second {
+      grid-column: 10 / 15;
+    }
+  }
+}

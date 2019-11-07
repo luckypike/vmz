@@ -1,0 +1,66 @@
+.root {
+  padding: 0 var(--xr);
+
+  @media(--s) {
+    padding: 0 calc(var(--xr) * 2);
+  }
+  @media(--l) {
+    padding: 0;
+  }
+}
+
+.section {
+  margin: calc(var(--yr) * 9) 0;
+
+  @media(--s) {
+    margin: calc(var(--yr) * 12) 0;
+  }
+
+  @media(--l) {
+    margin: calc(var(--yr) * 24) 0;
+  }
+}
+
+.text {
+  composes: h0 from './Fonts.module.css';
+  color: #fff;
+  position: absolute;
+  bottom: calc(var(--yr) * 9);
+  left: var(--xr);
+  right: var(--xr);
+  z-index: 1;
+
+  @media(--s) {
+    left: calc(var(--xr) * 2);
+    bottom: calc(var(--yr) * 12);
+  }
+
+  @media(--m) {
+    bottom: calc(var(--yr) * 32);
+  }
+
+  @media(--l) {
+    margin: 0 calc(2 / 16 * 100%);
+    left: 0;
+    right: 0;
+  }
+}
+
+.block {
+  composes: small from './Fonts.module.css';
+  margin-bottom: calc(var(--yr) * var(--s2));
+  color: #727272;
+
+  @media(--l) {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+
+    & .index {
+      grid-column: 3;
+    }
+
+    & .description {
+      grid-column: 4 / 12;
+    }
+  }
+}

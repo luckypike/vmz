@@ -1,0 +1,62 @@
+h1, .h0 {
+font-size: calc(var(--yr) * calc(var(--fs) + 9));
+line-height: calc(var(--yr) * calc(var(--lh) + 8.5));
+font-weight: var(--fw_bold);
+}
+
+h1, .h1 {
+font-size: calc(var(--yr) * calc(var(--fs) + 7));
+line-height: calc(var(--yr) * calc(var(--lh) + 6.5));
+font-weight: var(--fw_bold);
+}
+
+h2, .h2 {
+font-size: calc(var(--yr) * calc(var(--fs) + 5));
+line-height: calc(var(--yr) * calc(var(--lh) + 4.5));
+font-weight: var(--fw_bold);
+}
+
+h3, .h3 {
+font-size: calc(var(--yr) * calc(var(--fs) + 3));
+line-height: calc(var(--yr) * calc(var(--lh) + 2.5));
+font-weight: var(--fw_bold);
+}
+
+h4, .h4 {
+font-size: calc(var(--yr) * calc(var(--fs) + 1));
+line-height: calc(var(--yr) * calc(var(--lh) + 0.5));
+font-weight: var(--fw_bold);
+}
+
+h5, .h5 {
+font-size: calc(var(--yr) * var(--fs));
+line-height: calc(var(--yr) * calc(var(--lh) - 1.5));
+font-weight: var(--fw_bold);
+}
+
+strong, b {
+font-weight: var(--fw_bold);
+}
+
+.small {
+font-size: calc(var(--yr) * calc(var(--fs) - 1.5));
+line-height: calc(var(--yr) * calc(var(--lh) - 2.5));
+}
+
+.intro {
+font-size: calc(var(--yr) * calc(var(--fs) + 1));
+line-height: calc(var(--yr) * calc(var(--lh) + 0.5));
+font-weight: var(--fw_normal);
+}
+
+h1 {
+margin: 0 0 calc(var(--yr) * var(--s2));
+}
+
+h2, h3, p {
+margin: 0 0 calc(var(--yr) * var(--s2));
+
+&:last-child {
+  margin: 0;
+}
+}
