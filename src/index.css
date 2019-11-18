@@ -1,3 +1,6 @@
+/* @import '@glidejs/glide/dist/css/glide.core'; */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+
 *, *::after, *::before {
   box-sizing: border-box;
 }
@@ -5,7 +8,7 @@
 body {
   background: #fff;
   color: #212121;
-  font-family: SF Pro Display, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: calc(var(--yr) * var(--fs));
   line-height: calc(var(--yr) * calc(var(--lh) + 0.5));
 }

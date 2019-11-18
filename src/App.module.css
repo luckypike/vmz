@@ -1,14 +1,13 @@
 .header {
   position: relative;
-  background-color: var(--gr_color);
-  /* background-image: url('./images/top.svg'); */
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #f1f1f1;
   height: 400px;
-  margin: 0 calc(-1 * var(--xr));
+  background-image: url('./images/top.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
 
   @media(--s) {
-    margin: 0 calc(-1 * calc(var(--xr) * 2));
     height: auto;
   }
 
@@ -79,13 +78,45 @@
   @media(--l) {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
+  }
+}
 
-    & .title {
-      margin-bottom: calc(var(--yr) * var(--s3));
-    }
+.spoiler {
+  color: #FAFAFA;
+  grid-column: 4 / 15;
+  margin-bottom: calc(var(--yr) * calc(var(--s3) * 2));
+  background-color: #FAFAFA;
+  padding: 64px 45px;
+  height: 330px;
+  display: flex;
+  align-items: flex-end;
+  background-image: url('./images/spoil1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 
-    & .text {
-      margin-bottom: calc(var(--yr) * calc(var(--s3) * 2));
+  & .title {
+    width: calc(10 / 16 * 100%);
+  }
+
+  & .more {
+    margin-left: auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      text-align: center;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      content: '';
+      background-color: #E7422E;
+      background-image: url('./images/plus.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 16px;
+      width: 40px;
+      height: 40px;
     }
   }
 }
@@ -93,49 +124,97 @@
 .world {
   @media(--l) {
     grid-column: 4 / 12;
-    margin-bottom: calc(var(--yr) * calc(var(--s2) * 5));
+    margin-bottom: calc(var(--yr) * calc(var(--s3) * 2));
+
+    & .title {
+      margin-bottom: calc(var(--yr) * var(--s3));
+    }
   }
 }
 
 .pics {
   @media(--l) {
-    color: red;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
+    margin-bottom: calc(var(--yr) * calc(var(--s3) * 2));
 
-    & .rgd, & .pipes {
-      grid-column: 3 / 6;
-      height: 192px;
-      background-color: var(--gr_color);
+    & .rgd, & .pipe {
+      grid-column: 4 / 9;
+
+      & .image {
+        display: block;
+        background-image: url('./images/train.svg');
+        background-repeat: no-repeat;
+        margin-bottom: calc(var(--yr) * var(--s3));
+
+        &:before {
+          display: block;
+          content: '';
+          height: 95px;
+          width: 100%;
+        }
+      }
+
+      & .title {
+        display: flex;
+        align-items: center;
+        color: #E7422E;
+        border-bottom: 2px solid #E8E8E8;
+
+        & .mln {
+          margin-right: calc(var(--yr) * var(--s2));
+          margin-bottom: calc(var(--yr) * 2);
+        }
+      }
+
+      & .desc {
+        display: flex;
+        margin-top: calc(var(--yr) * 2);
+        margin-bottom: calc(var(--yr) * var(--s3));
+        color: #141414;
+        align-items: center;
+
+        & .km {
+          margin-right: calc(var(--yr) * var(--s2));
+        }
+      }
     }
 
-    & .rgd_text, & .pipes_text {
-      grid-column: 6 / 8;
-      display: flex;
-      height: 168px;
-      background-color: var(--gr_color);
-      flex-wrap: wrap;
-      align-self: center;
+    & .pipe {
+      grid-column: 10 / 15;
+
+      & .image {
+        background-image: url('./images/world.svg');
+      }
+    }
+  }
+}
+
+.pipes {
+  @media(--l) {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    position: relative;
+    height: 513px;
+
+    & .baltic {
+      grid-column: 4 / 9;
+
+      & .sahalin {
+        color: #E7422E;
+      }
     }
 
-    & .pipes {
-      grid-column: 9 / 12;
-    }
-
-    & .pipes_text {
-      grid-column: 12 / 14;
-    }
-
-    & .placeholder1 {
-      grid-column: 3 / 8;
-      background-color: var(--gr_color);
-      height: 188px;
-    }
-
-    & .placeholder2 {
-      grid-column: 9 / 14;
-      background-color: var(--gr_color);
-      height: 188px;
+    & .map {
+      position: absolute;
+      background-image: url('./images/map.svg');
+      width: 100%;
+      height: 786px;
+      top: -52px;
+      background-repeat: no-repeat;
+      z-index: -1;
+      left: calc(2 / 16 * 100%);
+      right: calc(1 / 16 * 100%);
     }
   }
 }
@@ -155,51 +234,76 @@
     grid-column: 4 / 12;
     margin-bottom: calc(var(--yr) * calc(var(--s3) * 2));
   }
+}
 
-  & .investment {
-    grid-column: 4 / 12;
-    margin-bottom: calc(var(--yr) * var(--s3));
-  }
+.overlay {
+  position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0;
+  background: rgba(0,0,0,0.4);
+	transition: all 0.3s;
 
-  & .placeholder3 {
-    height: 212px;
-    background-color: var(--gr_color);
-    grid-column: 4 / 17;
+  &.active {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
-.single_pipe {
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  max-width: 630px;
+  min-width: 320px;
+  height: auto;
+  z-index: 2000;
+  visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateX(-50%) translateY(-50%);
+
+  &.show {
+  	visibility: visible;
+
+    & .content {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+.content {
+  color: #fff;
+  background: #e74c3c;
+  position: relative;
+  border-radius: 3px;
+  margin: 0 auto;
+  transform: scale(0.7);
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.blur {
+  filter: blur(10px);
+}
+
+.gg {
+  position: absolute;
+}
+
+.single {
   @media(--l) {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
 
-    & .text {
-      grid-column: 3 / 12;
-      margin-bottom: calc(var(--yr) * calc(var(--s3) * 2));
-    }
-
-    & .desc {
-      grid-column: 10 / 15;
-      margin-bottom: calc(var(--yr) * calc(var(--s3) * 2));
-    }
-
-    & .import {
-      grid-column: 6 / 14;
-
-      & .title {
-        margin-bottom: calc(var(--yr) * var(--s3));
-      }
-
-      & .placeholder4 {
-        background-color: var(--gr_color);
-        height: 52px;
-        margin-bottom: calc(var(--yr) * 111.5);
-      }
-    }
-
     & .image {
-      grid-column: 1 / 11;
-      background-color: var(--gr_color);
+      grid-column: 1 / span 11;
+      background-color: #fafafa;
       height: 496px;
     }
   }

@@ -1,0 +1,71 @@
+.root {
+  grid-column: span 16;
+}
+
+.schedule {
+  @media(--l) {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    margin-bottom: 16px;
+  }
+}
+
+.year {
+  grid-column: 4 / span 2;
+  margin-left: auto;
+  margin-right: 16px;
+}
+
+.indicator {
+  background-color: #E7422E;
+  display: block;
+  grid-column: 6;
+  margin-right: 16px;
+
+  &.first {
+    width: 13px;
+  }
+
+  &.second {
+    width: 52px;
+  }
+
+  &.third {
+    width: 120px;
+  }
+
+  &.fourth {
+    width: 256px;
+  }
+
+  &.fifth {
+    width: 360px;
+  }
+
+  &.sixth {
+    width: 320px;
+  }
+
+  &.seventh {
+    width: 560px;
+  }
+
+  &.eighth {
+    width: 400px;
+  }
+}
+
+.sum {
+  color: #E7422E;
+  grid-column: span 2;
+}
+
+.description {
+  grid-column: 6 / 15;
+}
+
+.graph {
+  display: flex;
+  grid-column: 6 / 15;
+  margin-bottom: 8px;
+}
