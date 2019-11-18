@@ -4,6 +4,7 @@ import classNames from 'classnames'
 // import VisibilitySensor from "react-visibility-sensor"
 // import { useLax, useLaxElement } from 'use-lax'
 
+import Spoiler from './components/Spoiler'
 import Slider from './components/Slider'
 import Industrial from './components/Industrial'
 import Social from './components/Social'
@@ -40,17 +41,6 @@ export default function App() {
 
   return (
     <div className={page.root}>
-      <div className={classNames(styles.overlay, { [styles.active]: active })} onClick={() => [setActive(false), setSpoiler(false)]} />
-
-      <div className={classNames(styles.modal, styles.effect, {[styles.show]: spoiler})}>
-        <div className={classNames(styles.content)}>
-          <h3>wqeqweqweq</h3>
-          <div>
-            qweqweqweqwe
-          </div>
-        </div>
-      </div>
-
       <header className={styles.header}>
         <div className={styles.placeholder}></div>
         <div className={page.text}>
@@ -95,16 +85,7 @@ export default function App() {
             </div>
           </div>
 
-          <div className={classNames(styles.spoiler)}>
-            <div className={styles.gg} />
-            <div className={classNames(styles.title, fonts.h3)}>
-              От гвоздей до международных газопроводов
-            </div>
-
-            <div className={styles.more} onClick={() => [setActive(true), setSpoiler(!spoiler)]}>
-              Читать дальше
-            </div>
-          </div>
+          <Spoiler />
         </div>
 
         <div className={styles.pics}>
@@ -169,16 +150,7 @@ export default function App() {
             С момента вхождения ВМЗ в ОМК на выксунской площадке успешно реализовано пять крупных инвестиционных проектов по модернизации производства, еще три — в работе. Суммарные инвестиции компании в развитие завода к 2023 году должны превысить 300 млрд руб., а к 2025 году — достигнуть 350 млрд руб.
           </div>
 
-          <div className={classNames(styles.spoiler)}>
-            <div className={styles.gg} />
-            <div className={classNames(styles.title, fonts.h3)}>
-              ОМК и ВМЗ меняют отрасль
-            </div>
-
-            <div className={styles.more} onClick={() => [setActive(true), setSpoiler(!spoiler)]}>
-              Читать дальше
-            </div>
-          </div>
+          <Spoiler />
 
           <Schedule />
         </div>
@@ -196,7 +168,7 @@ export default function App() {
 
       <Industrial />
 
-      {/* <Social /> */}
+      <Social />
     </div>
   )
 }
