@@ -10,7 +10,93 @@
 
     & .text {
       grid-column: 4 / 12;
-      margin-bottom: calc(var(--yr) * calc(var(--s4) * 2));
+      margin-bottom: calc(var(--yr) * calc(var(--s3) * 2));
     }
   }
+}
+
+.salary {
+  @media(--l) {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    margin-bottom: 64px;
+
+    & .salary_2003, & .salary_2019 {
+      grid-column: 4 / 9;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    & .salary_2019 {
+      grid-column: 10 / 15;
+    }
+  }
+}
+
+.worker_1, .worker_2, .worker_3, .worker_4 {
+  position: absolute;
+  background-image: url('../images/worker_1.svg');
+  background-repeat: no-repeat;
+  height: auto;
+  width: 100%;
+}
+
+.placeholder {
+  grid-column: span 5;
+  height: 352px;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.worker_1 {
+  top: 36px;
+  left: 135px;
+  width: 90px;
+  height: 279px;
+}
+
+.worker_2 {
+  height: 352px;
+  left: 50%;
+  width: 114px;
+  background-image: url('../images/worker_2.svg');
+}
+
+.worker_3 {
+  left: 20%;
+  transform: translateX(-20%);
+  top: 36px;
+  width: 84px;
+  height: 280px;
+  background-image: url('../images/worker_3.svg');
+}
+
+.worker_4 {
+  height: 340px;
+  width: 167px;
+  background-image: url('../images/worker_4.svg');
+  right: 103.64px;
+  top: 0;
+}
+
+.nn {
+  text-align: right;
+  grid-column: 1 / 3;
+}
+
+.vyksa {
+  grid-column: 4 / 6;
+
+  & .sum_vyksa {
+    color: #E7422E;
+  }
+}
+
+.sum_nn, .sum_vyksa {
+  margin-bottom: calc(var(--yr) * var(--s2));
+  font-weight: var(--fw_bold);
+}
+
+.desc {
+  color: #727272;
 }

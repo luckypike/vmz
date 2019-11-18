@@ -67,7 +67,7 @@
   height: 330px;
   display: flex;
   align-items: flex-end;
-  background-image: url('../images/spoil1.png');
+  /* background-image: url('../images/spoil1.png'); */
   background-repeat: no-repeat;
   background-size: cover;
 
