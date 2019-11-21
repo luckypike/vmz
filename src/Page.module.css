@@ -23,7 +23,7 @@
 }
 
 .text {
-  composes: h1 from './Fonts.module.css';
+  composes: h0 from './Fonts.module.css';
   color: #fff;
   position: absolute;
   bottom: calc(var(--yr) * 9);
@@ -37,7 +37,7 @@
   }
 
   @media(--m) {
-    bottom: calc(var(--yr) * 34);
+    bottom: calc(var(--yr) * 32);
   }
 
   @media(--l) {

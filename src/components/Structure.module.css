@@ -1,0 +1,64 @@
+.root {
+  margin-bottom: 32px;
+}
+
+.schedule {
+  @media(--l) {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 4px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.percent {
+  color: #E7422E;
+  grid-column: 1;
+}
+
+.indicator {
+  background-color: #E7422E;
+  display: block;
+  grid-column: 2 / 6;
+  height: 20px;
+
+  &.first {
+    width: 94px;
+  }
+
+  &.second {
+    width: 36px;
+  }
+
+  &.third {
+    width: 22px;
+  }
+
+  &.fourth {
+    width: 11px;
+  }
+
+  &.fifth {
+    width: 7px;
+  }
+
+  &.sixth {
+    width: 4px;
+  }
+
+  &.seventh {
+    width: 4px;
+  }
+
+  &.eighth {
+    width: 180px;
+    background-color: #E8E8E8;
+  }
+}
+
+.description {
+  grid-column: 2 / 6;
+}

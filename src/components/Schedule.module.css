@@ -1,5 +1,6 @@
 .root {
   grid-column: span 16;
+  margin-bottom: 64px;
 }
 
 .schedule {
@@ -7,65 +8,70 @@
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     margin-bottom: 16px;
+    align-items: center;
   }
 }
 
 .year {
-  grid-column: 4 / span 2;
+  grid-column: 3 / 5;
   margin-left: auto;
   margin-right: 16px;
+  color: #727272;
 }
 
 .indicator {
   background-color: #E7422E;
   display: block;
-  grid-column: 6;
+  grid-column: 13 / 15;
   margin-right: 16px;
+  height: 8px;
+  margin-left: 8px;
 
   &.first {
-    width: 13px;
+    width: 4px;
   }
 
   &.second {
-    width: 52px;
+    width: 14px;
   }
 
   &.third {
-    width: 120px;
+    width: 36px;
   }
 
   &.fourth {
-    width: 256px;
+    width: 77px;
   }
 
   &.fifth {
-    width: 360px;
+    width: 108px;
   }
 
   &.sixth {
-    width: 320px;
+    width: 96px;
   }
 
   &.seventh {
-    width: 560px;
+    width: 168px;
   }
 
   &.eighth {
-    width: 400px;
+    width: 120px;
   }
 }
 
 .sum {
   color: #E7422E;
-  grid-column: span 2;
+  grid-column: 12;
 }
 
 .description {
-  grid-column: 6 / 15;
+  grid-column: 5 / 12;
 }
 
-.graph {
+/* .graph {
   display: flex;
   grid-column: 6 / 15;
   margin-bottom: 8px;
-}
+  align-items: center;
+} */

@@ -2,7 +2,7 @@
   position: relative;
   background-color: #f1f1f1;
   height: 400px;
-  background-image: url('./images/top.png');
+  background-image: url('./images/top.jpg');
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -155,14 +155,28 @@
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     position: relative;
-    height: 513px;
+    height: 937px;
 
     & .baltic {
       grid-column: 4 / 9;
+      align-self: center;
+      grid-row: 2;
 
       & .sahalin {
         color: #E7422E;
       }
+    }
+
+    & .international {
+      grid-column: 4 / 9;
+      align-self: end;
+      grid-row: 2;
+    }
+
+    & .stream {
+      grid-column: 10 / 15;
+      align-self: end;
+      grid-row: 2;
     }
 
     & .map {
@@ -207,8 +221,13 @@
 
     & .image {
       grid-column: 1 / span 11;
-      background-color: #fafafa;
-      height: 496px;
+      background-image: url('./images/people.jpg');
+      padding-top: 50%;
+      background-repeat: no-repeat;
     }
   }
+}
+
+.qwe {
+  grid-column: 4 / 15;
 }

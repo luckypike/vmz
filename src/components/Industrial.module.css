@@ -20,12 +20,12 @@
     display: grid;
     grid-template-columns: repeat(16, 1fr);
 
-    & .structure, & .taxes {
+    & .structure {
       grid-column: 4 / 9;
     }
 
-    & .production, & .description {
-      grid-column: 10 / 15;
+    & .production {
+      grid-column: 10 / 16;
       margin-bottom: 64px;
     }
 
@@ -56,6 +56,9 @@
 }
 
 .taxes {
+  grid-column: 4 / 15;
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
   margin-bottom: calc(var(--yr) * calc(var(--s3) * 4));
 
   & .text {
@@ -64,6 +67,7 @@
   }
 
   & .ellipse_1 {
+    grid-column: 1 / 6;
     position: relative;
     background-image: url('../images/ellipse_1.svg');
     background-repeat: no-repeat;
@@ -78,25 +82,37 @@
       background-image: url('../images/ellipse_2.svg');
       background-repeat: no-repeat;
       background-position: bottom;
-      height: 280px;
+      height: 100%;
       bottom: 0;
-      width: 100%;
+      width: 102%;
 
       & .dues {
-        position: absolute;
         top: 50%;
+        position: absolute;
         left: 50%;
         transform: translateY(-50%) translateX(-50%);
-        color: #FAFAFA;
         text-align: center;
         z-index: 2;
       }
 
       & .sum {
         margin-bottom: 8px;
+        color: #E7422E;
+      }
+
+      & .taxe {
+        color: #E7422E;
+      }
+
+      & .desc {
+        margin-bottom: 32px;
       }
     }
   }
+}
+
+.description {
+  grid-column: 7 / 12;
 }
 
 .image {

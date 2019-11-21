@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import classNames from 'classnames'
-// import * as d3 from "d3";
+
+import Structure from './Structure'
 
 import styles from './Industrial.module.css'
 import page from '../Page.module.css'
@@ -36,7 +37,7 @@ export default function Industrial() {
           </div>
 
           <div className={styles.production}>
-            <div className={styles.placeholder} />
+            <Structure />
 
             <div className={classNames(styles.desc, fonts.small)}>
               Доля предприятий в структуре промышленного производства Нижегородской области
@@ -47,18 +48,18 @@ export default function Industrial() {
             <div className={styles.ellipse_1}>
               <div className={styles.ellipse_2}>
                 <div className={styles.dues}>
+                  <div className={classNames(styles.text, fonts.h4)}>96 млрд руб.</div>
+                  <div className={classNames(styles.desc, fonts.small)}>Размер общих отчислений ВМЗ</div>
+
                   <div className={classNames(styles.sum, fonts.h4)}>75 млрд руб.</div>
                   <div className={classNames(styles.taxe, fonts.small)}>Налоги</div>
                 </div>
               </div>
             </div>
 
-            <div className={classNames(styles.text, fonts.h4)}>96 млрд руб.</div>
-            <div className={styles.desc}>Размер общих отчислений ВМЗ</div>
-          </div>
-
-          <div className={styles.description}>
-            Налоговые отчисления ВМЗ в бюджеты всех уровней за последние 20 лет составили около 75 млрд руб. За это время еще 21 млрд руб. предприятие перечислило в различные фонды. Таким образом размер общих отчислений ВМЗ составил 96 млрд руб.
+            <div className={styles.description}>
+              Налоговые отчисления ВМЗ в бюджеты всех уровней за последние 20 лет составили около 75 млрд руб. За это время еще 21 млрд руб. предприятие перечислило в различные фонды. Таким образом размер общих отчислений ВМЗ составил 96 млрд руб.
+            </div>
           </div>
 
           <div className={styles.image} />

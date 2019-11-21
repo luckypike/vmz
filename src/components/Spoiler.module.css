@@ -68,6 +68,7 @@
   display: flex;
   align-items: flex-end;
   /* background-image: url('../images/spoil1.png'); */
+  background-color: grey;
   background-repeat: no-repeat;
   background-size: cover;
 

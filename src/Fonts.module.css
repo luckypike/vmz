@@ -31,7 +31,7 @@ font-weight: var(--fw_bold);
 h5, .h5 {
 font-size: calc(var(--yr) * var(--fs));
 line-height: calc(var(--yr) * calc(var(--lh) - 1.5));
-font-weight: var(--fw_normal);
+font-weight: var(--fw_bold);
 }
 
 strong, b {
