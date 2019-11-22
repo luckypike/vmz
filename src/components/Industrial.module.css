@@ -37,7 +37,7 @@
 }
 
 .circle {
-  background-image: url('../images/circle.svg');
+  background: url('../images/circle.svg') no-repeat;
   display: block;
   padding-top: 100%;
   margin-bottom: 26px;
@@ -117,7 +117,7 @@
 
 .image {
   grid-column: 4 / 17;
-  background-image: url('../images/qew.png');
+  background: url('../images/vyksa.jpg') no-repeat center;
+  background-size: cover;
   height: 584px;
-  background-repeat: no-repeat;
 }

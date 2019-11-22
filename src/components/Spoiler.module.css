@@ -7,8 +7,7 @@
   top: 50%;
   left: 50%;
   width: 50%;
-  max-width: 630px;
-  min-width: 320px;
+  min-width: calc(14 / 16 * 100%);
   height: auto;
   z-index: 2000;
   visibility: hidden;
@@ -27,13 +26,21 @@
 
 .content {
   color: #fff;
-  background: #e74c3c;
+  height: 90vh;
+  background: #FAFAFA;
   position: relative;
-  border-radius: 3px;
+  border-radius: 15px;
   margin: 0 auto;
   transform: scale(0.7);
   opacity: 0;
   transition: all 0.3s;
+
+  & .title {
+    position: absolute;
+    top: 20%;
+    left: calc(2 / 16 * 100%);
+    width: calc( 10 / 16 * 100%);
+  }
 }
 
 .overlay {
@@ -67,10 +74,23 @@
   height: 330px;
   display: flex;
   align-items: flex-end;
-  /* background-image: url('../images/spoil1.png'); */
+  background-image: url('../images/spoiler_1.jpg');
   background-color: grey;
   background-repeat: no-repeat;
   background-size: cover;
+
+  &.second {
+    background-image: url('../images/spoiler_2.jpg');
+  }
+  &.third {
+    background-image: url('../images/spoiler_3.jpg');
+  }
+  &.fouth {
+    background-image: url('../images/spoiler_4.jpg');
+  }
+  &.fifth {
+    background-image: url('../images/spoiler_5.jpg');
+  }
 
   & .title {
     width: calc(10 / 16 * 100%);
@@ -95,6 +115,50 @@
       margin-right: 16px;
       width: 40px;
       height: 40px;
+    }
+  }
+}
+
+.blur {
+  filter: blur(10px);
+}
+
+.image {
+  height: 35%;
+  background: url('../images/spoiler_1.jpg') no-repeat center center;
+  background-size: cover;
+  margin-bottom: 32px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  position: relative;
+}
+
+.text {
+  color: #000;
+  padding: 0 calc(2 / 16 * 100%);
+}
+
+.close {
+  position: absolute;
+  height: 36px;
+  width: 36px;
+  background: #fff;
+  border-radius: 50%;
+  left: calc(1 / 16 * 100%);
+  top: 10%;
+  cursor: pointer;
+
+  & svg {
+    display: block;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+
+    & line {
+      stroke: #000;
     }
   }
 }

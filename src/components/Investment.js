@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react'
 import Chart from 'chart.js'
 
+import styles from './Investment.module.css'
+
 export default function Investment () {
   const mount = useRef()
 
@@ -52,9 +54,7 @@ export default function Investment () {
         yAxes: [{
           gridLines: {
             drawBorder: false,
-            offsetGridLines: true,
-            display: false,
-
+            display: true
           },
           ticks: {
             fontSize: 14,
@@ -79,7 +79,23 @@ export default function Investment () {
 
   return (
     <div>
-      <canvas ref={mount} margin="0" />
+      <canvas className={styles.graph} ref={mount} margin="0" />
+
+      <div className={styles.legend}>
+        <div className={styles.indicator_p}></div>
+        <div className={styles.production}>
+          Производство, тыс. тонн
+        </div>
+
+        <div className={styles.indicator_i}></div>
+        <div className={styles.import}>
+          Импорт, тыс. тонн
+        </div>
+      </div>
+
+      <div className={styles.description}>
+        Динамика экспорта ТБД после ввода производства прямошовных одношовных труб большого диаметра «русского размера» на ВМЗ и последующем запуске других российских производств
+      </div>
     </div>
   )
 }

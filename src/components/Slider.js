@@ -203,16 +203,16 @@ export default function Slider () {
         </div>
 
         <div className={classNames(styles.bullets, "glide__bullets")} data-glide-el="controls[nav]">
-          <div class="glide_bullet" data-glide-dir="=0">
+          <div className="glide_bullet" data-glide-dir="=0">
             <div className={styles.qwe} />
           </div>
-          <div class="glide_bullet" data-glide-dir="=1">
+          <div className="glide_bullet" data-glide-dir="=1">
             <div className={styles.q} />
           </div>
-          <div class="glide_bullet" data-glide-dir="=2">
+          <div className="glide_bullet" data-glide-dir="=2">
             <div className={styles.q} />
           </div>
-          <div class="glide_bullet" data-glide-dir="=3">
+          <div className="glide_bullet" data-glide-dir="=3">
             <div className={styles.q} />
           </div>
         </div>

@@ -1,4 +1,41 @@
-.svg {
-  height: 500px;
-  width: 500px;
+.legend {
+  display: flex;
+  align-items: center;
+  margin-left: calc( 1/ 16 * 100%);
+  margin-bottom: 32px;
+}
+
+.indicator_p {
+  background: #E7422E;
+  width: 32px;
+  height: 4px;
+  margin-right: 16px;
+}
+
+.indicator_i {
+  background: #727272;
+  width: 32px;
+  height: 4px;
+  margin-right: 16px;
+}
+
+.production {
+  composes: small from '../Fonts.module.css';
+  color: #727272;
+  margin-right: 53px;
+}
+
+.import {
+  composes: small from '../Fonts.module.css';
+  color: #727272;
+}
+
+.graph {
+  margin-bottom: 32px;
+}
+
+.description {
+  color: #727272;
+  margin-left: calc( 1 / 16 * 100%);
+  composes: small from '../Fonts.module.css';
 }
