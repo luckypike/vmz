@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import styles from './Spoiler.module.css'
 import fonts from '../Fonts.module.css'
 
-export default function App ({ second, third, fouth, fifth }) {
+export default function App ({ second, third, fouth, fifth, title, text }) {
   const [spoiler, setSpoiler] = useState(false)
   const [active, setActive] = useState(false)
 
@@ -20,7 +20,7 @@ export default function App ({ second, third, fouth, fifth }) {
 
       <div className={classNames(styles.modal, styles.effect, {[styles.show]: spoiler})}>
         <div className={classNames(styles.content)}>
-          <div className={styles.image}>
+          <div className={classNames(styles.image, {[styles.second]: second, [styles.third]: third, [styles.fouth]: fouth, [styles.fifth]: fifth })}>
             <div className={styles.close} onClick={() => [setActive(false), setSpoiler(false)]}>
               <svg viewBox="0 0 16 16">
                 <line x1="1" y1="1" x2="15" y2="15" />
@@ -29,11 +29,11 @@ export default function App ({ second, third, fouth, fifth }) {
             </div>
           </div>
           <div className={classNames(styles.title, fonts.h2)}>
-            От гвоздей до международных газопроводов
+            {title}
           </div>
 
           <div className={classNames(styles.text)}>
-
+            {text}
           </div>
         </div>
       </div>
@@ -41,7 +41,7 @@ export default function App ({ second, third, fouth, fifth }) {
         <div className={classNames(styles.spoiler, {[styles.second]: second, [styles.third]: third, [styles.fouth]: fouth, [styles.fifth]: fifth, [styles.blur]: active })}>
           <div className={styles.gg} />
           <div className={classNames(styles.title, fonts.h3)}>
-            От гвоздей до международных газопроводов
+            {title}
           </div>
 
           <div className={styles.more} onClick={() => [setActive(true), setSpoiler(!spoiler)]}>
