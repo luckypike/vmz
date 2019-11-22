@@ -19,6 +19,48 @@
   color: #727272;
 }
 
+@keyframes indicator {
+  from {
+    width: 0px;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+/*
+@keyframes second {
+  from {width: 0px;}
+  to {width: 14px;}
+}
+
+@keyframes third {
+  from {width: 0px;}
+  to {width: 36px;}
+}
+
+@keyframes fourth {
+  from {width: 0px;}
+  to {width: 77px;}
+}
+
+@keyframes fifth {
+  from {width: 0px;}
+  to {width: 108px;}
+}
+@keyframes sixth {
+  from {width: 0px;}
+  to {width: 96px;}
+}
+@keyframes seventh {
+  from {width: 0px;}
+  to {width: 168px;}
+}
+@keyframes eighth {
+  from {width: 0px;}
+  to {width: 120px;}
+} */
+
 .indicator {
   background-color: #E7422E;
   display: block;
@@ -26,52 +68,64 @@
   margin-right: 16px;
   height: 8px;
   margin-left: 8px;
+  width: 0;
+  transform: translateY(16px);
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
 
   &.first {
-    width: 4px;
+    width: 100%;
+    animation: indicator 1.5s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
 
-  &.second {
+  /* &.second {
     width: 14px;
+    animation: indicator 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
 
   &.third {
     width: 36px;
+    animation: indicator 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
 
   &.fourth {
     width: 77px;
+    animation: indicator 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
 
   &.fifth {
     width: 108px;
+    animation: indicator 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
 
   &.sixth {
     width: 96px;
+    animation: indicator 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
 
   &.seventh {
     width: 168px;
+    animation: indicator 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
 
   &.eighth {
     width: 120px;
-  }
+    animation: indicator 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  } */
 }
 
 .sum {
   color: #E7422E;
   grid-column: 12;
+  transform: translateY(16px);
+  transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+  opacity: 0;
+}
+
+.animated {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .description {
   grid-column: 5 / 12;
 }
-
-/* .graph {
-  display: flex;
-  grid-column: 6 / 15;
-  margin-bottom: 8px;
-  align-items: center;
-} */

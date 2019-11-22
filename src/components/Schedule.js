@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import classNames from 'classnames'
+import CountUp from 'react-countup'
+import AOS from 'aos'
 
 import fonts from '../Fonts.module.css'
 import styles from './Schedule.module.css'
 
 export default function Schedule () {
+
+  useEffect(() => {
+    AOS.init({
+      useClassNames: true,
+      initClassName: styles.init,
+      animatedClassName: styles.animated
+    })
+  }, [])
+
   return(
     <div className={styles.root}>
       <div className={styles.schedule}>
@@ -16,11 +27,11 @@ export default function Schedule () {
           Реконструкция колесопрокатного комплекса ВМЗ
         </div>
 
-        <div className={classNames(styles.sum, fonts.small)}>
-          1,6 млрд руб.
+        <div className={classNames(styles.sum, fonts.small)} data-aos="fade-up">
+          <CountUp decimals={1} start={0} end={1.6} duration={2} delay={0.5} suffix=" млрд руб." />
         </div>
 
-        <div className={classNames(styles.indicator, styles.first)} />
+        <div className={classNames(styles.indicator, styles.first)} data-aos="fade-up" />
       </div>
 
       <div className={styles.schedule}>
