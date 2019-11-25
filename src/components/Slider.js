@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import classNames from 'classnames'
 import Glide from '@glidejs/glide'
 
+import fonts from '../Fonts.module.css'
 import styles from './Slider.module.css'
 
 export default function Slider () {
@@ -13,7 +14,14 @@ export default function Slider () {
       type: 'carousel',
       perView: 2.2,
       peek: { before: 90, after: 180 },
-      gap: 90
+      gap: 90,
+      breakpoints: {
+        1430: {
+          perView: 1,
+          peek: 0,
+          gap: 16
+        }
+      }
     })
     glide.mount()
   },[])
@@ -29,7 +37,7 @@ export default function Slider () {
               2003
             </div>
 
-            <div className={styles.text}>
+            <div className={classNames(styles.text, fonts.small)}>
               В 2003 году на ВМЗ началась реконструкция колесопрокатного комплекса. Тогда рекордом предприятия был выпуск 600 тыс. железнодорожных колес в год.
             </div>
           </div>

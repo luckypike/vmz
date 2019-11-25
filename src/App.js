@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import classNames from 'classnames'
+import AOS from 'aos'
 
 import Spoiler from './components/Spoiler'
 import Slider from './components/Slider'
@@ -15,6 +16,10 @@ import fonts from './Fonts.module.css'
 import logo from './images/logo.svg'
 
 export default function App() {
+
+  useEffect(() => {
+    AOS.init()
+  }, [])
 
   return (
     <div className={page.root}>
@@ -156,6 +161,7 @@ export default function App() {
 
       <section className={page.section}>
         <div className={styles.single}>
+          <div className={styles.bg} />
           <div className={styles.image} />
         </div>
       </section>

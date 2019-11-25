@@ -1,21 +1,20 @@
-import React, { useEffect } from 'react'
+import React, { useState } from 'react'
 import classNames from 'classnames'
 import CountUp from 'react-countup'
-import AOS from 'aos'
+import VisibilitySensor from 'react-visibility-sensor';
 
 import fonts from '../Fonts.module.css'
 import styles from './Schedule.module.css'
 
 export default function Schedule () {
 
-  useEffect(() => {
-    AOS.init({
-      useClassNames: true,
-      initClassName: styles.init,
-      animatedClassName: styles.animated,
-      once: true
-    })
-  }, [])
+  const [visible, setVisible] = useState(false)
+
+  const onVisibilityChange = isVisible => {
+    if (isVisible) {
+      setVisible(true)
+    }
+  }
 
   return(
     <div className={styles.root}>
@@ -29,11 +28,15 @@ export default function Schedule () {
         </div>
 
         <div className={styles.indicators}>
-          <div className={classNames(styles.sum, fonts.small)} data-aos="fade-up">
-            <CountUp decimals={1} start={0} end={1.6} duration={2} delay={0.5} suffix=" млрд руб." />
+          <div className={classNames(styles.sum, fonts.small, {[styles.animated]: visible })}>
+            <VisibilitySensor delayedCall>
+              <CountUp decimals={1} start={0} end={visible ? 1.6 : 0} duration={2} delay={1} suffix=" млрд руб." />
+            </VisibilitySensor>
           </div>
 
-          <div className={classNames(styles.indicator, styles.first)} data-aos="fade-up"/>
+          <VisibilitySensor delayedCall>
+            <div className={classNames(styles.indicator, styles.first, {[styles.animated]: visible })} />
+          </VisibilitySensor>
         </div>
       </div>
 
@@ -47,11 +50,15 @@ export default function Schedule () {
         </div>
 
         <div className={styles.indicators}>
-          <div className={classNames(styles.sum, fonts.small)} data-aos="fade-up">
-            <CountUp decimals={1} start={0} end={5.7} duration={2} delay={0.5} suffix=" млрд руб." />
+          <div className={classNames(styles.sum, fonts.small, {[styles.animated]: visible })}>
+            <VisibilitySensor delayedCall>
+              <CountUp decimals={1} start={0} end={visible ? 5.7 : 0} duration={2} delay={1} suffix=" млрд руб." />
+            </VisibilitySensor>
           </div>
 
-          <div className={classNames(styles.indicator, styles.second)} data-aos="fade-up" />
+          <VisibilitySensor delayedCall>
+            <div className={classNames(styles.indicator, styles.second, {[styles.animated]: visible })} />
+          </VisibilitySensor>
         </div>
       </div>
 
@@ -65,11 +72,15 @@ export default function Schedule () {
         </div>
 
         <div className={styles.indicators}>
-          <div className={classNames(styles.sum, fonts.small)} data-aos="fade-up">
-            <CountUp start={0} end={15} duration={2} delay={0.5} suffix=" млрд руб." />
+          <div className={classNames(styles.sum, fonts.small, {[styles.animated]: visible })}>
+            <VisibilitySensor delayedCall>
+              <CountUp start={0} end={visible ? 15 : 0} duration={2} delay={1} suffix=" млрд руб." />
+            </VisibilitySensor>
           </div>
 
-          <div className={classNames(styles.indicator, styles.third)} data-aos="fade-up" />
+          <VisibilitySensor delayedCall>
+            <div className={classNames(styles.indicator, styles.third, {[styles.animated]: visible })} />
+          </VisibilitySensor>
         </div>
       </div>
 
@@ -83,11 +94,15 @@ export default function Schedule () {
         </div>
 
         <div className={styles.indicators}>
-          <div className={classNames(styles.sum, fonts.small)} data-aos="fade-up">
-            <CountUp start={0} end={32} duration={2} delay={0.5} suffix=" млрд руб." />
+          <div className={classNames(styles.sum, fonts.small, {[styles.animated]: visible })}>
+            <VisibilitySensor delayedCall>
+              <CountUp start={0} end={visible ? 32 : 0} duration={2} delay={1} suffix=" млрд руб." />
+            </VisibilitySensor>
           </div>
 
-          <div className={classNames(styles.indicator, styles.fourth)} data-aos="fade-up" />
+          <VisibilitySensor delayedCall>
+            <div className={classNames(styles.indicator, styles.fourth, {[styles.animated]: visible })} />
+          </VisibilitySensor>
         </div>
       </div>
 
@@ -101,11 +116,15 @@ export default function Schedule () {
         </div>
 
         <div className={styles.indicators}>
-          <div className={classNames(styles.sum, fonts.small)} data-aos="fade-up">
-            <CountUp start={0} end={45} duration={2} delay={0.5} suffix=" млрд руб." />
+          <div className={classNames(styles.sum, fonts.small, {[styles.animated]: visible })}>
+            <VisibilitySensor delayedCall>
+              <CountUp start={0} end={visible ? 45 : 0} duration={2} delay={1} suffix=" млрд руб." />
+            </VisibilitySensor>
           </div>
 
-          <div className={classNames(styles.indicator, styles.fifth)} data-aos="fade-up" />
+          <VisibilitySensor delayedCall>
+            <div className={classNames(styles.indicator, styles.fifth, {[styles.animated]: visible })} />
+          </VisibilitySensor>
         </div>
       </div>
 
@@ -119,11 +138,15 @@ export default function Schedule () {
         </div>
 
         <div className={styles.indicators}>
-          <div className={classNames(styles.sum, fonts.small)} data-aos="fade-up">
-            <CountUp start={0} end={40} duration={2} delay={0.5} suffix=" млрд руб." />
+          <div className={classNames(styles.sum, fonts.small, {[styles.animated]: visible })}>
+            <VisibilitySensor delayedCall>
+              <CountUp start={0} end={visible ? 40 : 0} duration={2} delay={1} suffix=" млрд руб." />
+            </VisibilitySensor>
           </div>
 
-          <div className={classNames(styles.indicator, styles.sixth)} data-aos="fade-up" />
+          <VisibilitySensor delayedCall>
+            <div className={classNames(styles.indicator, styles.sixth, {[styles.animated]: visible })} />
+          </VisibilitySensor>
         </div>
       </div>
 
@@ -137,11 +160,15 @@ export default function Schedule () {
         </div>
 
         <div className={styles.indicators}>
-          <div className={classNames(styles.sum, fonts.small)} data-aos="fade-up">
-            <CountUp start={0} end={70} duration={2} delay={0.5} suffix=" млрд руб." />
+          <div className={classNames(styles.sum, fonts.small, {[styles.animated]: visible })}>
+            <VisibilitySensor onChange={onVisibilityChange} offset={{ top: 10 }} delayedCall>
+              <CountUp start={0} end={visible ? 70 : 0} duration={2} delay={1} suffix=" млрд руб." />
+            </VisibilitySensor>
           </div>
 
-          <div className={classNames(styles.indicator, styles.seventh)} data-aos="fade-up" />
+          <VisibilitySensor onChange={onVisibilityChange} offset={{ top: 10 }} delayedCall>
+            <div className={classNames(styles.indicator, styles.seventh, {[styles.animated]: visible })} />
+          </VisibilitySensor>
         </div>
       </div>
 
@@ -155,11 +182,15 @@ export default function Schedule () {
         </div>
 
         <div className={styles.indicators}>
-          <div className={classNames(styles.sum, fonts.small)} data-aos="fade-up">
-            <CountUp start={0} end={50} duration={2} delay={0.5} suffix=" млрд руб." />
+          <div className={classNames(styles.sum, fonts.small, {[styles.animated]: visible })}>
+            <VisibilitySensor delayedCall>
+              <CountUp start={0} end={visible ? 50 : 0} duration={2} delay={1} suffix=" млрд руб." />
+            </VisibilitySensor>
           </div>
 
-          <div className={classNames(styles.indicator, styles.eighth)} data-aos="fade-up" />
+          <VisibilitySensor delayedCall>
+            <div className={classNames(styles.indicator, styles.eighth, {[styles.animated]: visible })} />
+          </VisibilitySensor>
         </div>
       </div>
     </div>

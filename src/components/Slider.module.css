@@ -1,4 +1,6 @@
 .slides {
+  display: flex;
+
   @media(--s) {
     display: grid;
     grid-template-columns: repeat(16,1fr);
@@ -33,8 +35,10 @@
 }
 
 .text {
-  composes: small from '../Fonts.module.css';
-  margin-bottom: calc(var(--yr) * calc(var(--s3) * 2));
+  margin: 16px;
+  @media(--l) {
+    margin-bottom: calc(var(--yr) * calc(var(--s3) * 2));
+  }
 }
 
 .qwe {
