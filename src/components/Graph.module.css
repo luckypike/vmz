@@ -33,6 +33,7 @@
   width: 0;
   opacity: 0;
   margin-top: 6px;
+  margin-left: calc(var(--yr) * 2);
   grid-column: span 2;
   transform: translateY(16px);
   transition: all 1s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
@@ -83,6 +84,7 @@
   transform: translateY(16px);
   transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
   opacity: 0;
+  text-align: right;
 }
 
 .animated {

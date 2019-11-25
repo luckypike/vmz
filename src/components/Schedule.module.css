@@ -40,56 +40,95 @@
 
   &.first {
     width: 4px;
+    transition-delay: .2s;
+    transform: translateY(0);
+    transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
     /* animation: first 1.5s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
   }
 
   &.second {
     width: 14px;
+    transition-delay: .4s;
     /* animation: second 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
+    transform: translateY(0);
+    transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
   }
 
   &.third {
     width: 36px;
+    transition-delay: .6s;
     /* animation: third 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
+    transform: translateY(0);
+    transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
   }
 
   &.fourth {
     width: 77px;
+    transition-delay: .8s;
     /* animation: fourth 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
+    transform: translateY(0);
+    transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
   }
 
   &.fifth {
     width: 108px;
+    transition-delay: 1s;
     /* animation: fifth 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
+    transform: translateY(0);
+    transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
   }
 
   &.sixth {
     width: 96px;
+    transition-delay: 1.2s;
     /* animation: sixth 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
+    transform: translateY(0);
+    transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
   }
 
-  &.seventh {
-    width: 168px;
-    /* animation: seventh 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
-  }
+
 
   &.eighth {
     width: 120px;
+
     /* animation: eighth 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
+    transform: translateY(0);
+    opacity: 0;
+    transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+    transition-delay: 1.6s;
   }
 }
 
 .sum {
   color: #E7422E;
   transform: translateY(16px);
-  transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+  /* transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s; */
   opacity: 0;
+}
+
+.seventh {
+  width: 168px;
+  
+  /* animation: seventh 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
+  transform: translateY(0);
+  /* transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s; */
+  transition-delay: 1.4s;
+}
+
+.eighth {
+  width: 120px;
+
+  /* animation: eighth 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
+  transform: translateY(0);
+  opacity: 0;
+  transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+  transition-delay: 1.6s;
 }
 
 .animated {
   transform: translateY(0);
   opacity: 1;
-  transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+  /* transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s; */
 }
 
 .description {

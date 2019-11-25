@@ -30,7 +30,7 @@ export default function Schedule () {
         <VisibilitySensor delayedCall>
           <div className={styles.indicators}>
             <div className={classNames(styles.sum, fonts.small, {[styles.animated]: visible })}>
-              <CountUp decimals={1} start={0} end={visible ? 1.6 : 0} duration={2} delay={1} suffix=" млрд руб." />
+              <CountUp decimals={1} start={0} end={visible ? 1.6 : 0} duration={2} delay={0.2} suffix=" млрд руб." />
             </div>
 
             <div className={classNames(styles.indicator, {[styles.first]: visible}, {[styles.animated]: visible })} />
@@ -50,7 +50,7 @@ export default function Schedule () {
         <VisibilitySensor delayedCall>
           <div className={styles.indicators}>
             <div className={classNames(styles.sum, fonts.small, {[styles.animated]: visible })}>
-              <CountUp decimals={1} start={0} end={visible ? 5.7 : 0} duration={2} delay={1} suffix=" млрд руб." />
+              <CountUp decimals={1} start={0} end={visible ? 5.7 : 0} duration={2} delay={0.4} suffix=" млрд руб." />
             </div>
 
             <div className={classNames(styles.indicator, {[styles.second]: visible}, {[styles.animated]: visible })} />
@@ -70,7 +70,7 @@ export default function Schedule () {
         <VisibilitySensor delayedCall>
           <div className={styles.indicators}>
             <div className={classNames(styles.sum, fonts.small, {[styles.animated]: visible })}>
-              <CountUp start={0} end={visible ? 15 : 0} duration={2} delay={1} suffix=" млрд руб." />
+              <CountUp start={0} end={visible ? 15 : 0} duration={2} delay={0.6} suffix=" млрд руб." />
             </div>
 
             <div className={classNames(styles.indicator, {[styles.third]: visible}, {[styles.animated]: visible })} />
@@ -90,7 +90,7 @@ export default function Schedule () {
         <VisibilitySensor delayedCall>
           <div className={styles.indicators}>
             <div className={classNames(styles.sum, fonts.small, {[styles.animated]: visible })}>
-              <CountUp start={0} end={visible ? 32 : 0} duration={2} delay={1} suffix=" млрд руб." />
+              <CountUp start={0} end={visible ? 32 : 0} duration={2} delay={0.8} suffix=" млрд руб." />
             </div>
 
             <div className={classNames(styles.indicator, {[styles.fourth]: visible}, {[styles.animated]: visible })} />
@@ -130,7 +130,7 @@ export default function Schedule () {
         <VisibilitySensor delayedCall>
           <div className={styles.indicators}>
             <div className={classNames(styles.sum, fonts.small, {[styles.animated]: visible })}>
-              <CountUp start={0} end={visible ? 40 : 0} duration={2} delay={1} suffix=" млрд руб." />
+              <CountUp start={0} end={visible ? 40 : 0} duration={2} delay={1.2} suffix=" млрд руб." />
             </div>
 
             <div className={classNames(styles.indicator, {[styles.sixth]: visible}, {[styles.animated]: visible })} />
@@ -149,11 +149,11 @@ export default function Schedule () {
 
         <VisibilitySensor delayedCall onChange={onVisibilityChange} offset={{ top: 50 }}>
           <div className={styles.indicators}>
-            <div className={classNames(styles.sum, fonts.small, {[styles.animated]: visible })}>
-              <CountUp start={0} end={visible ? 70 : 0} duration={2} delay={1} suffix=" млрд руб." />
+            <div className={classNames(styles.sum, styles.seventh, fonts.small, {[styles.animated]: visible })}>
+              <CountUp start={0} end={visible ? 70 : 0} duration={2} delay={1.4} suffix=" млрд руб." />
             </div>
 
-            <div className={classNames(styles.indicator, {[styles.seventh]: visible}, {[styles.animated]: visible })} />
+            <div className={classNames(styles.indicator, {[styles.animated]: visible })} />
           </div>
         </VisibilitySensor>
       </div>
@@ -169,11 +169,11 @@ export default function Schedule () {
 
         <VisibilitySensor delayedCall>
           <div className={styles.indicators}>
-            <div className={classNames(styles.sum, fonts.small, {[styles.animated]: visible })}>
-              <CountUp start={0} end={visible ? 50 : 0} duration={2} delay={1} suffix=" млрд руб." />
+            <div className={classNames(styles.sum, styles.eighth, fonts.small, {[styles.animated]: visible })}>
+              <CountUp start={0} end={visible ? 50 : 0} duration={2} delay={1.6} suffix=" млрд руб." />
             </div>
 
-            <div className={classNames(styles.indicator, {[styles.eighth]: visible}, {[styles.animated]: visible })} />
+            <div className={classNames(styles.indicator, styles.eighth, {[styles.animated]: visible })} />
           </div>
         </VisibilitySensor>
       </div>
