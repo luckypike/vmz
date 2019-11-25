@@ -85,7 +85,7 @@ export default function App() {
 
             <div className={styles.desc}>
               <div className={classNames(fonts.h0, styles.km)}>37 000 км</div>
-              <div className={fonts.h5}>поезд<br /> длиной</div>
+              <div className={fonts.h5}>длина<br /> поезда</div>
             </div>
 
             <div className={styles.text}>
