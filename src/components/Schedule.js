@@ -12,7 +12,8 @@ export default function Schedule () {
     AOS.init({
       useClassNames: true,
       initClassName: styles.init,
-      animatedClassName: styles.animated
+      animatedClassName: styles.animated,
+      once: true
     })
   }, [])
 
@@ -27,11 +28,13 @@ export default function Schedule () {
           Реконструкция колесопрокатного комплекса ВМЗ
         </div>
 
-        <div className={classNames(styles.sum, fonts.small)} data-aos="fade-up">
-          <CountUp decimals={1} start={0} end={1.6} duration={2} delay={0.5} suffix=" млрд руб." />
-        </div>
+        <div className={styles.indicators}>
+          <div className={classNames(styles.sum, fonts.small)} data-aos="fade-up">
+            <CountUp decimals={1} start={0} end={1.6} duration={2} delay={0.5} suffix=" млрд руб." />
+          </div>
 
-        <div className={classNames(styles.indicator, styles.first)} data-aos="fade-up" />
+          <div className={classNames(styles.indicator, styles.first)} data-aos="fade-up"/>
+        </div>
       </div>
 
       <div className={styles.schedule}>
@@ -43,11 +46,13 @@ export default function Schedule () {
           Модернизация производства
         </div>
 
-        <div className={classNames(styles.sum, fonts.small)}>
-          6,5 млрд руб.
-        </div>
+        <div className={styles.indicators}>
+          <div className={classNames(styles.sum, fonts.small)} data-aos="fade-up">
+            <CountUp decimals={1} start={0} end={5.7} duration={2} delay={0.5} suffix=" млрд руб." />
+          </div>
 
-        <div className={classNames(styles.indicator, styles.second)} />
+          <div className={classNames(styles.indicator, styles.second)} data-aos="fade-up" />
+        </div>
       </div>
 
       <div className={styles.schedule}>
@@ -59,11 +64,13 @@ export default function Schedule () {
           Строительство сверхсовременных линий для выпуска труб большого диаметра «русского размера»
         </div>
 
-        <div className={classNames(styles.sum, fonts.small)}>
-          15 млрд руб.
-        </div>
+        <div className={styles.indicators}>
+          <div className={classNames(styles.sum, fonts.small)} data-aos="fade-up">
+            <CountUp start={0} end={15} duration={2} delay={0.5} suffix=" млрд руб." />
+          </div>
 
-        <div className={classNames(styles.indicator, styles.third)} />
+          <div className={classNames(styles.indicator, styles.third)} data-aos="fade-up" />
+        </div>
       </div>
 
       <div className={styles.schedule}>
@@ -75,11 +82,13 @@ export default function Schedule () {
           Строительство литейно-прокатного комплекса по производству трубной стали и проката
         </div>
 
-        <div className={classNames(styles.sum, fonts.small)}>
-          32 млрд руб.
-        </div>
+        <div className={styles.indicators}>
+          <div className={classNames(styles.sum, fonts.small)} data-aos="fade-up">
+            <CountUp start={0} end={32} duration={2} delay={0.5} suffix=" млрд руб." />
+          </div>
 
-        <div className={classNames(styles.indicator, styles.fourth)} />
+          <div className={classNames(styles.indicator, styles.fourth)} data-aos="fade-up" />
+        </div>
       </div>
 
       <div className={styles.schedule}>
@@ -91,11 +100,13 @@ export default function Schedule () {
           Запуск самого современного стана-5000 по выпуску широкого листа
         </div>
 
-        <div className={classNames(styles.sum, fonts.small)}>
-          45 млрд руб.
-        </div>
+        <div className={styles.indicators}>
+          <div className={classNames(styles.sum, fonts.small)} data-aos="fade-up">
+            <CountUp start={0} end={45} duration={2} delay={0.5} suffix=" млрд руб." />
+          </div>
 
-        <div className={classNames(styles.indicator, styles.fifth)} />
+          <div className={classNames(styles.indicator, styles.fifth)} data-aos="fade-up" />
+        </div>
       </div>
 
       <div className={styles.schedule}>
@@ -107,11 +118,13 @@ export default function Schedule () {
           Модернизация производства сварных труб для добычи нефти и газа
         </div>
 
-        <div className={classNames(styles.sum, fonts.small)}>
-          40 млрд руб.
-        </div>
+        <div className={styles.indicators}>
+          <div className={classNames(styles.sum, fonts.small)} data-aos="fade-up">
+            <CountUp start={0} end={40} duration={2} delay={0.5} suffix=" млрд руб." />
+          </div>
 
-        <div className={classNames(styles.indicator, styles.sixth)} />
+          <div className={classNames(styles.indicator, styles.sixth)} data-aos="fade-up" />
+        </div>
       </div>
 
       <div className={styles.schedule}>
@@ -123,11 +136,13 @@ export default function Schedule () {
           Расширение мощностей по выпуску стали с 1,5 до 3 млн тонн/год
         </div>
 
-        <div className={classNames(styles.sum, fonts.small)}>
-          70 млрд руб.
-        </div>
+        <div className={styles.indicators}>
+          <div className={classNames(styles.sum, fonts.small)} data-aos="fade-up">
+            <CountUp start={0} end={70} duration={2} delay={0.5} suffix=" млрд руб." />
+          </div>
 
-        <div className={classNames(styles.indicator, styles.seventh)} />
+          <div className={classNames(styles.indicator, styles.seventh)} data-aos="fade-up" />
+        </div>
       </div>
 
       <div className={styles.schedule}>
@@ -139,13 +154,14 @@ export default function Schedule () {
           Запланирован ввод трубопрокатного комплекса по производству бесшовных труб
         </div>
 
-        <div className={classNames(styles.sum, fonts.small)}>
-          50 млрд руб.
+        <div className={styles.indicators}>
+          <div className={classNames(styles.sum, fonts.small)} data-aos="fade-up">
+            <CountUp start={0} end={50} duration={2} delay={0.5} suffix=" млрд руб." />
+          </div>
+
+          <div className={classNames(styles.indicator, styles.eighth)} data-aos="fade-up" />
         </div>
-
-        <div className={classNames(styles.indicator, styles.eighth)} />
       </div>
-
     </div>
   )
 }

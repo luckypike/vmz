@@ -70,7 +70,7 @@ export default function Investment () {
     }
 
   useEffect(() => {
-    const line = new Chart(mount.current, {
+    new Chart(mount.current, {
       type: 'line',
       data: data,
       options: options

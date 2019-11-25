@@ -1,121 +1,95 @@
 .root {
   grid-column: span 16;
-  margin-bottom: 64px;
+  margin-bottom: calc(var(--yr) * calc(var(--s3) * 2));
 }
 
 .schedule {
   @media(--l) {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    margin-bottom: 16px;
-    align-items: center;
+    margin-bottom: calc(var(--yr) * calc(var(--s2)));
   }
 }
 
 .year {
-  grid-column: 3 / 5;
+  grid-column: 4;
   margin-left: auto;
-  margin-right: 16px;
+  margin-right: calc(var(--yr) * 2);
   color: #727272;
 }
 
 @keyframes indicator {
   from {
-    width: 0px;
+    width: 0;
   }
 
   to {
-    width: 100%;
+    width: 50px;
   }
 }
-/*
-@keyframes second {
-  from {width: 0px;}
-  to {width: 14px;}
+
+.indicators {
+  display: grid;
+  align-items: flex-start;
+  grid-column: 12 / 15;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-@keyframes third {
-  from {width: 0px;}
-  to {width: 36px;}
-}
-
-@keyframes fourth {
-  from {width: 0px;}
-  to {width: 77px;}
-}
-
-@keyframes fifth {
-  from {width: 0px;}
-  to {width: 108px;}
-}
-@keyframes sixth {
-  from {width: 0px;}
-  to {width: 96px;}
-}
-@keyframes seventh {
-  from {width: 0px;}
-  to {width: 168px;}
-}
-@keyframes eighth {
-  from {width: 0px;}
-  to {width: 120px;}
-} */
 
 .indicator {
   background-color: #E7422E;
-  display: block;
-  grid-column: 13 / 15;
-  margin-right: 16px;
-  height: 8px;
-  margin-left: 8px;
+  height: calc(var(--yr) * 2);
   width: 0;
+  opacity: 0;
+  margin-top: 6px;
+  margin-left: calc(var(--yr) * 2);
   transform: translateY(16px);
   transition: all 1s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
 
   &.first {
-    width: 100%;
+    width: 50px;
     animation: indicator 1.5s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
 
-  /* &.second {
-    width: 14px;
+  &.second {
+    width: 50px;
     animation: indicator 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
 
   &.third {
-    width: 36px;
+    width: 50px;
     animation: indicator 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
 
   &.fourth {
-    width: 77px;
+    width: 50px;
     animation: indicator 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
 
   &.fifth {
-    width: 108px;
+    width: 50px;
     animation: indicator 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
 
   &.sixth {
-    width: 96px;
+    width: 50px;
     animation: indicator 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
 
   &.seventh {
-    width: 168px;
+    width: 50px;
     animation: indicator 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
 
   &.eighth {
-    width: 120px;
+    width: 50px;
     animation: indicator 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  } */
+  }
 }
 
 .sum {
   color: #E7422E;
-  grid-column: 12;
   transform: translateY(16px);
   transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
   opacity: 0;

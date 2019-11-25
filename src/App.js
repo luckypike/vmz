@@ -1,7 +1,5 @@
 import React from 'react'
 import classNames from 'classnames'
-// import VisibilitySensor from "react-visibility-sensor"
-// import { useLax, useLaxElement } from 'use-lax'
 
 import Spoiler from './components/Spoiler'
 import Slider from './components/Slider'
@@ -17,15 +15,6 @@ import fonts from './Fonts.module.css'
 import logo from './images/logo.svg'
 
 export default function App() {
-  // const ref = useLaxElement()
-
-  // const onVisibilityChange = isVisible => {
-  //   if (isVisible) {
-  //     setVisible(true)
-  //   }
-  // }
-
-  // useLax()
 
   return (
     <div className={page.root}>
