@@ -117,7 +117,13 @@
 
 .image {
   grid-column: 4 / 17;
-  background: url('../images/vyksa.jpg') no-repeat center;
+  background: url('../images/vyksa.jpg') no-repeat;
   background-size: cover;
-  height: 584px;
+
+  &:before {
+    display: block;
+    content: '';
+    width: 100%;
+    padding-top: calc(1 / 2 * 100%);
+  }
 }

@@ -262,42 +262,19 @@
 
     & .image {
       grid-column: 1 / span 11;
-      background-image: url('./images/people.jpg');
-      padding-top: 50%;
-      background-repeat: no-repeat;
-      /* width: 0; */
-      /* transform: translateX(-1.5rem);
-      transition: width 1s 0.3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s; */
+      background: url('./images/people.jpg') no-repeat;
+      background-size: cover;
+
+      &:before {
+        display: block;
+        content: '';
+        width: 100%;
+        padding-top: calc(1 / 2 * 100%);
+      }
     }
   }
 }
 
 .qwe {
   grid-column: 4 / 15;
-}
-
-.animated {
-  & .image {
-    transform: translateX(0);
-    width: 100%;
-  }
-
-  & .bg {
-    width: 100%;
-  }
-}
-
-.bg {
-  grid-column: 1 / span 11;
-  background-color: #eee;
-  display: block;
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 0;
-  top: 0;
-  height: 100%;
-  overflow: hidden;
-  transition: width 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-  z-index: -1;
 }

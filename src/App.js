@@ -163,7 +163,6 @@ export default function App() {
 
       <section className={page.section}>
         <div className={styles.single}>
-          <div className={styles.bg} />
           <div className={styles.image} />
         </div>
       </section>
