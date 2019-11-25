@@ -35,47 +35,36 @@
   &.first {
     width: 94px;
     background-color: #E7422E;
-
-    /* animation: first 1.5s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
   }
 
   &.second {
     width: 36px;
     background-color: #E7422E;
-
-    /* animation: second 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
   }
 
   &.third {
     width: 22px;
     background-color: #E7422E;
-
-    /* animation: third 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
   }
 
   &.fourth {
     width: 11px;
     background-color: #E7422E;
-
-    /* animation: fourth 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
   }
 
   &.fifth {
     width: 7px;
     background-color: #E7422E;
-    /* animation: fifth 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
   }
 
   &.sixth {
     width: 4px;
     background-color: #E7422E;
-    /* animation: sixth 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
   }
 
   &.seventh {
     width: 4px;
     background-color: #E7422E;
-    /* animation: seventh 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
   }
 
   &.eighth {
@@ -90,87 +79,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-
-
-/* @keyframes first {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 94px;
-  }
-}
-
-@keyframes second {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 36px;
-  }
-}
-
-@keyframes third {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 22px;
-  }
-}
-
-@keyframes fourth {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 11px;
-  }
-}
-
-@keyframes fifth {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 7px;
-  }
-}
-
-@keyframes sixth {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 4px;
-  }
-}
-
-@keyframes seventh {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 4px;
-  }
-}
-
-@keyframes eighth {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 180px;
-  }
-} */
 
 .description {
   grid-column: 2 / 6;

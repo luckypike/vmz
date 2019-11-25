@@ -1,59 +1,177 @@
 .root {
   grid-column: span 16;
+  margin-bottom: calc(var(--yr) * calc(var(--s3) * 2));
 }
 
 .schedule {
   @media(--l) {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    margin-bottom: 16px;
+    margin-bottom: calc(var(--yr) * calc(var(--s2)));
   }
 }
 
 .year {
-  grid-column: 4 / span 2;
+  grid-column: 4;
   margin-left: auto;
-  margin-right: 16px;
+  margin-right: calc(var(--yr) * 2);
+  color: #727272;
 }
+
+.indicators {
+  display: grid;
+  align-items: flex-start;
+  grid-column: 12 / 16;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 
 .indicator {
   background-color: #E7422E;
-  display: block;
-  grid-column: 6;
-  margin-right: 16px;
+  height: calc(var(--yr) * 2);
+  width: 0;
+  opacity: 0;
+  margin-top: 6px;
+  grid-column: span 2;
+  transform: translateY(16px);
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
 
   &.first {
-    width: 160px;
+    width: 4px;
+    /* animation: first 1.5s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
   }
 
   &.second {
-    width: 488px;
+    width: 14px;
+    /* animation: second 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
   }
 
   &.third {
-    width: 398px;
+    width: 36px;
+    /* animation: third 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
   }
 
   &.fourth {
-    width: 70px;
+    width: 77px;
+    /* animation: fourth 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
   }
 
   &.fifth {
-    width: 26px;
+    width: 108px;
+    /* animation: fifth 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
+  }
+
+  &.sixth {
+    width: 96px;
+    /* animation: sixth 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
+  }
+
+  &.seventh {
+    width: 168px;
+    /* animation: seventh 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
+  }
+
+  &.eighth {
+    width: 120px;
+    /* animation: eighth 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
   }
 }
 
 .sum {
   color: #E7422E;
-  grid-column: span 2;
+  transform: translateY(16px);
+  transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+  opacity: 0;
+}
+
+.animated {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
 }
 
 .description {
-  grid-column: 6 / 15;
+  grid-column: 5 / 12;
+  margin-right: var(--xr);
 }
 
-.graph {
-  display: flex;
-  grid-column: 6 / 15;
-  margin-bottom: 8px;
+@keyframes first {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 4px;
+  }
+}
+
+@keyframes second {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 14px;
+  }
+}
+
+@keyframes third {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 36px;
+  }
+}
+
+@keyframes fourth {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 77px;
+  }
+}
+
+@keyframes fifth {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 108px;
+  }
+}
+
+@keyframes sixth {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 96px;
+  }
+}
+
+@keyframes seventh {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 168px;
+  }
+}
+
+@keyframes eighth {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 120px;
+  }
 }
