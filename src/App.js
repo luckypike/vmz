@@ -24,7 +24,7 @@ export default function App() {
   return (
     <div className={page.root}>
       <header className={styles.header}>
-        <div className={styles.placeholder}></div>
+        <div className={styles.placeholder} />
         <div className={page.text}>
           Кто строит заводы
         </div>
@@ -112,6 +112,10 @@ export default function App() {
           </div>
         </div>
 
+        <div className={styles.map}>
+          <div className={styles.placeholder} />
+        </div>
+
         <div className={styles.pipes}>
           <div className={classNames(styles.baltic, fonts.h2)}>
             Наши трубы <span className={styles.sahalin}>от Балтики до Сахалина</span>
@@ -124,8 +128,6 @@ export default function App() {
           <div className={styles.stream}>
             А в проекте «Северный поток — 1» ОМК была первой и единственной российской компанией, допущенной до участия в поставках, объем которых превысил 500 км. труб.
           </div>
-
-          <div className={styles.map} />
         </div>
       </section>
 
