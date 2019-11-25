@@ -21,7 +21,7 @@
 .indicators {
   display: grid;
   align-items: flex-start;
-  grid-column: 12 / 16;
+  grid-column: 12 / 15;
   width: 100%;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -39,43 +39,28 @@
   transition: all 1s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
 
   &.first {
-    width: 4px;
+    width: 40%;
     /* animation: first 1.5s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
   }
 
   &.second {
-    width: 14px;
+    width: 100%;
     /* animation: second 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
   }
 
   &.third {
-    width: 36px;
+    width: 80%;
     /* animation: third 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
   }
 
   &.fourth {
-    width: 77px;
+    width: 30%;
     /* animation: fourth 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
   }
 
   &.fifth {
-    width: 108px;
+    width: 10%;
     /* animation: fifth 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
-  }
-
-  &.sixth {
-    width: 96px;
-    /* animation: sixth 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
-  }
-
-  &.seventh {
-    width: 168px;
-    /* animation: seventh 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
-  }
-
-  &.eighth {
-    width: 120px;
-    /* animation: eighth 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
   }
 }
 
