@@ -20,7 +20,7 @@
 
 .indicators {
   display: grid;
-  align-items: flex-start;
+  align-items: center;
   grid-column: 12 / 15;
   width: 100%;
   grid-template-columns: 1fr 1fr 1fr;
@@ -40,60 +40,56 @@
 
   &.first {
     width: 4px;
-    transition-delay: .2s;
     transform: translateY(0);
     transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
-    /* animation: first 1.5s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
+    transition-delay: .2s;
   }
 
   &.second {
     width: 14px;
-    transition-delay: .4s;
-    /* animation: second 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
     transform: translateY(0);
     transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+    transition-delay: .4s;
   }
 
   &.third {
     width: 36px;
-    transition-delay: .6s;
-    /* animation: third 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
     transform: translateY(0);
     transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+    transition-delay: .6s;
   }
 
   &.fourth {
     width: 77px;
-    transition-delay: .8s;
-    /* animation: fourth 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
     transform: translateY(0);
     transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+    transition-delay: .8s;
   }
 
   &.fifth {
     width: 108px;
-    transition-delay: 1s;
-    /* animation: fifth 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
     transform: translateY(0);
     transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+    transition-delay: 1s;
   }
 
   &.sixth {
     width: 96px;
-    transition-delay: 1.2s;
-    /* animation: sixth 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
     transform: translateY(0);
     transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+    transition-delay: 1.2s;
   }
 
-
+  &.seventh {
+    width: 96px;
+    transform: translateY(0);
+    transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+    transition-delay: 1.4s;
+  }
 
   &.eighth {
     width: 120px;
-
-    /* animation: eighth 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
     transform: translateY(0);
-    opacity: 0;
     transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
     transition-delay: 1.6s;
   }
@@ -102,25 +98,47 @@
 .sum {
   color: #E7422E;
   transform: translateY(16px);
-  /* transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s; */
   opacity: 0;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+}
+
+.first {
+  transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+  transition-delay: .2s;
+}
+
+.second {
+  transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+  transition-delay: .4s;
+}
+
+.third {
+  transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+  transition-delay: .6s;
+
+}
+
+.fourth {
+  transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+  transition-delay: .8s;
+}
+
+.fifth {
+  transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+  transition-delay: 1s;
+}
+
+.sixth {
+  transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+  transition-delay: 1.2s;
 }
 
 .seventh {
-  width: 168px;
-  
-  /* animation: seventh 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
-  transform: translateY(0);
-  /* transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s; */
+  transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
   transition-delay: 1.4s;
 }
 
 .eighth {
-  width: 120px;
-
-  /* animation: eighth 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
-  transform: translateY(0);
-  opacity: 0;
   transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
   transition-delay: 1.6s;
 }
@@ -128,90 +146,9 @@
 .animated {
   transform: translateY(0);
   opacity: 1;
-  /* transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s; */
 }
 
 .description {
   grid-column: 5 / 12;
   margin-right: var(--xr);
-}
-
-@keyframes first {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 4px;
-  }
-}
-
-@keyframes second {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 14px;
-  }
-}
-
-@keyframes third {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 36px;
-  }
-}
-
-@keyframes fourth {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 77px;
-  }
-}
-
-@keyframes fifth {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 108px;
-  }
-}
-
-@keyframes sixth {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 96px;
-  }
-}
-
-@keyframes seventh {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 168px;
-  }
-}
-
-@keyframes eighth {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 120px;
-  }
 }

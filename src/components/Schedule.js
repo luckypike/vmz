@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import classNames from 'classnames'
 import CountUp from 'react-countup'
-import VisibilitySensor from 'react-visibility-sensor';
+import VisibilitySensor from 'react-visibility-sensor'
 
 import fonts from '../Fonts.module.css'
 import styles from './Schedule.module.css'
@@ -27,15 +27,14 @@ export default function Schedule () {
           Реконструкция колесопрокатного комплекса ВМЗ
         </div>
 
-        <VisibilitySensor delayedCall>
-          <div className={styles.indicators}>
-            <div className={classNames(styles.sum, fonts.small, {[styles.animated]: visible })}>
-              <CountUp decimals={1} start={0} end={visible ? 1.6 : 0} duration={2} delay={0.2} suffix=" млрд руб." />
-            </div>
-
-            <div className={classNames(styles.indicator, {[styles.first]: visible}, {[styles.animated]: visible })} />
+        <div className={styles.indicators}>
+          <div className={classNames(styles.sum, styles.first, {[styles.animated]: visible })}>
+            <CountUp decimals={1} end={visible ? 1.6 : 0} />
+            <div className={fonts.small}>млрд руб.</div>
           </div>
-        </VisibilitySensor>
+
+          <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.first]: visible })} />
+        </div>
       </div>
 
       <div className={styles.schedule}>
@@ -47,15 +46,14 @@ export default function Schedule () {
           Модернизация производства
         </div>
 
-        <VisibilitySensor delayedCall>
-          <div className={styles.indicators}>
-            <div className={classNames(styles.sum, fonts.small, {[styles.animated]: visible })}>
-              <CountUp decimals={1} start={0} end={visible ? 5.7 : 0} duration={2} delay={0.4} suffix=" млрд руб." />
-            </div>
-
-            <div className={classNames(styles.indicator, {[styles.second]: visible}, {[styles.animated]: visible })} />
+        <div className={styles.indicators}>
+          <div className={classNames(styles.sum, styles.second, {[styles.animated]: visible })}>
+            <CountUp decimals={1} end={visible ? 5.7 : 0} duration={3} />
+            <div className={fonts.small}>млрд руб.</div>
           </div>
-        </VisibilitySensor>
+
+          <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.second]: visible })} />
+        </div>
       </div>
 
       <div className={styles.schedule}>
@@ -67,15 +65,14 @@ export default function Schedule () {
           Строительство сверхсовременных линий для выпуска труб большого диаметра «русского размера»
         </div>
 
-        <VisibilitySensor delayedCall>
-          <div className={styles.indicators}>
-            <div className={classNames(styles.sum, fonts.small, {[styles.animated]: visible })}>
-              <CountUp start={0} end={visible ? 15 : 0} duration={2} delay={0.6} suffix=" млрд руб." />
-            </div>
-
-            <div className={classNames(styles.indicator, {[styles.third]: visible}, {[styles.animated]: visible })} />
+        <div className={styles.indicators}>
+          <div className={classNames(styles.sum, styles.third, {[styles.animated]: visible })}>
+            <CountUp end={visible ? 15 : 0} duration={4} />
+            <div className={fonts.small}>млрд руб.</div>
           </div>
-        </VisibilitySensor>
+
+          <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.third]: visible })} />
+        </div>
       </div>
 
       <div className={styles.schedule}>
@@ -87,15 +84,14 @@ export default function Schedule () {
           Строительство литейно-прокатного комплекса по производству трубной стали и проката
         </div>
 
-        <VisibilitySensor delayedCall>
-          <div className={styles.indicators}>
-            <div className={classNames(styles.sum, fonts.small, {[styles.animated]: visible })}>
-              <CountUp start={0} end={visible ? 32 : 0} duration={2} delay={0.8} suffix=" млрд руб." />
-            </div>
-
-            <div className={classNames(styles.indicator, {[styles.fourth]: visible}, {[styles.animated]: visible })} />
+        <div className={styles.indicators}>
+          <div className={classNames(styles.sum, styles.fourth, {[styles.animated]: visible })}>
+            <CountUp end={visible ? 32 : 0} duration={4} />
+            <div className={fonts.small}>млрд руб.</div>
           </div>
-        </VisibilitySensor>
+
+          <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.fourth]: visible })} />
+        </div>
       </div>
 
       <div className={styles.schedule}>
@@ -107,15 +103,14 @@ export default function Schedule () {
           Запуск самого современного стана-5000 по выпуску широкого листа
         </div>
 
-        <VisibilitySensor delayedCall>
-          <div className={styles.indicators}>
-            <div className={classNames(styles.sum, fonts.small, {[styles.animated]: visible })}>
-              <CountUp start={0} end={visible ? 45 : 0} duration={2} delay={1} suffix=" млрд руб." />
-            </div>
-
-            <div className={classNames(styles.indicator, {[styles.fifth]: visible}, {[styles.animated]: visible })} />
+        <div className={styles.indicators}>
+          <div className={classNames(styles.sum, styles.fifth, {[styles.animated]: visible })}>
+            <CountUp end={visible ? 45 : 0} duration={4} />
+            <div className={fonts.small}>млрд руб.</div>
           </div>
-        </VisibilitySensor>
+
+          <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.fifth]: visible })} />
+        </div>
       </div>
 
       <div className={styles.schedule}>
@@ -127,15 +122,14 @@ export default function Schedule () {
           Модернизация производства сварных труб для добычи нефти и газа
         </div>
 
-        <VisibilitySensor delayedCall>
-          <div className={styles.indicators}>
-            <div className={classNames(styles.sum, fonts.small, {[styles.animated]: visible })}>
-              <CountUp start={0} end={visible ? 40 : 0} duration={2} delay={1.2} suffix=" млрд руб." />
-            </div>
-
-            <div className={classNames(styles.indicator, {[styles.sixth]: visible}, {[styles.animated]: visible })} />
+        <div className={styles.indicators}>
+          <div className={classNames(styles.sum, styles.sixth, {[styles.animated]: visible })}>
+            <CountUp end={visible ? 40 : 0} duration={4} />
+            <div className={fonts.small}>млрд руб.</div>
           </div>
-        </VisibilitySensor>
+
+          <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.sixth]: visible })} />
+        </div>
       </div>
 
       <div className={styles.schedule}>
@@ -149,11 +143,12 @@ export default function Schedule () {
 
         <VisibilitySensor delayedCall onChange={onVisibilityChange} offset={{ top: 50 }}>
           <div className={styles.indicators}>
-            <div className={classNames(styles.sum, styles.seventh, fonts.small, {[styles.animated]: visible })}>
-              <CountUp start={0} end={visible ? 70 : 0} duration={2} delay={1.4} suffix=" млрд руб." />
+            <div className={classNames(styles.sum, styles.seventh, {[styles.animated]: visible })}>
+              <CountUp end={visible ? 70 : 0} duration={4} />
+              <div className={fonts.small}>млрд руб.</div>
             </div>
 
-            <div className={classNames(styles.indicator, {[styles.animated]: visible })} />
+            <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.seventh]: visible })} />
           </div>
         </VisibilitySensor>
       </div>
@@ -167,15 +162,14 @@ export default function Schedule () {
           Запланирован ввод трубопрокатного комплекса по производству бесшовных труб
         </div>
 
-        <VisibilitySensor delayedCall>
-          <div className={styles.indicators}>
-            <div className={classNames(styles.sum, styles.eighth, fonts.small, {[styles.animated]: visible })}>
-              <CountUp start={0} end={visible ? 50 : 0} duration={2} delay={1.6} suffix=" млрд руб." />
-            </div>
-
-            <div className={classNames(styles.indicator, styles.eighth, {[styles.animated]: visible })} />
+        <div className={styles.indicators}>
+          <div className={classNames(styles.sum, styles.eighth, {[styles.animated]: visible })}>
+            <CountUp end={visible ? 50 : 0} duration={4} />
+            <div className={fonts.small}>млрд руб.</div>
           </div>
-        </VisibilitySensor>
+
+          <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.eighth]: visible })} />
+        </div>
       </div>
     </div>
   )
