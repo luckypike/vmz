@@ -74,10 +74,11 @@
   height: 330px;
   display: flex;
   align-items: flex-end;
-  background-image: url('../images/spoiler_1.jpg');
+  background: url('../images/spoiler_1.jpg') no-repeat;
   background-color: grey;
-  background-repeat: no-repeat;
+  background-position: top;
   background-size: cover;
+  cursor: pointer;
 
   &.second {
     background-image: url('../images/spoiler_2.jpg');
