@@ -76,24 +76,28 @@
   align-items: flex-end;
   background: url('../images/spoiler_1.jpg') no-repeat;
   background-color: grey;
-  background-position: top;
+  background-position: bottom;
   background-size: cover;
   cursor: pointer;
 
   &.second {
     background-image: url('../images/spoiler_2.jpg');
+    background-position: center;
   }
 
   &.third {
     background-image: url('../images/spoiler_3.jpg');
+    background-position: center 15%;
   }
 
   &.fouth {
     background-image: url('../images/spoiler_4.jpg');
+    background-position: center;
   }
 
   &.fifth {
     background-image: url('../images/spoiler_5.jpg');
+    background-position: center 25%;
   }
 
   & .title {
