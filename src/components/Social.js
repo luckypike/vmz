@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classNames from 'classnames'
 
 import Slider from './Slider'
@@ -8,8 +8,18 @@ import Graph from './Graph'
 import styles from './Social.module.css'
 import page from '../Page.module.css'
 import fonts from '../Fonts.module.css'
+import CountUp from 'react-countup'
+import VisibilitySensor from 'react-visibility-sensor'
 
 export default function Industrial() {
+  const [visible, setVisible] = useState(false)
+
+  const onVisibilityChange = isVisible => {
+    if (isVisible) {
+      setVisible(true)
+    }
+  }
+
   return (
     <div className={styles.root}>
       <section className={page.section}>
@@ -43,9 +53,9 @@ export default function Industrial() {
               <div className={styles.worker_2} />
             </div>
 
-            <div className={styles.nn}>
+            <div className={classNames(styles.nn, {[styles.animated]: visible })}>
               <div className={classNames(styles.sum_nn, fonts.h5)}>
-                4,2 тыс. руб.
+                <CountUp decimals={1} end={visible ? 4.2 : 0} duration={1.6} suffix=" тыс. руб."/>
               </div>
 
               <div className={classNames(styles.desc, fonts.small)}>
@@ -53,9 +63,9 @@ export default function Industrial() {
               </div>
             </div>
 
-            <div className={styles.vyksa}>
+            <div className={classNames(styles.vyksa, {[styles.animated]: visible })}>
               <div className={classNames(styles.sum_vyksa, fonts.h5)}>
-                5,7 тыс. руб.
+                <CountUp decimals={1} end={visible ? 5.7 : 0} duration={1.6} suffix=" тыс. руб."/>
               </div>
 
               <div className={classNames(styles.desc, fonts.small)}>
@@ -70,19 +80,21 @@ export default function Industrial() {
               <div className={styles.worker_4} />
             </div>
 
-            <div className={styles.nn}>
-              <div className={classNames(styles.sum_nn, fonts.h5)}>
-                33,9 тыс. руб.
-              </div>
+            <VisibilitySensor delayedCall onChange={onVisibilityChange} offset={{ top: 50 }}>
+              <div className={classNames(styles.nn, {[styles.animated]: visible })}>
+                <div className={classNames(styles.sum_nn, fonts.h5)}>
+                  <CountUp decimals={1} end={visible ? 33.9 : 0} duration={1.6} suffix=" тыс. руб."/>
+                </div>
 
-              <div className={classNames(styles.desc, fonts.small)}>
-                Средняя заработная плата в Нижегородской области в 2019 году
+                <div className={classNames(styles.desc, fonts.small)}>
+                  Средняя заработная плата в Нижегородской области в 2019 году
+                </div>
               </div>
-            </div>
+            </VisibilitySensor>
 
-            <div className={styles.vyksa}>
+            <div className={classNames(styles.vyksa, {[styles.animated]: visible })}>
               <div className={classNames(styles.sum_vyksa, fonts.h5)}>
-                51,9 тыс. руб.
+                <CountUp decimals={1} end={visible ? 51.9 : 0} duration={1.6} suffix=" тыс. руб."/>
               </div>
 
               <div className={classNames(styles.desc, fonts.small)}>
