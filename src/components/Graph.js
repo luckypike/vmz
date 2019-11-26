@@ -48,7 +48,7 @@ export default function Graph () {
 
         <div className={styles.indicators}>
           <div className={classNames(styles.sum, styles.second, {[styles.animated]: visible })}>
-            <CountUp decimals={1} end={visible ? 244.5 : 0} duration={2} />
+            <CountUp decimals={1} decimal="," end={visible ? 244.5 : 0} duration={2} />
             <div className={fonts.small}>млрд руб.</div>
           </div>
 

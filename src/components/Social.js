@@ -55,7 +55,7 @@ export default function Industrial() {
 
             <div className={classNames(styles.nn, {[styles.animated]: visible })}>
               <div className={classNames(styles.sum_nn, fonts.h5)}>
-                <CountUp decimals={1} end={visible ? 4.2 : 0} duration={1.6} suffix=" тыс. руб."/>
+                <CountUp decimals={1} decimal="," end={visible ? 4.2 : 0} duration={1.6} suffix=" тыс. руб."/>
               </div>
 
               <div className={classNames(styles.desc, fonts.small)}>
@@ -65,7 +65,7 @@ export default function Industrial() {
 
             <div className={classNames(styles.vyksa, {[styles.animated]: visible })}>
               <div className={classNames(styles.sum_vyksa, fonts.h5)}>
-                <CountUp decimals={1} end={visible ? 5.7 : 0} duration={1.6} suffix=" тыс. руб."/>
+                <CountUp decimals={1} decimal="," end={visible ? 5.7 : 0} duration={1.6} suffix=" тыс. руб."/>
               </div>
 
               <div className={classNames(styles.desc, fonts.small)}>
@@ -83,7 +83,7 @@ export default function Industrial() {
             <VisibilitySensor delayedCall onChange={onVisibilityChange} offset={{ top: 50 }}>
               <div className={classNames(styles.nn, {[styles.animated]: visible })}>
                 <div className={classNames(styles.sum_nn, fonts.h5)}>
-                  <CountUp decimals={1} end={visible ? 33.9 : 0} duration={1.6} suffix=" тыс. руб."/>
+                  <CountUp decimals={1} decimal="," end={visible ? 33.9 : 0} duration={1.6} suffix=" тыс. руб."/>
                 </div>
 
                 <div className={classNames(styles.desc, fonts.small)}>
@@ -94,7 +94,7 @@ export default function Industrial() {
 
             <div className={classNames(styles.vyksa, {[styles.animated]: visible })}>
               <div className={classNames(styles.sum_vyksa, fonts.h5)}>
-                <CountUp decimals={1} end={visible ? 51.9 : 0} duration={1.6} suffix=" тыс. руб."/>
+                <CountUp decimals={1} decimal="," end={visible ? 51.9 : 0} duration={1.6} suffix=" тыс. руб."/>
               </div>
 
               <div className={classNames(styles.desc, fonts.small)}>

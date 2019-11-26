@@ -30,7 +30,7 @@ export default function Schedule () {
 
         <div className={styles.indicators}>
           <div className={classNames(styles.sum, styles.first, {[styles.animated]: visible })}>
-            <CountUp decimals={1} end={visible ? 1.6 : 0} />
+            <CountUp decimals={1} decimal="," end={visible ? 1.6 : 0} />
             <div className={fonts.small}>млрд руб.</div>
           </div>
 
@@ -49,7 +49,7 @@ export default function Schedule () {
 
         <div className={styles.indicators}>
           <div className={classNames(styles.sum, styles.second, {[styles.animated]: visible })}>
-            <CountUp decimals={1} end={visible ? 5.7 : 0} duration={3} />
+            <CountUp decimals={1} decimal="," end={visible ? 5.7 : 0} duration={3} />
             <div className={fonts.small}>млрд руб.</div>
           </div>
 
