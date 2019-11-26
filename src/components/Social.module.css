@@ -50,7 +50,7 @@
 
 .worker_1 {
   top: 36px;
-  left: 135px;
+  left: 29%;
   width: 90px;
   height: 279px;
 }
@@ -64,7 +64,6 @@
 
 .worker_3 {
   left: 20%;
-  transform: translateX(-20%);
   top: 36px;
   width: 84px;
   height: 280px;
@@ -75,7 +74,7 @@
   height: 340px;
   width: 167px;
   background-image: url('../images/worker_4.svg');
-  right: 103.64px;
+  right: 23%;
   top: 0;
 }
 

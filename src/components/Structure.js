@@ -133,7 +133,7 @@ export default function Structure () {
       <div className={styles.schedule}>
         <VisibilitySensor delayedCall>
           <div className={styles.vrp}>
-            <div className={classNames(fonts.h4, {[styles.animated]: visible })}>
+            <div className={classNames(styles.other, fonts.h4, {[styles.animated]: visible })}>
               <CountUp start={0} end={visible ? 50 : 0} duration={2} delay={1} suffix=" %" />
             </div>
 

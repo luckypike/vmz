@@ -147,8 +147,9 @@
 
 .bullets {
   margin-left: calc(3 / 16 * 100%);
+  margin-right: calc(2 / 16 * 100%);
   display: flex;
-  width: calc(13 / 16 * 100%);
+  width: calc(11 / 16 * 100%);
   align-items: center;
 }
 
@@ -159,22 +160,11 @@
   display: flex;
   margin-top: -4px;
 
-  & .first {
-    background-color: #E7422E;
-    height: 2px;
-  }
-
-  & .second {
-    background-color: #E7422E;
-    height: 2px;
-  }
-
-  & .third {
-    background-color: #E7422E;
-    height: 2px;
-  }
-
-  & .fourth {
+  & .first, & .second, & .third,
+  & .fourth, & .fifth, & .sixth,
+  & .seventh, & .eighth, & .ninth,
+  & .tenth, & .eleventh, & .twelfth,
+  & .thirteenth, & .fourteenth {
     background-color: #E7422E;
     height: 2px;
   }
@@ -185,7 +175,7 @@
 }
 
 .bar {
-  width: 25%;
+  width: 7.1428%;
   transition: all 1.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 

@@ -20,6 +20,12 @@
   opacity: 0;
 }
 
+.other {
+  grid-column: 1;
+  transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: 0;
+}
+
 .indicator {
   display: block;
   grid-column: 2 / 6;

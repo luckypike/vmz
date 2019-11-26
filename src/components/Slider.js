@@ -227,6 +227,16 @@ export default function Slider () {
             <div className={classNames(styles.bar, {[styles.second]: index === 2})} />
             <div className={classNames(styles.bar, {[styles.third]: index === 3})} />
             <div className={classNames(styles.bar, {[styles.fourth]: index === 4})} />
+            <div className={classNames(styles.bar, {[styles.fifth]: index === 5})} />
+            <div className={classNames(styles.bar, {[styles.sixth]: index === 6})} />
+            <div className={classNames(styles.bar, {[styles.seventh]: index === 7})} />
+            <div className={classNames(styles.bar, {[styles.eighth]: index === 8})} />
+            <div className={classNames(styles.bar, {[styles.ninth]: index === 9})} />
+            <div className={classNames(styles.bar, {[styles.tenth]: index === 10})} />
+            <div className={classNames(styles.bar, {[styles.eleventh]: index === 11})} />
+            <div className={classNames(styles.bar, {[styles.twelfth]: index === 12})} />
+            <div className={classNames(styles.bar, {[styles.thirteenth]: index === 13})} />
+            <div className={classNames(styles.bar, {[styles.fourteenth]: index === 14})} />
           </div>
         </div>
       </div>
