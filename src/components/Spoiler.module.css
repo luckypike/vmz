@@ -167,7 +167,7 @@
   width: 36px;
   background: #fff;
   border-radius: 50%;
-  left: calc(1 / 16 * 100%);
+  right: calc(1 / 16 * 100%);
   transform: translateY(100%);
   transition: 0s;
   cursor: pointer;

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import classNames from 'classnames'
 import Glide from '@glidejs/glide'
 
@@ -9,9 +9,11 @@ export default function Slider () {
   const mount = React.createRef()
   const slides = React.createRef()
 
+  const [index, setIndex] = useState(1)
+
   useEffect(() => {
     const glide = new Glide(mount.current, {
-      type: 'carousel',
+      type: 'slider',
       perView: 2.2,
       peek: { before: 90, after: 180 },
       gap: 90,
@@ -23,8 +25,15 @@ export default function Slider () {
         }
       }
     })
+
+    glide.on('run', move => {
+      setIndex(glide.index + 1)
+    })
+
     glide.mount()
   },[])
+
+  console.log(index)
 
   return(
     <div className={classNames(styles.glide, 'glide')} ref={mount}>
@@ -49,179 +58,175 @@ export default function Slider () {
               2019
             </div>
 
-            <div className={styles.text}>
+            <div className={classNames(styles.text, fonts.small)}>
               Сегодня предприятие выпускает 860 тыс. железнодорожных колес в год, в том числе, для скоростных поездов.
             </div>
           </div>
 
           <div className={classNames('glide__slide', styles.slide)}>
-            <div className={classNames(styles.image, styles.first)} />
+            <div className={classNames(styles.image, styles.third)} />
 
             <div className={styles.title}>
               2007
             </div>
 
-            <div className={styles.text}>
+            <div className={classNames(styles.text, fonts.small)}>
               В 2007 году на ВМЗ началось строительство металлургического комплекса стан-5000.
             </div>
           </div>
 
           <div className={classNames('glide__slide', styles.slide)}>
-            <div className={classNames(styles.image, styles.second)} />
+            <div className={classNames(styles.image, styles.fourth)} />
 
             <div className={styles.title}>
               2019
             </div>
 
-            <div className={styles.text}>
+            <div className={classNames(styles.text, fonts.small)}>
               Производственная мощность стана — 1,5 млн т широкого стального листа в год. На МКС-5000 работает тысяча сотрудников
             </div>
           </div>
 
-          {/* <div className={classNames('glide__slide', styles.slide)}>
-            <div className={classNames(styles.image, styles.first)} />
+          <div className={classNames('glide__slide', styles.slide)}>
+            <div className={classNames(styles.image, styles.fifth)} />
 
             <div className={styles.title}>
               2008
             </div>
 
-            <div className={styles.text}>
+            <div className={classNames(styles.text, fonts.small)}>
               В 2008 году на площадке ВМЗ началось строительство литейно-прокатного комплекса по выпуску стали для труб малого и среднего диаметра
             </div>
           </div>
 
           <div className={classNames('glide__slide', styles.slide)}>
-            <div className={classNames(styles.image, styles.second)} />
+            <div className={classNames(styles.image, styles.sixth)} />
 
             <div className={styles.title}>
               2018
             </div>
 
-            <div className={styles.text}>
+            <div className={classNames(styles.text, fonts.small)}>
               По итогам 2018 года ЛПК произвел 1,27 млн т рулонного и листового проката
             </div>
           </div>
 
           <div className={classNames('glide__slide', styles.slide)}>
-            <div className={classNames(styles.image, styles.first)} />
+            <div className={classNames(styles.image, styles.seventh)} />
 
             <div className={styles.title}>
               2017
             </div>
 
-            <div className={styles.text}>
+            <div className={classNames(styles.text, fonts.small)}>
               В 2017 году в Выксе началось строительство трубоэлектросварочного цеха № 1 в рамках программы технического перевооружения и модернизации производства обсадных, насосно-компрессорных и нефтегазопроводных труб
             </div>
           </div>
 
           <div className={classNames('glide__slide', styles.slide)}>
-            <div className={classNames(styles.image, styles.second)} />
+            <div className={classNames(styles.image, styles.eighth)} />
 
             <div className={styles.title}>
               2019
             </div>
 
-            <div className={styles.text}>
+            <div className={classNames(styles.text, fonts.small)}>
               Сейчас ТЭСЦ-1 выпускает 40 тыс. т продукции, освоил производство обсадных труб с резьбовым соединением
             </div>
           </div>
 
           <div className={classNames('glide__slide', styles.slide)}>
-            <div className={classNames(styles.image, styles.first)} />
+            <div className={classNames(styles.image, styles.ninth)} />
 
             <div className={styles.title}>
               1978
             </div>
 
-            <div className={styles.text}>
+            <div className={classNames(styles.text, fonts.small)}>
               Трубоэлектросварочный цех № 3 ВМЗ открылся в 1978 году
             </div>
           </div>
 
           <div className={classNames('glide__slide', styles.slide)}>
-            <div className={classNames(styles.image, styles.second)} />
+            <div className={classNames(styles.image, styles.tenth)} />
 
             <div className={styles.title}>
               2018
             </div>
 
-            <div className={styles.text}>
+            <div className={classNames(styles.text, fonts.small)}>
               В 2018 году в составе комплекса производства труб малого и среднего диаметра завода ТЭСЦ-3 и выпускает нефтегазопроводные и бесшовные трубы
             </div>
           </div>
 
           <div className={classNames('glide__slide', styles.slide)}>
-            <div className={classNames(styles.image, styles.first)} />
+            <div className={classNames(styles.image, styles.eleventh)} />
 
             <div className={styles.title}>
               1982
             </div>
 
-            <div className={styles.text}>
+            <div className={classNames(styles.text, fonts.small)}>
               В 1982 году в Выксе был запущен трубоэлектросварочный цех № 4, выпускающий трубы большого диаметра
             </div>
           </div>
 
           <div className={classNames('glide__slide', styles.slide)}>
-            <div className={classNames(styles.image, styles.second)} />
+            <div className={classNames(styles.image, styles.twelfth)} />
 
             <div className={styles.title}>
               2019
             </div>
 
-            <div className={styles.text}>
-              Текущая мощность цеха 2 млн тонн труб большого диаметра в год. Вместе с толстолистовым прокатным станом МКС-5000 и цехом по нанесению антикоррозионного покрытия на трубы он образует дивизион труб большого диаметра ВМЗ
-            </div>
-          </div>
-          <div className={classNames('glide__slide', styles.slide)}>
-            <div className={classNames(styles.image, styles.first)} />
-
-            <div className={styles.title}>
-              2019
-            </div>
-
-            <div className={styles.text}>
+            <div className={classNames(styles.text, fonts.small)}>
               Текущая мощность цеха 2 млн тонн труб большого диаметра в год. Вместе с толстолистовым прокатным станом МКС-5000 и цехом по нанесению антикоррозионного покрытия на трубы он образует дивизион труб большого диаметра ВМЗ
             </div>
           </div>
 
           <div className={classNames('glide__slide', styles.slide)}>
-            <div className={classNames(styles.image, styles.second)} />
+            <div className={classNames(styles.image, styles.thirteenth)} />
 
             <div className={styles.title}>
               1986
             </div>
 
-            <div className={styles.text}>
+            <div className={classNames(styles.text, fonts.small)}>
               Трубоэлектросварочный цех № 5 был пущен в строй в 1986 году и позволил Выксунскому металлургическому заводу стать единственным в России производителем сварных обсадных труб
             </div>
           </div>
 
           <div className={classNames('glide__slide', styles.slide)}>
-            <div className={classNames(styles.image, styles.first)} />
+            <div className={classNames(styles.image, styles.fourteenth)} />
 
             <div className={styles.title}>
               2019
             </div>
 
-            <div className={styles.text}>
+            <div className={classNames(styles.text, fonts.small)}>
               Благодаря модернизации производственная мощность ТЭСЦ-5 выросла до 400 тыс. тонн в год
             </div>
-          </div> */}
+          </div>
         </div>
 
         <div className={classNames(styles.bullets, "glide__bullets")} data-glide-el="controls[nav]">
-          <div className="glide_bullet" data-glide-dir="=0">
-            <div className={styles.qwe} />
+          <div className={styles.buttons} data-glide-el="controls">
+            <div className={styles.prev} data-glide-dir="<">
+              <svg width="34" height="18" viewBox="0 0 34 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 9H33M1 9L9 1M1 9L9 17" stroke="#E7422E" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+            <div className={styles.next} data-glide-dir=">">
+              <svg width="34" height="18" viewBox="0 0 34 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M33 9H1M33 9L25 1M33 9L25 17" stroke="#E7422E" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
           </div>
-          <div className="glide_bullet" data-glide-dir="=1">
-            <div className={styles.q} />
-          </div>
-          <div className="glide_bullet" data-glide-dir="=2">
-            <div className={styles.q} />
-          </div>
-          <div className="glide_bullet" data-glide-dir="=3">
-            <div className={styles.q} />
+
+          <div className={styles.control}>
+            <div className={classNames(styles.bar, {[styles.first]: index === 1})} />
+            <div className={classNames(styles.bar, {[styles.second]: index === 2})} />
+            <div className={classNames(styles.bar, {[styles.third]: index === 3})} />
+            <div className={classNames(styles.bar, {[styles.fourth]: index === 4})} />
           </div>
         </div>
       </div>
