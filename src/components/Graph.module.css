@@ -20,7 +20,7 @@
 
 .indicators {
   display: grid;
-  align-items: flex-start;
+  align-items: center;
   grid-column: 12 / 15;
   width: 100%;
   grid-template-columns: 1fr 1fr 1fr;
