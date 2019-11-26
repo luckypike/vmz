@@ -30,7 +30,9 @@ export default function Industrial() {
       <section>
         <div className={styles.graphs}>
           <div className={styles.structure}>
-            <div className={styles.circle} />
+            <div className={styles.circle}>
+              <div className={styles.placeholder2} />
+            </div>
             <div className={classNames(styles.desc, fonts.small)}>
               Структура ВРП Нижегородской области
             </div>
