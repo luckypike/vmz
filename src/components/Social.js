@@ -151,12 +151,12 @@ export default function Industrial() {
 
           <Graph />
 
-          <div className={page.block}>
+          {/* <div className={page.block}>
             <div className={styles.line} />
             <div className={classNames(page.description, styles.chrono)}>
               Инвестпроекты по хронологии с суммами
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
