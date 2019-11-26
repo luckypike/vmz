@@ -8,6 +8,10 @@
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     margin-bottom: calc(var(--yr) * calc(var(--s2)));
+
+    &:last-child {
+      margin-bottom: 64px;
+    }
   }
 }
 
@@ -152,4 +156,11 @@
 .description {
   grid-column: 5 / 12;
   margin-right: var(--xr);
+}
+
+.line {
+  margin-top: 32px;
+  grid-column: 4 / 13;
+  border-top: 1px solid #E8E8E8;
+  margin-bottom: 16px;
 }

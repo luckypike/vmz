@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import classNames from 'classnames'
 
-import Slider from './Slider'
+import Photo from './Galery/Photo'
 import Spoiler from './Spoiler'
 import Graph from './Graph'
 
@@ -152,6 +152,7 @@ export default function Industrial() {
           <Graph />
 
           <div className={page.block}>
+            <div className={styles.line} />
             <div className={page.description}>
               Инвестпроекты по хронологии с суммами
             </div>
@@ -160,7 +161,7 @@ export default function Industrial() {
       </section>
 
       <section>
-        <Slider />
+        <Photo />
       </section>
     </div>
   )

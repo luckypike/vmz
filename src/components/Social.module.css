@@ -110,3 +110,9 @@
   transform: translateY(0);
   opacity: 1;
 }
+
+.line {
+  grid-column: 4 / 13;
+  border-top: 1px solid #E8E8E8;
+  margin-bottom: 16px;
+}

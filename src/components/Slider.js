@@ -33,8 +33,6 @@ export default function Slider () {
     glide.mount()
   },[])
 
-  console.log(index)
-
   return(
     <div className={classNames(styles.glide, 'glide')} ref={mount}>
       <div className="glide__track" data-glide-el="track">
