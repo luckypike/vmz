@@ -159,7 +159,7 @@ export default function Investment () {
   }, [visible])
 
   return (
-    <div>
+    <div className={styles.investment}>
       <VisibilitySensor delayedCall onChange={onVisibilityChange} offset={{ top: 50 }}>
         <canvas className={styles.graph} ref={graphRef} margin="0" />
       </VisibilitySensor>

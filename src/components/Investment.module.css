@@ -39,3 +39,7 @@
   margin-left: calc( 1 / 16 * 100%);
   composes: small from '../Fonts.module.css';
 }
+
+.investment {
+  margin: 0 calc(1 / 16 * 100%);
+}
