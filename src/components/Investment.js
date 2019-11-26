@@ -1,9 +1,18 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Chart from 'chart.js'
+import VisibilitySensor from 'react-visibility-sensor'
 
 import styles from './Investment.module.css'
 
 export default function Investment () {
+  const [visible, setVisible] = useState(false)
+
+  const onVisibilityChange = isVisible => {
+    if (isVisible) {
+      setVisible(true)
+    }
+  }
+
   const graphRef = useRef()
 
   const datasets = {
@@ -143,12 +152,17 @@ export default function Investment () {
       }
     }
 
-    setTimeout(next, 400)
-  }, [])
+    if (visible === true) {
+      setTimeout(next, 400)
+    }
+
+  }, [visible])
 
   return (
     <div>
-      <canvas className={styles.graph} ref={graphRef} margin="0" />
+      <VisibilitySensor delayedCall onChange={onVisibilityChange} offset={{ top: 50 }}>
+        <canvas className={styles.graph} ref={graphRef} margin="0" />
+      </VisibilitySensor>
 
       <div className={styles.legend}>
         <div className={styles.indicator_p}></div>
