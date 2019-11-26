@@ -20,7 +20,7 @@ export default function Graph () {
     <div className={styles.root}>
       <div className={styles.schedule}>
         <div className={classNames(styles.year, fonts.small)}>
-          2003
+          2006 – 2008
         </div>
 
         <div className={classNames(styles.description, fonts.h5)}>
@@ -39,7 +39,7 @@ export default function Graph () {
 
       <div className={styles.schedule}>
         <div className={classNames(styles.year, fonts.small)}>
-          2004 – 2009
+          2009 – 2015
         </div>
 
         <div className={classNames(styles.description, fonts.h5)}>
@@ -58,7 +58,7 @@ export default function Graph () {
 
       <div className={styles.schedule}>
         <div className={classNames(styles.year, fonts.small)}>
-          2005
+          2010 – 2012
         </div>
 
         <div className={classNames(styles.description, fonts.h5)}>
@@ -79,7 +79,7 @@ export default function Graph () {
 
       <div className={styles.schedule}>
         <div className={classNames(styles.year, fonts.small)}>
-          2008
+          2017 – 2018
         </div>
 
         <div className={classNames(styles.description, fonts.h5)}>
@@ -98,7 +98,7 @@ export default function Graph () {
 
       <div className={styles.schedule}>
         <div className={classNames(styles.year, fonts.small)}>
-          2011
+          2018
         </div>
 
         <div className={classNames(styles.description, fonts.h5)}>
