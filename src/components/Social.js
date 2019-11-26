@@ -26,7 +26,7 @@ export default function Industrial() {
         <div className={page.block}>
           <div className={page.index}>03</div>
           <div className={page.description}>
-            Что деляет завод для Выксы
+            Что делает завод для Выксы
           </div>
         </div>
 
