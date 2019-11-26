@@ -145,15 +145,15 @@ export default function Investment () {
 
       dataExport[count] = datasets.export[count]
       dataImport[count] = datasets.import[count]
-      chart.update({ duration: 400, easing: 'linear' })
+      chart.update({ duration: 200, easing: 'linear' })
 
       if (count < datasets.export.length) {
-        setTimeout(next, 400)
+        setTimeout(next, 200)
       }
     }
 
     if (visible === true) {
-      setTimeout(next, 400)
+      setTimeout(next, 200)
     }
 
   }, [visible])

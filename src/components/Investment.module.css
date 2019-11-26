@@ -41,5 +41,6 @@
 }
 
 .investment {
-  margin: 0 calc(1 / 16 * 100%);
+  margin-right: calc(3 / 16 * 100%);
+  margin-left: calc(1 / 16 * 100%);
 }
