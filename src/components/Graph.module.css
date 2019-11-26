@@ -40,27 +40,37 @@
 
   &.first {
     width: 40%;
-    /* animation: first 1.5s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
+    transform: translateY(0);
+    transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+    transition-delay: .2s;
   }
 
   &.second {
     width: 100%;
-    /* animation: second 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
+    transform: translateY(0);
+    transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+    transition-delay: .4s;
   }
 
   &.third {
     width: 80%;
-    /* animation: third 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
+    transform: translateY(0);
+    transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+    transition-delay: .6s;
   }
 
   &.fourth {
     width: 30%;
-    /* animation: fourth 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
+    transform: translateY(0);
+    transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+    transition-delay: .8s;
   }
 
   &.fifth {
     width: 10%;
-    /* animation: fifth 2s 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95); */
+    transform: translateY(0);
+    transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+    transition-delay: 1s;
   }
 }
 
@@ -72,10 +82,35 @@
   text-align: right;
 }
 
+.first {
+  transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+  transition-delay: .2s;
+}
+
+.second {
+  transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+  transition-delay: .4s;
+}
+
+.third {
+  transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+  transition-delay: .6s;
+
+}
+
+.fourth {
+  transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+  transition-delay: .8s;
+}
+
+.fifth {
+  transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+  transition-delay: 1s;
+}
+
 .animated {
   transform: translateY(0);
   opacity: 1;
-  transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
 }
 
 .description {
