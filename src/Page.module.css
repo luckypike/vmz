@@ -48,9 +48,14 @@
 }
 
 .block {
+  display: flex;
   composes: small from './Fonts.module.css';
   margin-bottom: calc(var(--yr) * var(--s2));
   color: #727272;
+
+  & .index {
+    margin-right: 8px;
+  }
 
   @media(--l) {
     grid-column: span 16;

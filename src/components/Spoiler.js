@@ -39,7 +39,6 @@ export default function App ({ second, third, fouth, fifth, title, text }) {
       </div>
 
         <div className={classNames(styles.spoiler, {[styles.second]: second, [styles.third]: third, [styles.fouth]: fouth, [styles.fifth]: fifth, [styles.blur]: active })}  onClick={() => [setActive(true), setSpoiler(!spoiler)]}>
-          <div className={styles.gg} />
           <div className={classNames(styles.title, fonts.h3)}>
             {title}
           </div>

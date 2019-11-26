@@ -1,6 +1,6 @@
 .root {
   grid-column: span 16;
-  margin-bottom: calc(var(--yr) * calc(var(--s3) * 2));
+  /* margin-bottom: calc(var(--yr) * calc(var(--s3) * 2)); */
 }
 
 .schedule {

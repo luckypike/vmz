@@ -94,6 +94,8 @@
 }
 
 .worldwide {
+  display: block;
+
   @media(--l) {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
@@ -101,6 +103,15 @@
 }
 
 .world {
+
+  & .title {
+    margin-bottom: 16px;
+  }
+
+  & .text {
+    margin-bottom: 16px;
+  }
+
   @media(--l) {
     grid-column: 4 / 12;
     margin-bottom: calc(var(--yr) * calc(var(--s3) * 2));
@@ -112,6 +123,51 @@
 }
 
 .pics {
+  display: block;
+
+  & .rgd, & .pipe {
+    margin-bottom: 32px;
+
+    & .image {
+      display: block;
+      background-image: url('./images/train.svg');
+      background-repeat: no-repeat;
+      margin-bottom: calc(var(--yr) * var(--s3));
+
+      &:before {
+        display: block;
+        content: '';
+        height: 95px;
+        width: 100%;
+      }
+    }
+
+    & .title {
+      display: flex;
+      align-items: center;
+      color: #E7422E;
+      border-bottom: 2px solid #E8E8E8;
+    }
+    & .desc {
+      display: flex;
+      margin-top: calc(var(--yr) * 2);
+      margin-bottom: calc(var(--yr) * var(--s3));
+      color: #141414;
+      align-items: center;
+
+      & .km {
+        margin-right: calc(var(--yr) * var(--s2));
+      }
+    }
+  }
+
+  & .pipe {
+    & .image {
+      background-image: url('./images/world.svg');
+      background-size: cover;
+    }
+}
+
   @media(--l) {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
@@ -119,7 +175,7 @@
     & .rgd, & .pipe {
       grid-column: 4 / 9;
 
-      & .image {
+      /* & .image {
         display: block;
         background-image: url('./images/train.svg');
         background-repeat: no-repeat;
@@ -131,7 +187,7 @@
           height: 95px;
           width: 100%;
         }
-      }
+      } */
 
       & .title {
         display: flex;
@@ -145,7 +201,7 @@
         }
       }
 
-      & .desc {
+      /* & .desc {
         display: flex;
         margin-top: calc(var(--yr) * 2);
         margin-bottom: calc(var(--yr) * var(--s3));
@@ -155,20 +211,28 @@
         & .km {
           margin-right: calc(var(--yr) * var(--s2));
         }
-      }
+      } */
     }
 
     & .pipe {
       grid-column: 10 / 15;
 
-      & .image {
+      /* & .image {
         background-image: url('./images/world.svg');
-      }
+      } */
     }
   }
 }
 
 .pipes {
+  display: block;
+  position: relative;
+
+  & .baltic {
+    margin-bottom: 16px;
+  }
+
+
   @media(--l) {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
@@ -205,8 +269,9 @@
   position: relative;
   height: 400px;
   background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
+  background-position: center;
+  background-size: contain;
+  margin: 0 calc(-1 * var(--xr));
 
   @media(--s) {
     height: auto;
@@ -255,6 +320,21 @@
 }
 
 .single {
+  display: block;
+
+  & .image {
+    margin: 0 calc(-1 * var(--xr));
+    background: url('./images/people.jpg') no-repeat;
+    background-size: cover;
+
+    &:before {
+      display: block;
+      content: '';
+      width: 100%;
+      padding-top: calc(1 / 2 * 100%);
+    }
+  }
+
   @media(--l) {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
@@ -264,6 +344,7 @@
       grid-column: 1 / span 11;
       background: url('./images/people.jpg') no-repeat;
       background-size: cover;
+      margin: 0;
 
       &:before {
         display: block;

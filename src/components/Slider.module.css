@@ -8,7 +8,10 @@
 }
 
 .glide {
-  margin-bottom: 128px;
+  margin: 0;
+  @media(--l) {
+    margin-bottom: 128px;
+  }
 }
 
 .image {
@@ -146,11 +149,15 @@
 }
 
 .bullets {
-  margin-left: calc(3 / 16 * 100%);
-  margin-right: calc(2 / 16 * 100%);
-  display: flex;
-  width: calc(11 / 16 * 100%);
-  align-items: center;
+  display: none;
+
+  @media(--l) {
+    margin-left: calc(3 / 16 * 100%);
+    margin-right: calc(2 / 16 * 100%);
+    display: flex;
+    width: calc(11 / 16 * 100%);
+    align-items: center;
+  }
 }
 
 .control {
