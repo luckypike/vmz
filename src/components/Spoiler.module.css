@@ -88,7 +88,7 @@
   margin-bottom: calc(var(--yr) * calc(var(--s3) * 2));
   background-color: #FAFAFA;
   height: 468px;
-  background: url('../images/spoiler_1.jpg') no-repeat bottom;
+  background: url('../images/spoiler/spoiler_1.jpg') no-repeat bottom;
   background-size: cover;
   cursor: pointer;
   width: 100%;
@@ -97,22 +97,22 @@
   position: relative;
 
   &.second {
-    background-image: url('../images/spoiler_2.jpg');
+    background-image: url('../images/spoiler/spoiler_2.jpg');
     background-position: center;
   }
 
   &.third {
-    background-image: url('../images/spoiler_3.jpg');
+    background-image: url('../images/spoiler/spoiler_3.jpg');
     background-position: center 15%;
   }
 
   &.fouth {
-    background-image: url('../images/spoiler_4.jpg');
+    background-image: url('../images/spoiler/spoiler_4.jpg');
     background-position: center;
   }
 
   &.fifth {
-    background-image: url('../images/spoiler_5.jpg');
+    background-image: url('../images/spoiler/spoiler_5.jpg');
     background-position: center 25%;
   }
 
@@ -191,22 +191,22 @@
 
 .image {
   height: 35%;
-  background: url('../images/spoiler_1.jpg') no-repeat center center;
+  background: url('../images/spoiler/spoiler_1.jpg') no-repeat center center;
   background-size: cover;
   margin-bottom: 10%;
   position: relative;
 
   &.second {
-    background-image: url('../images/spoiler_2.jpg');
+    background-image: url('../images/spoiler/spoiler_2.jpg');
   }
   &.third {
-    background-image: url('../images/spoiler_3.jpg');
+    background-image: url('../images/spoiler/spoiler_3.jpg');
   }
   &.fouth {
-    background-image: url('../images/spoiler_4.jpg');
+    background-image: url('../images/spoiler/spoiler_4.jpg');
   }
   &.fifth {
-    background-image: url('../images/spoiler_5.jpg');
+    background-image: url('../images/spoiler/spoiler_5.jpg');
   }
 
   @media(--l) {
