@@ -55,59 +55,38 @@
   order: -1;
 
   &.first {
-    width: 4px;
+    width: 30%;
     transform: translateY(0);
     transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
     transition-delay: .2s;
   }
 
   &.second {
-    width: 14px;
+    width: 60%;
     transform: translateY(0);
     transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
     transition-delay: .4s;
   }
 
   &.third {
-    width: 36px;
+    width: 50%;
     transform: translateY(0);
     transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
     transition-delay: .6s;
   }
 
   &.fourth {
-    width: 77px;
+    width: 15%;
     transform: translateY(0);
     transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
     transition-delay: .8s;
   }
 
   &.fifth {
-    width: 108px;
+    width: 10%;
     transform: translateY(0);
     transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
     transition-delay: 1s;
-  }
-
-  &.sixth {
-    width: 96px;
-    transform: translateY(0);
-    transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
-    transition-delay: 1.2s;
-  }
-
-  &.seventh {
-    width: 168px;
-    transform: translateY(0);
-    transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
-    transition-delay: 1.4s;
-  }
-
-  &.eighth {
-    width: 120px;
-    transform: translateY(0);
-    transition: all 3s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
-    transition-delay: 1.6s;
   }
 
   @media(--l) {

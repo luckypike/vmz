@@ -13,6 +13,7 @@ font-weight: var(--fw_bold);
 h2, .h2 {
   font-size: calc(var(--yr) * calc(var(--fs) + 5));
   line-height: calc(var(--yr) * calc(var(--lh) + 3.5));
+  font-weight: var(--fw_bold);
 
   @media(--s) {
     line-height: calc(var(--yr) * calc(var(--lh) + 4.5));

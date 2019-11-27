@@ -26,6 +26,12 @@
 }
 
 .salary {
+  display: block;
+
+  & .salary_2003, & .salary_2019 {
+    margin-bottom: 32px;
+  }
+
   @media(--l) {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
@@ -45,55 +51,97 @@
 
 .worker_1, .worker_2, .worker_3, .worker_4 {
   position: absolute;
-  background-image: url('../images/worker_1.svg');
+  background: url('../images/worker_1.svg');
   background-repeat: no-repeat;
-  height: auto;
-  width: 100%;
+  height: 100%;
 }
 
 .placeholder {
   grid-column: span 5;
-  height: 352px;
   position: relative;
   margin-bottom: 16px;
+
+    &:before {
+    display: block;
+    content: '';
+    padding-top: 90%;
+  }
+  @media(--l) {
+    &:before {
+      padding-top: 80%;
+    }
+  }
 }
 
 .worker_1 {
-  top: 36px;
-  left: 29%;
   width: 90px;
-  height: 279px;
+  top: 10%;
+  left: 25%;
+
+  @media(--l) {
+    top: 36px;
+    left: 29%;
+    width: 90px;
+  }
 }
 
 .worker_2 {
-  height: 352px;
-  left: 50%;
   width: 114px;
+  top: 0;
+  right: 20%;
   background-image: url('../images/worker_2.svg');
+
+  @media(--l) {
+    left: 50%;
+  }
 }
 
 .worker_3 {
-  left: 20%;
-  top: 36px;
   width: 84px;
-  height: 280px;
   background-image: url('../images/worker_3.svg');
+  top: 10%;
+  left: 20%;
+
+  @media(--l) {
+    left: 20%;
+    top: 36px;
+  }
 }
 
 .worker_4 {
-  height: 340px;
   width: 167px;
   background-image: url('../images/worker_4.svg');
-  right: 23%;
   top: 0;
+  right: 15%;
+
+  @media(--l) {
+    right: 23%;
+    top: 0;
+  }
+}
+
+.money {
+  display: flex;
+
+  @media(--l) {
+    grid-column: span 5;
+  }
 }
 
 .nn {
   transform: translateY(16px);
   transition: all 1.6s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
   text-align: right;
-  grid-column: 1 / 3;
   opacity: 0;
+  margin-right: calc(var(--yr) * calc(var(--s2) * 2));
+
+  @media(--l) {
+    transform: translateY(16px);
+    transition: all 1.6s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s;
+    text-align: right;
+    grid-column: 1 / 3;
+    opacity: 0;
+  }
 }
 
 .vyksa {
