@@ -11,21 +11,34 @@ font-weight: var(--fw_bold);
 }
 
 h2, .h2 {
-font-size: calc(var(--yr) * calc(var(--fs) + 5));
-line-height: calc(var(--yr) * calc(var(--lh) + 4.5));
-font-weight: var(--fw_bold);
+  font-size: calc(var(--yr) * calc(var(--fs) + 5));
+  line-height: calc(var(--yr) * calc(var(--lh) + 3.5));
+
+  @media(--s) {
+    line-height: calc(var(--yr) * calc(var(--lh) + 4.5));
+    font-weight: var(--fw_bold);
+  }
 }
 
 h3, .h3 {
-font-size: calc(var(--yr) * calc(var(--fs) + 3));
-line-height: calc(var(--yr) * calc(var(--lh) + 2.5));
-font-weight: var(--fw_normal);
+  font-size: calc(var(--yr) * calc(var(--fs) + 3));
+  line-height: calc(var(--yr) * calc(var(--lh) + 1.5));
+
+  @media(--s) {
+    line-height: calc(var(--yr) * calc(var(--lh) + 2.5));
+    font-weight: var(--fw_normal);
+  }
 }
 
 h4, .h4 {
-font-size: calc(var(--yr) * calc(var(--fs) + 1));
-line-height: calc(var(--yr) * calc(var(--lh) + 0.5));
-font-weight: var(--fw_bold);
+  font-size: calc(var(--yr) * calc(var(--fs) + 2));
+  line-height: calc(var(--yr) * calc(var(--lh) + 0.5));
+
+  @media(--s) {
+    font-size: calc(var(--yr) * calc(var(--fs) + 1));
+    /* line-height: calc(var(--yr) * calc(var(--lh) + 0.5)); */
+    font-weight: var(--fw_bold);
+  }
 }
 
 h5, .h5 {
@@ -39,14 +52,24 @@ font-weight: var(--fw_bold);
 }
 
 .small {
-font-size: calc(var(--yr) * calc(var(--fs) - 1.5));
-line-height: calc(var(--yr) * calc(var(--lh) - 2.5));
+  font-size: calc(var(--yr) * var(--fs));
+  line-height: calc(var(--yr) * calc(var(--lh) - 1));
+
+  @media(--s) {
+    font-size: calc(var(--yr) * calc(var(--fs) - 1.5));
+    line-height: calc(var(--yr) * calc(var(--lh) - 2.5));
+  }
 }
 
 .intro {
-font-size: calc(var(--yr) * calc(var(--fs) + 1));
-line-height: calc(var(--yr) * calc(var(--lh) + 0.5));
-font-weight: var(--fw_normal);
+  font-size: calc(var(--yr) * calc(var(--fs) + 1.5));
+  line-height: calc(var(--yr) * calc(var(--lh) + 2.5));
+
+  @media(--s) {
+    font-size: calc(var(--yr) * calc(var(--fs) + 1));
+    line-height: calc(var(--yr) * calc(var(--lh) + 0.5));
+    font-weight: var(--fw_normal);
+  }
 }
 
 h1 {

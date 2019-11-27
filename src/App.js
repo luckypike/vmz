@@ -32,7 +32,7 @@ export default function App() {
 
       <section className={page.section}>
         <div className={styles.intro}>
-          <div className={styles.text}>
+          <div className={classNames(styles.text, fonts.intro)}>
             Выкса сегодня хорошо известна как индустриальный и культурный центр России: здесь современная промышленность и актуальное искусство дополняют и развивают друг друга. Такой статус города формировался последние 20 лет, с тех пор как в ноябре 1999 года Выксунский металлургический завод вошел в состав Объединенной металлургической компании.
           </div>
           <div className={styles.wrapper}>

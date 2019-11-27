@@ -9,8 +9,12 @@ body {
   background: #fff;
   color: #212121;
   font-family: 'Open Sans', sans-serif;
-  font-size: calc(var(--yr) * var(--fs));
+  font-size: calc(var(--yr) * calc(var(--fs) + 1));
   line-height: calc(var(--yr) * calc(var(--lh) + 0.5));
+
+  @media(--s) {
+    font-size: calc(var(--yr) * var(--fs));
+  }
 }
 
 a {
