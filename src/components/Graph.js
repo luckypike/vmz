@@ -29,8 +29,8 @@ export default function Graph () {
 
         <div className={styles.indicators}>
           <div className={classNames(styles.sum, styles.first, {[styles.animated]: visible })}>
-            <CountUp end={visible ? 80 : 0} />
-            <div className={fonts.small}>млрд руб.</div>
+            <CountUp className={styles.num} end={visible ? 80 : 0} />
+            <div className={classNames(fonts.small, styles.rub)}>млрд руб.</div>
           </div>
 
           <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.first]: visible })} />
@@ -48,8 +48,8 @@ export default function Graph () {
 
         <div className={styles.indicators}>
           <div className={classNames(styles.sum, styles.second, {[styles.animated]: visible })}>
-            <CountUp decimals={1} decimal="," end={visible ? 244.5 : 0} duration={2} />
-            <div className={fonts.small}>млрд руб.</div>
+            <CountUp className={styles.num} decimals={1} decimal="," end={visible ? 244.5 : 0} duration={2} />
+            <div className={classNames(fonts.small, styles.rub)}>млрд руб.</div>
           </div>
 
           <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.second]: visible })} />
@@ -68,8 +68,8 @@ export default function Graph () {
         <VisibilitySensor delayedCall onChange={onVisibilityChange} offset={{ top: 50 }}>
           <div className={styles.indicators}>
             <div className={classNames(styles.sum, styles.third, {[styles.animated]: visible })}>
-              <CountUp end={visible ? 199 : 0} duration={3} />
-              <div className={fonts.small}>млрд руб.</div>
+              <CountUp className={styles.num} end={visible ? 199 : 0} duration={3} />
+              <div className={classNames(fonts.small, styles.rub)}>млрд руб.</div>
             </div>
 
             <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.third]: visible })} />
@@ -88,8 +88,8 @@ export default function Graph () {
 
         <div className={styles.indicators}>
           <div className={classNames(styles.sum, styles.fourth, {[styles.animated]: visible })}>
-            <CountUp end={visible ? 35 : 0} duration={4} />
-            <div className={fonts.small}>млрд руб.</div>
+            <CountUp className={styles.num} end={visible ? 35 : 0} duration={4} />
+            <div className={classNames(fonts.small, styles.rub)}>млрд руб.</div>
           </div>
 
           <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.fourth]: visible })} />
@@ -107,8 +107,8 @@ export default function Graph () {
 
         <div className={styles.indicators}>
           <div className={classNames(styles.sum, styles.fifth, {[styles.animated]: visible })}>
-            <CountUp end={visible ? 13 : 0} duration={4} />
-            <div className={fonts.small}>млрд руб.</div>
+            <CountUp className={styles.num} end={visible ? 13 : 0} duration={4} />
+            <div className={classNames(fonts.small, styles.rub)}>млрд руб.</div>
           </div>
 
           <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.fifth]: visible })} />

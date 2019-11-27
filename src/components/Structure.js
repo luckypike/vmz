@@ -19,15 +19,13 @@ export default function Structure () {
   return(
     <div className={styles.root}>
       <div className={styles.schedule}>
-        <VisibilitySensor delayedCall>
-          <div className={styles.vrp}>
-            <div className={classNames(styles.percent, fonts.h4, {[styles.animated]: visible })}>
-              <CountUp start={0} end={visible ? 26 : 0} duration={2} delay={1} suffix=" %" />
-            </div>
-
-            <div className={classNames(styles.indicator, {[styles.first]: visible}, {[styles.animated]: visible })} />
+        <div className={styles.vrp}>
+          <div className={classNames(styles.percent, fonts.h4, {[styles.animated]: visible })}>
+            <CountUp start={0} end={visible ? 26 : 0} duration={2} delay={1} suffix=" %" />
           </div>
-        </VisibilitySensor>
+
+          <div className={classNames(styles.indicator, {[styles.first]: visible}, {[styles.animated]: visible })} />
+        </div>
 
         <div className={classNames(styles.description, fonts.small)}>
           ООО «Лукойл Нижегороднефтесинтез»
@@ -35,15 +33,13 @@ export default function Structure () {
       </div>
 
       <div className={styles.schedule}>
-        <VisibilitySensor delayedCall>
-          <div className={styles.vrp}>
-            <div className={classNames(styles.percent, fonts.h4, {[styles.animated]: visible })}>
-              <CountUp start={0} end={visible ? 10 : 0} duration={2} delay={1} suffix=" %" />
-            </div>
-
-            <div className={classNames(styles.indicator, {[styles.second]: visible}, {[styles.animated]: visible })} />
+        <div className={styles.vrp}>
+          <div className={classNames(styles.percent, fonts.h4, {[styles.animated]: visible })}>
+            <CountUp start={0} end={visible ? 10 : 0} duration={2} delay={1} suffix=" %" />
           </div>
-        </VisibilitySensor>
+
+          <div className={classNames(styles.indicator, {[styles.second]: visible}, {[styles.animated]: visible })} />
+        </div>
 
         <div className={classNames(styles.description, fonts.small)}>
           АО «Выксунский металлургический завод»
@@ -51,15 +47,13 @@ export default function Structure () {
       </div>
 
       <div className={styles.schedule}>
-        <VisibilitySensor delayedCall>
-          <div className={styles.vrp}>
-            <div className={classNames(styles.percent, fonts.h4, {[styles.animated]: visible })}>
-              <CountUp start={0} end={visible ? 6 : 0} duration={2} delay={1} suffix=" %" />
-            </div>
-
-            <div className={classNames(styles.indicator, {[styles.third]: visible}, {[styles.animated]: visible })} />
+        <div className={styles.vrp}>
+          <div className={classNames(styles.percent, fonts.h4, {[styles.animated]: visible })}>
+            <CountUp start={0} end={visible ? 6 : 0} duration={2} delay={1} suffix=" %" />
           </div>
-        </VisibilitySensor>
+
+          <div className={classNames(styles.indicator, {[styles.third]: visible}, {[styles.animated]: visible })} />
+        </div>
 
         <div className={classNames(styles.description, fonts.small)}>
           ООО «Автозавод ГАЗ»
@@ -67,15 +61,13 @@ export default function Structure () {
       </div>
 
       <div className={styles.schedule}>
-        <VisibilitySensor delayedCall>
-          <div className={styles.vrp}>
-            <div className={classNames(styles.percent, fonts.h4, {[styles.animated]: visible })}>
-              <CountUp start={0} end={visible ? 3 : 0} duration={2} delay={1} suffix=" %" />
-            </div>
-
-            <div className={classNames(styles.indicator, {[styles.fourth]: visible}, {[styles.animated]: visible })} />
+        <div className={styles.vrp}>
+          <div className={classNames(styles.percent, fonts.h4, {[styles.animated]: visible })}>
+            <CountUp start={0} end={visible ? 3 : 0} duration={2} delay={1} suffix=" %" />
           </div>
-        </VisibilitySensor>
+
+          <div className={classNames(styles.indicator, {[styles.fourth]: visible}, {[styles.animated]: visible })} />
+        </div>
 
         <div className={classNames(styles.description, fonts.small)}>
           ПАО «ГАЗ»
@@ -83,15 +75,13 @@ export default function Structure () {
       </div>
 
       <div className={styles.schedule}>
-        <VisibilitySensor delayedCall>
-          <div className={styles.vrp}>
-            <div className={classNames(styles.percent, fonts.h4, {[styles.animated]: visible })}>
-              <CountUp start={0} end={visible ? 2 : 0} duration={2} delay={1} suffix=" %" />
-            </div>
-
-            <div className={classNames(styles.indicator, {[styles.fifth]: visible}, {[styles.animated]: visible })} />
+        <div className={styles.vrp}>
+          <div className={classNames(styles.percent, fonts.h4, {[styles.animated]: visible })}>
+            <CountUp start={0} end={visible ? 2 : 0} duration={2} delay={1} suffix=" %" />
           </div>
-        </VisibilitySensor>
+
+          <div className={classNames(styles.indicator, {[styles.fifth]: visible}, {[styles.animated]: visible })} />
+        </div>
 
         <div className={classNames(styles.description, fonts.small)}>
           ООО «Павловский автобус»
@@ -115,15 +105,13 @@ export default function Structure () {
       </div>
 
       <div className={styles.schedule}>
-        <VisibilitySensor delayedCall>
-          <div className={styles.vrp}>
-            <div className={classNames(styles.percent, fonts.h4, {[styles.animated]: visible })}>
-              <CountUp start={0} end={visible ? 1 : 0} duration={2} delay={1} suffix=" %" />
-            </div>
-
-            <div className={classNames(styles.indicator, {[styles.seventh]: visible}, {[styles.animated]: visible })} />
+        <div className={styles.vrp}>
+          <div className={classNames(styles.percent, fonts.h4, {[styles.animated]: visible })}>
+            <CountUp start={0} end={visible ? 1 : 0} duration={2} delay={1} suffix=" %" />
           </div>
-        </VisibilitySensor>
+
+          <div className={classNames(styles.indicator, {[styles.seventh]: visible}, {[styles.animated]: visible })} />
+        </div>
 
         <div className={classNames(styles.description, fonts.small)}>
           ПАО «Русполимет»
@@ -131,22 +119,18 @@ export default function Structure () {
       </div>
 
       <div className={styles.schedule}>
-        <VisibilitySensor delayedCall>
-          <div className={styles.vrp}>
-            <div className={classNames(styles.other, fonts.h4, {[styles.animated]: visible })}>
-              <CountUp start={0} end={visible ? 50 : 0} duration={2} delay={1} suffix=" %" />
-            </div>
-
-            <div className={classNames(styles.indicator, {[styles.eighth]: visible}, {[styles.animated]: visible })} />
+        <div className={styles.vrp}>
+          <div className={classNames(styles.other, fonts.h4, {[styles.animated]: visible })}>
+            <CountUp start={0} end={visible ? 50 : 0} duration={2} delay={1} suffix=" %" />
           </div>
-        </VisibilitySensor>
+
+          <div className={classNames(styles.indicator, {[styles.eighth]: visible}, {[styles.animated]: visible })} />
+        </div>
 
         <div className={classNames(styles.description, fonts.small)}>
           Остальные
         </div>
       </div>
-
-
     </div>
   )
 }

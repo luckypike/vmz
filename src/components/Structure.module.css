@@ -1,11 +1,18 @@
 .root {
-  margin-bottom: 32px;
+  margin-bottom: calc(var(--yr) * var(--s3));
+
+  @media(--l) {
+    margin-bottom: 32px;
+  }
 }
 
 .schedule {
+  margin-bottom: var(--yr);
+
   @media(--l) {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 0;
 
     &:last-child {
       margin: 0;
@@ -14,16 +21,26 @@
 }
 
 .percent {
-  color: #E7422E;
-  grid-column: 1;
+  width: 15%;
   transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
   opacity: 0;
+  color: #E7422E;
+
+  @media(--l) {
+    width: auto;
+    grid-column: 1;
+  }
 }
 
 .other {
-  grid-column: 1;
+  width: 15%;
   transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
   opacity: 0;
+
+  @media(--l) {
+    width: auto;
+    grid-column: 1;
+  }
 }
 
 .indicator {
@@ -78,9 +95,13 @@
 }
 
 .vrp {
-  grid-column: span 3;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+
+  @media(--l) {
+    display: grid;
+    grid-column: span 3;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .description {

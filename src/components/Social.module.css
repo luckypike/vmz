@@ -1,4 +1,14 @@
 .social {
+  display: block;
+
+  & .title {
+    margin-bottom: calc(var(--yr) * calc(var(--s3)));
+  }
+
+  & .text {
+    margin-bottom: calc(var(--yr) * calc(var(--s3)));
+  }
+
   @media(--l) {
     display: grid;
     grid-template-columns: repeat(16, 1fr);

@@ -315,12 +315,9 @@
   }
 }
 
-.blur {
-  filter: blur(10px);
-}
-
 .single {
   display: block;
+  position: relative;
 
   & .image {
     margin: 0 calc(-1 * var(--xr));
@@ -338,20 +335,10 @@
   @media(--l) {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    position: relative;
 
     & .image {
       grid-column: 1 / span 11;
-      background: url('./images/people.jpg') no-repeat;
-      background-size: cover;
       margin: 0;
-
-      &:before {
-        display: block;
-        content: '';
-        width: 100%;
-        padding-top: calc(1 / 2 * 100%);
-      }
     }
   }
 }

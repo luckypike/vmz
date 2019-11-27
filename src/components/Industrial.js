@@ -13,7 +13,7 @@ export default function Industrial() {
       <div className={page.block}>
         <div className={page.index}>02</div>
         <div className={page.description}>
-          Как ВМЗ влияет на регион присутствия
+          Передовики производства
         </div>
       </div>
 
