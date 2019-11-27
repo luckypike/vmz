@@ -30,8 +30,8 @@ export default function Schedule () {
 
         <div className={styles.indicators}>
           <div className={classNames(styles.sum, styles.first, {[styles.animated]: visible })}>
-            <CountUp decimals={1} decimal="," end={visible ? 1.6 : 0} />
-            <div className={fonts.small}>млрд руб.</div>
+            <CountUp className={styles.num} decimals={1} decimal="," end={visible ? 1.6 : 0} />
+            <div className={classNames(fonts.small, styles.rub)}>млрд руб.</div>
           </div>
 
           <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.first]: visible })} />
@@ -49,8 +49,8 @@ export default function Schedule () {
 
         <div className={styles.indicators}>
           <div className={classNames(styles.sum, styles.second, {[styles.animated]: visible })}>
-            <CountUp decimals={1} decimal="," end={visible ? 5.7 : 0} duration={3} />
-            <div className={fonts.small}>млрд руб.</div>
+            <CountUp className={styles.num} decimals={1} decimal="," end={visible ? 5.7 : 0} duration={3} />
+            <div className={classNames(fonts.small, styles.rub)}>млрд руб.</div>
           </div>
 
           <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.second]: visible })} />
@@ -68,8 +68,8 @@ export default function Schedule () {
 
         <div className={styles.indicators}>
           <div className={classNames(styles.sum, styles.third, {[styles.animated]: visible })}>
-            <CountUp end={visible ? 15 : 0} duration={4} />
-            <div className={fonts.small}>млрд руб.</div>
+            <CountUp className={styles.num} end={visible ? 15 : 0} duration={4} />
+            <div className={classNames(fonts.small, styles.rub)}>млрд руб.</div>
           </div>
 
           <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.third]: visible })} />
@@ -87,8 +87,8 @@ export default function Schedule () {
 
         <div className={styles.indicators}>
           <div className={classNames(styles.sum, styles.fourth, {[styles.animated]: visible })}>
-            <CountUp end={visible ? 32 : 0} duration={4} />
-            <div className={fonts.small}>млрд руб.</div>
+            <CountUp className={styles.num} end={visible ? 32 : 0} duration={4} />
+            <div className={classNames(fonts.small, styles.rub)}>млрд руб.</div>
           </div>
 
           <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.fourth]: visible })} />
@@ -106,8 +106,8 @@ export default function Schedule () {
 
         <div className={styles.indicators}>
           <div className={classNames(styles.sum, styles.fifth, {[styles.animated]: visible })}>
-            <CountUp end={visible ? 45 : 0} duration={4} />
-            <div className={fonts.small}>млрд руб.</div>
+            <CountUp className={styles.num} end={visible ? 45 : 0} duration={4} />
+            <div className={classNames(fonts.small, styles.rub)}>млрд руб.</div>
           </div>
 
           <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.fifth]: visible })} />
@@ -125,8 +125,8 @@ export default function Schedule () {
 
         <div className={styles.indicators}>
           <div className={classNames(styles.sum, styles.sixth, {[styles.animated]: visible })}>
-            <CountUp end={visible ? 40 : 0} duration={4} />
-            <div className={fonts.small}>млрд руб.</div>
+            <CountUp className={styles.num} end={visible ? 40 : 0} duration={4} />
+            <div className={classNames(fonts.small, styles.rub)}>млрд руб.</div>
           </div>
 
           <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.sixth]: visible })} />
@@ -145,8 +145,8 @@ export default function Schedule () {
         <VisibilitySensor delayedCall onChange={onVisibilityChange} offset={{ top: 50 }}>
           <div className={styles.indicators}>
             <div className={classNames(styles.sum, styles.seventh, {[styles.animated]: visible })}>
-              <CountUp end={visible ? 70 : 0} duration={4} />
-              <div className={fonts.small}>млрд руб.</div>
+              <CountUp className={styles.num} end={visible ? 70 : 0} duration={4} />
+              <div className={classNames(fonts.small, styles.rub)}>млрд руб.</div>
             </div>
 
             <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.seventh]: visible })} />
@@ -165,8 +165,8 @@ export default function Schedule () {
 
         <div className={styles.indicators}>
           <div className={classNames(styles.sum, styles.eighth, {[styles.animated]: visible })}>
-            <CountUp end={visible ? 50 : 0} duration={4} />
-            <div className={fonts.small}>млрд руб.</div>
+            <CountUp className={styles.num} end={visible ? 50 : 0} duration={4} />
+            <div className={classNames(fonts.small, styles.rub)}>млрд руб.</div>
           </div>
 
           <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.eighth]: visible })} />

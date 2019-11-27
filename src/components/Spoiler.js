@@ -27,9 +27,10 @@ export default function App ({ second, third, fouth, fifth, title, text }) {
                 <line x1="1" y1="15" x2="15" y2="1" />
               </svg>
             </div>
-          </div>
-          <div className={classNames(styles.title, fonts.h2)}>
-            {title}
+
+            <div className={classNames(styles.title, fonts.h2)}>
+              {title}
+            </div>
           </div>
 
           <div className={classNames(styles.text)}>
