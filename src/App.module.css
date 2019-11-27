@@ -147,7 +147,13 @@
       align-items: center;
       color: #E7422E;
       border-bottom: 2px solid #E8E8E8;
+
+      & .mln {
+        margin-right: calc(var(--yr) * var(--s2));
+        margin-bottom: calc(var(--yr) * 2);
+      }
     }
+
     & .desc {
       display: flex;
       margin-top: calc(var(--yr) * 2);
