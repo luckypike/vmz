@@ -206,7 +206,7 @@ export default function Slider () {
           </div>
         </div>
 
-        <div className={classNames(styles.bullets, "glide__bullets")} data-glide-el="controls[nav]">
+        <div className={styles.bullets}>
           <div className={styles.buttons} data-glide-el="controls">
             <div className={styles.prev} data-glide-dir="<">
               <svg width="34" height="18" viewBox="0 0 34 18" fill="none" xmlns="http://www.w3.org/2000/svg">
