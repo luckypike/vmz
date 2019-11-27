@@ -10,7 +10,7 @@
   }
 }
 
-.section {
+/* .section {
   margin: calc(var(--yr) * 9) 0;
 
   @media(--s) {
@@ -20,7 +20,7 @@
   @media(--l) {
     margin: calc(var(--yr) * 24) 0;
   }
-}
+} */
 
 .text {
   composes: h0 from './Fonts.module.css';
@@ -37,7 +37,7 @@
   }
 
   @media(--m) {
-    bottom: calc(var(--yr) * 32);
+    bottom: calc(var(--yr) * calc(var(--s3) * 4));
   }
 
   @media(--l) {

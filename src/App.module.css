@@ -59,7 +59,7 @@
     & .logo {
       width: 90px;
       height: 95px;
-      margin-bottom: 16px;
+      margin-bottom: calc(var(--yr) * var(--s2));
     }
 
     & .link {
@@ -71,16 +71,16 @@
   @media(--l) {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
+    margin: calc(var(--yr) * calc(var(--s3) * 4)) 0;
+
 
     & .text {
       grid-column: 4 / 12;
+      margin-bottom: 0;
     }
 
     & .wrapper {
       grid-column: 13 / 15;
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 180px;
 
       & .link {
         grid-column: 13 / 15;
@@ -118,6 +118,10 @@
 
     & .title {
       margin-bottom: calc(var(--yr) * var(--s3));
+    }
+
+    & .text {
+      margin-bottom: 0;
     }
   }
 }
