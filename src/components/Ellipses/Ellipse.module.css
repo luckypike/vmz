@@ -1,0 +1,100 @@
+.ellipse1 {
+  position: relative;
+  grid-column: 1 / 6;
+  margin: 0 auto;
+  height: 360px;
+  z-index: -1;
+  margin-bottom: calc(var(--yr) * var(--s2));
+
+  & > svg {
+    height: 100%;
+    width: 100%;
+    transform: rotate(-90deg);
+
+  & > circle {
+      stroke-dasharray: 1200;
+      stroke-dashoffset: 1200;
+      animation: dash 1s linear forwards;
+      animation-play-state: paused;
+    }
+  }
+}
+
+.ellipse2 {
+  & > svg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: calc(var(--yr) * 2);
+
+    & > path {
+      stroke-dasharray: 1200;
+      stroke-dashoffset: 1200;
+      animation: lodash 1s linear forwards;
+      animation-delay: 1s;
+      animation-play-state: paused;
+    }
+  }
+  & .dues {
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+    z-index: 2;
+  }
+
+  & .sum {
+    transform: translateY(16px);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1), transform 1s;
+    transition-delay: 1s;
+    margin-bottom: 8px;
+    color: #E7422E;
+    opacity: 0;
+  }
+
+  & .taxe {
+    transform: translateY(16px);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1), transform 1s;
+    color: #E7422E;
+    opacity: 0;
+    transition-delay: 1.2s;
+  }
+
+  & .desc {
+    transform: translateY(16px);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1), transform 1s;
+    margin-bottom: 32px;
+    opacity: 0;
+    transition-delay: 0.5s;
+  }
+
+  & .text {
+    transform: translateY(16px);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1), transform 1s;
+    text-align: center;
+    margin-bottom: 8px;
+    opacity: 0;
+    transition-delay: 0.7s;
+  }
+
+  & .animated {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes lodash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
