@@ -7,7 +7,7 @@
   margin-bottom: calc(var(--yr) * var(--s2));
 
   & > svg {
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
     transform: rotate(-90deg);
 
@@ -22,7 +22,7 @@
 
 .ellipse2 {
   & > svg {
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
     position: absolute;
     top: 0;
@@ -37,6 +37,7 @@
     }
   }
   & .dues {
+    min-width: 270px;
     top: 50%;
     position: absolute;
     left: 50%;

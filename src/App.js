@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react'
+import React, { useState } from 'react'
 import classNames from 'classnames'
-import AOS from 'aos'
+// import AOS from 'aos'
+import VisibilitySensor from 'react-visibility-sensor'
 
 import Spoiler from './components/Spoiler'
 import Slider from './components/Slider'
@@ -16,10 +17,13 @@ import fonts from './Fonts.module.css'
 import logo from './images/logo.svg'
 
 export default function App() {
+  const [visible, setVisible] = useState(false)
 
-  useEffect(() => {
-    AOS.init()
-  }, [])
+  const onVisibilityChange = isVisible => {
+    if (isVisible) {
+      setVisible(true)
+    }
+  }
 
   return (
     <div className={page.root}>
@@ -157,17 +161,19 @@ export default function App() {
 
           <Schedule />
 
-          <div className={styles.qwe}>
+          <div className={styles.investment}>
             <Investment />
           </div>
         </div>
       </section>
 
-      <section>
-        <div className={styles.single}>
-          <div className={styles.image} />
-        </div>
-      </section>
+      <VisibilitySensor delayedCall onChange={onVisibilityChange} offset={{ top: 50 }}>
+        <section>
+          <div className={classNames(styles.single, {[styles.animated]: visible})} >
+            <div className={styles.image} />
+          </div>
+        </section>
+      </VisibilitySensor>
 
       <Industrial />
 

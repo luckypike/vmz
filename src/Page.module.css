@@ -49,6 +49,7 @@
     grid-column: span 16;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
+    margin-bottom: calc(var(--yr) * var(--s2));
 
     & .index {
       grid-column: 3;

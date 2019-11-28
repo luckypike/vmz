@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import CountUp from 'react-countup'
 import VisibilitySensor from 'react-visibility-sensor'
 
-import page from '../Page.module.css'
+// import page from '../Page.module.css'
 import fonts from '../Fonts.module.css'
 import styles from './Schedule.module.css'
 
@@ -86,10 +86,12 @@ export default function Schedule () {
         </div>
 
         <div className={styles.indicators}>
-          <div className={classNames(styles.sum, styles.fourth, {[styles.animated]: visible })}>
-            <CountUp className={styles.num} end={visible ? 32 : 0} duration={4} />
-            <div className={classNames(fonts.small, styles.rub)}>млрд руб.</div>
-          </div>
+          <VisibilitySensor delayedCall onChange={onVisibilityChange} offset={{ top: 50 }}>
+            <div className={classNames(styles.sum, styles.fourth, {[styles.animated]: visible })}>
+              <CountUp className={styles.num} end={visible ? 32 : 0} duration={4} />
+              <div className={classNames(fonts.small, styles.rub)}>млрд руб.</div>
+            </div>
+          </VisibilitySensor>
 
           <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.fourth]: visible })} />
         </div>
@@ -142,16 +144,14 @@ export default function Schedule () {
           Расширение мощностей по выпуску стали с 1,5 до 3 млн тонн/год
         </div>
 
-        <VisibilitySensor delayedCall onChange={onVisibilityChange} offset={{ top: 50 }}>
-          <div className={styles.indicators}>
-            <div className={classNames(styles.sum, styles.seventh, {[styles.animated]: visible })}>
-              <CountUp className={styles.num} end={visible ? 70 : 0} duration={4} />
-              <div className={classNames(fonts.small, styles.rub)}>млрд руб.</div>
-            </div>
-
-            <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.seventh]: visible })} />
+        <div className={styles.indicators}>
+          <div className={classNames(styles.sum, styles.seventh, {[styles.animated]: visible })}>
+            <CountUp className={styles.num} end={visible ? 70 : 0} duration={4} />
+            <div className={classNames(fonts.small, styles.rub)}>млрд руб.</div>
           </div>
-        </VisibilitySensor>
+
+          <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.seventh]: visible })} />
+        </div>
       </div>
 
       <div className={styles.schedule}>

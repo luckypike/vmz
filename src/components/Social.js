@@ -49,17 +49,19 @@ export default function Industrial() {
         <div className={styles.salary}>
           <div className={styles.salary_2003}>
             <div className={styles.money}>
-              <div className={classNames(styles.nn, {[styles.animated]: visible })}>
-                <div className={styles.worker_1} />
+              <VisibilitySensor delayedCall onChange={onVisibilityChange} offset={{ top: 50 }}>
+                <div className={classNames(styles.nn, {[styles.animated]: visible })}>
+                  <div className={styles.worker_1} />
 
-                <div className={classNames(styles.sum_nn, fonts.h5)}>
-                  <CountUp decimals={1} decimal="," end={visible ? 4.2 : 0} duration={1.6} suffix=" тыс. руб."/>
-                </div>
+                  <div className={classNames(styles.sum_nn, fonts.h5)}>
+                    <CountUp decimals={1} decimal="," end={visible ? 4.2 : 0} duration={1.6} suffix=" тыс. руб."/>
+                  </div>
 
-                <div className={classNames(styles.desc, fonts.small)}>
-                  Средняя заработная плата в Нижегородской области в 2003 году
+                  <div className={classNames(styles.desc, fonts.small)}>
+                    Средняя заработная плата в Нижегородской области в 2003 году
+                  </div>
                 </div>
-              </div>
+              </VisibilitySensor>
 
               <div className={classNames(styles.vyksa, {[styles.animated]: visible })}>
                 <div className={styles.worker_2} />
@@ -77,7 +79,7 @@ export default function Industrial() {
 
           <div className={styles.salary_2019}>
             <div className={styles.money}>
-              <VisibilitySensor delayedCall onChange={onVisibilityChange} offset={{ top: 50 }}>
+
                 <div className={classNames(styles.nn, {[styles.animated]: visible })}>
                   <div className={styles.worker_3} />
 
@@ -89,7 +91,7 @@ export default function Industrial() {
                     Средняя заработная плата в Нижегородской области в 2019 году
                   </div>
                 </div>
-              </VisibilitySensor>
+
 
               <div className={classNames(styles.vyksa, {[styles.animated]: visible })}>
                 <div className={styles.worker_4} />

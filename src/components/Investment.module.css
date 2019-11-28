@@ -42,7 +42,7 @@
 
 .investment {
   display: none;
-  
+
   @media(--l) {
     display: block;
     margin-right: calc(3 / 16 * 100%);

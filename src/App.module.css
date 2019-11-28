@@ -181,20 +181,6 @@
     & .rgd, & .pipe {
       grid-column: 4 / 9;
 
-      /* & .image {
-        display: block;
-        background-image: url('./images/train.svg');
-        background-repeat: no-repeat;
-        margin-bottom: calc(var(--yr) * var(--s3));
-
-        &:before {
-          display: block;
-          content: '';
-          height: 95px;
-          width: 100%;
-        }
-      } */
-
       & .title {
         display: flex;
         align-items: center;
@@ -206,26 +192,10 @@
           margin-bottom: calc(var(--yr) * 2);
         }
       }
-
-      /* & .desc {
-        display: flex;
-        margin-top: calc(var(--yr) * 2);
-        margin-bottom: calc(var(--yr) * var(--s3));
-        color: #141414;
-        align-items: center;
-
-        & .km {
-          margin-right: calc(var(--yr) * var(--s2));
-        }
-      } */
     }
 
     & .pipe {
       grid-column: 10 / 15;
-
-      /* & .image {
-        background-image: url('./images/world.svg');
-      } */
     }
   }
 }
@@ -233,6 +203,7 @@
 .pipes {
   display: block;
   position: relative;
+  margin-bottom: calc(var(--yr) * var(--s3) * 2);
 
   & .baltic {
     margin-bottom: 16px;
@@ -242,11 +213,16 @@
     }
   }
 
+  & .stream {
+    margin-bottom:
+  }
+
   @media(--l) {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     position: relative;
     margin-top: -9%;
+    /* margin-bottom: calc(var(--yr) * var(--s3) * 2); */
 
     & .baltic {
       grid-column: 4 / 9;
@@ -323,6 +299,10 @@
 .single {
   display: block;
   position: relative;
+  transform: translateX(-100%);
+  transition: all 1.6s cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: 0;
+  margin-bottom: calc(var(--yr) * 23);
 
   & .image {
     margin: 0 calc(-1 * var(--xr));
@@ -348,6 +328,12 @@
   }
 }
 
-.qwe {
+.investment {
   grid-column: 4 / 15;
+  margin-bottom: calc(var(--yr) * calc(var(--s3) * 4));
+}
+
+.animated {
+  transform: translateX(0);
+  opacity: 1;
 }

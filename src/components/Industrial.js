@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classNames from 'classnames'
+import VisibilitySensor from 'react-visibility-sensor'
 
 import Structure from './Structure'
 import Ellipse from './Ellipses/Ellipse'
@@ -9,6 +10,13 @@ import page from '../Page.module.css'
 import fonts from '../Fonts.module.css'
 
 export default function Industrial() {
+  const [visible, setVisible] = useState(false)
+
+  const onVisibilityChange = isVisible => {
+    if (isVisible) {
+      setVisible(true)
+    }
+  }
   return (
     <div>
       <div className={page.block}>
@@ -29,6 +37,7 @@ export default function Industrial() {
       </div>
 
       <section>
+
         <div className={styles.graphs}>
           <div className={styles.structure}>
             <div className={styles.circle}>
@@ -52,12 +61,14 @@ export default function Industrial() {
 
             <Ellipse />
 
-            <div className={styles.description}>
-              Налоговые отчисления ВМЗ в бюджеты всех уровней за последние 20 лет составили около 75 млрд руб. За это время еще 21 млрд руб. предприятие перечислило в различные фонды. Таким образом размер общих отчислений ВМЗ составил 96 млрд руб.
-            </div>
+            <VisibilitySensor delayedCall onChange={onVisibilityChange} offset={{ top: 200 }}>
+              <div className={styles.description}>
+                Налоговые отчисления ВМЗ в бюджеты всех уровней за последние 20 лет составили около 75 млрд руб. За это время еще 21 млрд руб. предприятие перечислило в различные фонды. Таким образом размер общих отчислений ВМЗ составил 96 млрд руб.
+              </div>
+            </VisibilitySensor>
           </div>
 
-          <div className={styles.image} />
+          <div className={classNames(styles.image, {[styles.animated]: visible })} />
         </div>
       </section>
     </div>
