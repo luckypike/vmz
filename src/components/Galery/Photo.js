@@ -20,7 +20,7 @@ export default function Photo () {
       breakpoints: {
         1430: {
           perView: 1,
-          peek: 0,
+          peek: { before: 0, after: 130 },
           gap: 16
         }
       }

@@ -116,6 +116,8 @@
 }
 
 .text {
+  color: #727272;
+
   @media(--l) {
     margin-bottom: calc(var(--yr) * calc(var(--s3) * 2));
   }

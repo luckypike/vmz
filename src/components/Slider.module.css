@@ -138,11 +138,16 @@
 }
 
 .title {
-  composes: h4 from '../Fonts.module.css';
-  margin-bottom: calc(var(--yr) * 2);
+  margin-bottom: calc(var(--yr) * 1.5);
+
+  @media(--l) {
+    margin-bottom: calc(var(--yr) * 2);
+  }
 }
 
 .text {
+  color: #727272;
+  
   @media(--l) {
     margin-bottom: calc(var(--yr) * calc(var(--s3) * 2));
   }

@@ -20,7 +20,7 @@ export default function Slider () {
       breakpoints: {
         1430: {
           perView: 1,
-          peek: 0,
+          peek: { before: 0, after: 130 },
           gap: 16
         }
       }
@@ -40,7 +40,7 @@ export default function Slider () {
           <div className={classNames('glide__slide', styles.slide)}>
             <div className={classNames(styles.image, styles.first)} />
 
-            <div className={styles.title}>
+            <div className={classNames(styles.title, fonts.h5)}>
               2003
             </div>
 
@@ -52,7 +52,7 @@ export default function Slider () {
           <div className={classNames('glide__slide', styles.slide)}>
             <div className={classNames(styles.image, styles.second)} />
 
-            <div className={styles.title}>
+            <div className={classNames(styles.title, fonts.h5)}>
               2019
             </div>
 
@@ -64,7 +64,7 @@ export default function Slider () {
           <div className={classNames('glide__slide', styles.slide)}>
             <div className={classNames(styles.image, styles.third)} />
 
-            <div className={styles.title}>
+            <div className={classNames(styles.title, fonts.h5)}>
               2007
             </div>
 
@@ -76,7 +76,7 @@ export default function Slider () {
           <div className={classNames('glide__slide', styles.slide)}>
             <div className={classNames(styles.image, styles.fourth)} />
 
-            <div className={styles.title}>
+            <div className={classNames(styles.title, fonts.h5)}>
               2019
             </div>
 
@@ -88,7 +88,7 @@ export default function Slider () {
           <div className={classNames('glide__slide', styles.slide)}>
             <div className={classNames(styles.image, styles.fifth)} />
 
-            <div className={styles.title}>
+            <div className={classNames(styles.title, fonts.h5)}>
               2008
             </div>
 
@@ -100,7 +100,7 @@ export default function Slider () {
           <div className={classNames('glide__slide', styles.slide)}>
             <div className={classNames(styles.image, styles.sixth)} />
 
-            <div className={styles.title}>
+            <div className={classNames(styles.title, fonts.h5)}>
               2018
             </div>
 
@@ -112,7 +112,7 @@ export default function Slider () {
           <div className={classNames('glide__slide', styles.slide)}>
             <div className={classNames(styles.image, styles.seventh)} />
 
-            <div className={styles.title}>
+            <div className={classNames(styles.title, fonts.h5)}>
               2017
             </div>
 
@@ -124,7 +124,7 @@ export default function Slider () {
           <div className={classNames('glide__slide', styles.slide)}>
             <div className={classNames(styles.image, styles.eighth)} />
 
-            <div className={styles.title}>
+            <div className={classNames(styles.title, fonts.h5)}>
               2019
             </div>
 
@@ -136,7 +136,7 @@ export default function Slider () {
           <div className={classNames('glide__slide', styles.slide)}>
             <div className={classNames(styles.image, styles.ninth)} />
 
-            <div className={styles.title}>
+            <div className={classNames(styles.title, fonts.h5)}>
               1978
             </div>
 
@@ -148,7 +148,7 @@ export default function Slider () {
           <div className={classNames('glide__slide', styles.slide)}>
             <div className={classNames(styles.image, styles.tenth)} />
 
-            <div className={styles.title}>
+            <div className={classNames(styles.title, fonts.h5)}>
               2018
             </div>
 
@@ -160,7 +160,7 @@ export default function Slider () {
           <div className={classNames('glide__slide', styles.slide)}>
             <div className={classNames(styles.image, styles.eleventh)} />
 
-            <div className={styles.title}>
+            <div className={classNames(styles.title, fonts.h5)}>
               1982
             </div>
 
@@ -172,7 +172,7 @@ export default function Slider () {
           <div className={classNames('glide__slide', styles.slide)}>
             <div className={classNames(styles.image, styles.twelfth)} />
 
-            <div className={styles.title}>
+            <div className={classNames(styles.title, fonts.h5)}>
               2019
             </div>
 
@@ -184,7 +184,7 @@ export default function Slider () {
           <div className={classNames('glide__slide', styles.slide)}>
             <div className={classNames(styles.image, styles.thirteenth)} />
 
-            <div className={styles.title}>
+            <div className={classNames(styles.title, fonts.h5)}>
               1986
             </div>
 
@@ -196,7 +196,7 @@ export default function Slider () {
           <div className={classNames('glide__slide', styles.slide)}>
             <div className={classNames(styles.image, styles.fourteenth)} />
 
-            <div className={styles.title}>
+            <div className={classNames(styles.title, fonts.h5)}>
               2019
             </div>
 

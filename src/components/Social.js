@@ -31,7 +31,7 @@ export default function Industrial() {
         </div>
 
         <div className={styles.social}>
-          <div className={classNames(styles.title, fonts.h1)}>
+          <div lang="ru" className={classNames(styles.title, fonts.h1)}>
              Градообразующее предприятие
           </div>
 
@@ -48,13 +48,10 @@ export default function Industrial() {
 
         <div className={styles.salary}>
           <div className={styles.salary_2003}>
-            <div className={styles.placeholder}>
-              <div className={styles.worker_1} />
-              <div className={styles.worker_2} />
-            </div>
-
             <div className={styles.money}>
               <div className={classNames(styles.nn, {[styles.animated]: visible })}>
+                <div className={styles.worker_1} />
+
                 <div className={classNames(styles.sum_nn, fonts.h5)}>
                   <CountUp decimals={1} decimal="," end={visible ? 4.2 : 0} duration={1.6} suffix=" тыс. руб."/>
                 </div>
@@ -65,6 +62,8 @@ export default function Industrial() {
               </div>
 
               <div className={classNames(styles.vyksa, {[styles.animated]: visible })}>
+                <div className={styles.worker_2} />
+
                 <div className={classNames(styles.sum_vyksa, fonts.h5)}>
                   <CountUp decimals={1} decimal="," end={visible ? 5.7 : 0} duration={1.6} suffix=" тыс. руб."/>
                 </div>
@@ -77,14 +76,11 @@ export default function Industrial() {
           </div>
 
           <div className={styles.salary_2019}>
-            <div className={styles.placeholder}>
-              <div className={styles.worker_3} />
-              <div className={styles.worker_4} />
-            </div>
-
             <div className={styles.money}>
               <VisibilitySensor delayedCall onChange={onVisibilityChange} offset={{ top: 50 }}>
                 <div className={classNames(styles.nn, {[styles.animated]: visible })}>
+                  <div className={styles.worker_3} />
+
                   <div className={classNames(styles.sum_nn, fonts.h5)}>
                     <CountUp decimals={1} decimal="," end={visible ? 33.9 : 0} duration={1.6} suffix=" тыс. руб."/>
                   </div>
@@ -96,6 +92,8 @@ export default function Industrial() {
               </VisibilitySensor>
 
               <div className={classNames(styles.vyksa, {[styles.animated]: visible })}>
+                <div className={styles.worker_4} />
+
                 <div className={classNames(styles.sum_vyksa, fonts.h5)}>
                   <CountUp decimals={1} decimal="," end={visible ? 51.9 : 0} duration={1.6} suffix=" тыс. руб."/>
                 </div>

@@ -10,23 +10,11 @@
   }
 }
 
-/* .section {
-  margin: calc(var(--yr) * 9) 0;
-
-  @media(--s) {
-    margin: calc(var(--yr) * 12) 0;
-  }
-
-  @media(--l) {
-    margin: calc(var(--yr) * 24) 0;
-  }
-} */
-
 .text {
   composes: h0 from './Fonts.module.css';
   color: #fff;
   position: absolute;
-  bottom: calc(var(--yr) * 9);
+  bottom: calc(var(--yr) * 12);
   left: var(--xr);
   right: var(--xr);
   z-index: 1;
@@ -50,7 +38,7 @@
 .block {
   display: flex;
   composes: small from './Fonts.module.css';
-  margin-bottom: calc(var(--yr) * var(--s2));
+  margin-bottom: calc(var(--yr) * 1.5);
   color: #727272;
 
   & .index {

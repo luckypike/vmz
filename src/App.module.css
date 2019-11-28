@@ -4,7 +4,7 @@
   height: 400px;
   background-image: url('./images/top.jpg');
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: 90%;
   background-size: cover;
   margin: 0 calc(-1 * var(--xr));
 
@@ -14,7 +14,7 @@
     background-position: top center;
   }
 
-  &::after {
+  &:after {
     content: '';
     position: absolute;
     left: 0;
@@ -38,7 +38,7 @@
     display: block;
     content: '';
     width: 100%;
-    padding-top: 50%;
+    padding-top: 48%;
     position: relative;
     z-index: -1;
   }
@@ -49,6 +49,8 @@
 }
 
 .intro {
+  margin: calc(var(--yr) * calc(var(--s3) * 2)) 0;
+
   & .text {
     margin-bottom: 16px;
   }
@@ -73,7 +75,6 @@
     grid-template-columns: repeat(16, 1fr);
     margin: calc(var(--yr) * calc(var(--s3) * 4)) 0;
 
-
     & .text {
       grid-column: 4 / 12;
       margin-bottom: 0;
@@ -84,10 +85,6 @@
 
       & .link {
         grid-column: 13 / 15;
-      }
-
-      & .logo {
-        /* margin: 0; */
       }
     }
   }
@@ -103,13 +100,12 @@
 }
 
 .world {
-
   & .title {
-    margin-bottom: 16px;
+    margin-bottom: calc(var(--yr) * var(--s3));
   }
 
   & .text {
-    margin-bottom: 16px;
+    margin-bottom: calc(var(--yr) * var(--s3));
   }
 
   @media(--l) {

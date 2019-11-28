@@ -30,7 +30,7 @@ export default function App() {
         </div>
       </header>
 
-      <section className={page.section}>
+      <section>
         <div className={styles.intro}>
           <div className={classNames(styles.text, fonts.intro)}>
             Выкса сегодня хорошо известна как индустриальный и культурный центр России: здесь современная промышленность и актуальное искусство дополняют и развивают друг друга. Такой статус города формировался последние 20 лет, с тех пор как в ноябре 1999 года Выксунский металлургический завод вошел в состав Объединенной металлургической компании.
@@ -47,9 +47,11 @@ export default function App() {
         </div>
       </section>
 
-      <Slider />
+      <section>
+        <Slider />
+      </section>
 
-      <section className={page.section}>
+      <section>
         <div className={page.block}>
           <div className={page.index}>01</div>
           <div className={page.description}>
@@ -131,37 +133,37 @@ export default function App() {
         </div>
       </section>
 
-      <section className={page.section}>
-          <div className={page.block}>
-            <div className={page.description}>
-              Как развивается ВМЗ
-            </div>
+      <section>
+        <div className={page.block}>
+          <div className={page.description}>
+            Как развивается ВМЗ
+          </div>
+        </div>
+
+        <div className={styles.projects}>
+          <div className={classNames(styles.title, fonts.h2)}>
+            Инвестируем в будущее
           </div>
 
-          <div className={styles.projects}>
-            <div className={classNames(styles.title, fonts.h2)}>
-              Инвестируем в будущее
-            </div>
-
-            <div className={styles.text}>
-              С момента вхождения ВМЗ в ОМК на выксунской площадке успешно реализовано пять крупных инвестиционных проектов по созданию новых производств и модернизации действующих, еще три — в работе. Общая сумма вложений ОМК в развитие предприятия к 2018 году в долларовом эквиваленте превысила 6 млрд. В 2019-2025 годах инвестиции компании в модернизацию завода составят еще более $3 млрд.
-            </div>
-
-            <Spoiler
-              second={2}
-              title='ОМК меняет отрасль'
-              text={<Gas />}
-            />
-
-            <Schedule />
-
-            <div className={styles.qwe}>
-              <Investment />
-            </div>
+          <div className={styles.text}>
+            С момента вхождения ВМЗ в ОМК на выксунской площадке успешно реализовано пять крупных инвестиционных проектов по созданию новых производств и модернизации действующих, еще три — в работе. Общая сумма вложений ОМК в развитие предприятия к 2018 году в долларовом эквиваленте превысила 6 млрд. В 2019-2025 годах инвестиции компании в модернизацию завода составят еще более $3 млрд.
           </div>
+
+          <Spoiler
+            second={2}
+            title='ОМК меняет отрасль'
+            text={<Gas />}
+          />
+
+          <Schedule />
+
+          <div className={styles.qwe}>
+            <Investment />
+          </div>
+        </div>
       </section>
 
-      <section className={page.section}>
+      <section>
         <div className={styles.single}>
           <div className={styles.image} />
         </div>
