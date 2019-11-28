@@ -98,7 +98,7 @@
 
   &.second {
     background-image: url('../images/spoiler/spoiler_2.jpg');
-    background-position: center;
+    background-position: center 75%;
   }
 
   &.third {
