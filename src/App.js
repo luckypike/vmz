@@ -39,7 +39,8 @@ export default function App() {
           <div className={classNames(styles.text, fonts.intro)}>
             Выкса сегодня хорошо известна как индустриальный и культурный центр России: здесь современная промышленность и актуальное искусство дополняют и развивают друг друга. Такой статус города формировался последние 20 лет, с тех пор как в ноябре 1999 года Выксунский металлургический завод вошел в состав Объединенной металлургической компании.
           </div>
-          <div className={styles.wrapper}>
+
+          <a href="https://omk.ru/" target="_blank" rel="noopener noreferrer" className={styles.wrapper}>
             <div className={styles.logo}>
               <img src={logo} alt="logo" />
             </div>
@@ -47,7 +48,7 @@ export default function App() {
             <div className={classNames(styles.link, fonts.small)}>
               Объединённая металлургическая компания
             </div>
-          </div>
+          </a>
         </div>
       </section>
 

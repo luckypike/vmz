@@ -65,6 +65,7 @@
     }
 
     & .link {
+      cursor: pointer;
       color: #2F5175;
       text-decoration: underline;
     }
