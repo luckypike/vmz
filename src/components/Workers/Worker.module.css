@@ -1,0 +1,11 @@
+.worker {
+  position: relative;
+  grid-column: 1 / 6;
+  margin: 0 auto;
+  height: 370px;
+  z-index: -1;
+
+  & > svg {
+    height: 100%;
+  }
+}

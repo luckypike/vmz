@@ -4,6 +4,7 @@ import classNames from 'classnames'
 import Photo from './Galery/Photo'
 import Spoiler from './Spoiler'
 import Graph from './Graph'
+import Worker from './Workers/Worker'
 
 import styles from './Social.module.css'
 import page from '../Page.module.css'
@@ -51,10 +52,10 @@ export default function Industrial() {
             <div className={styles.money}>
               <VisibilitySensor delayedCall onChange={onVisibilityChange} offset={{ top: 50 }}>
                 <div className={classNames(styles.nn, {[styles.animated]: visible })}>
-                  <div className={styles.worker_1} />
+                  <Worker />
 
                   <div className={classNames(styles.sum_nn, fonts.h5)}>
-                    <CountUp decimals={1} decimal="," end={visible ? 4.2 : 0} duration={1.6} suffix=" тыс. руб."/>
+                    <CountUp decimals={1} decimal="," end={visible ? 4.2 : 0} duration={1} suffix=" тыс. руб."/>
                   </div>
 
                   <div className={classNames(styles.desc, fonts.small)}>
