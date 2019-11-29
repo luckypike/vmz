@@ -1,5 +1,9 @@
 .root {
   grid-column: span 16;
+  margin-bottom: calc(var(--yr) * calc(var(--s2) * 4));
+  @media(--l) {
+
+  }
 }
 
 .schedule {

@@ -1,7 +1,7 @@
 .header {
   position: relative;
   background-color: #f1f1f1;
-  height: 400px;
+  height: 560px;
   background-image: url('./images/top.jpg');
   background-repeat: no-repeat;
   background-position: 90%;
@@ -11,7 +11,7 @@
   @media(--s) {
     margin: 0 calc(-1 * calc(var(--xr) * 2));
     height: auto;
-    background-position: top center;
+    /* background-position: top center; */
   }
 
   &:after {

@@ -9,6 +9,8 @@
 
 .glide {
   margin: 0;
+  margin-bottom: calc(var(--yr) * calc(var(--s2) * 4));
+  
   @media(--l) {
     margin-bottom: 128px;
   }

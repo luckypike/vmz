@@ -4,7 +4,7 @@
   margin: 0 auto;
   height: 360px;
   z-index: -1;
-  margin-bottom: calc(var(--yr) * var(--s2));
+  margin-bottom: calc(var(--yr) * var(--s3));
 
   & > svg {
     /* height: 100%; */
@@ -22,7 +22,6 @@
 
 .ellipse2 {
   & > svg {
-    /* height: 100%; */
     width: 100%;
     position: absolute;
     top: 0;
