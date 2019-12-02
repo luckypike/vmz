@@ -5,6 +5,9 @@ import Photo from './Galery/Photo'
 import Spoiler from './Spoiler'
 import Graph from './Graph'
 import Worker from './Workers/Worker'
+import Worker2 from './Workers/Worker2'
+import Worker3 from './Workers/Worker3'
+import Worker4 from './Workers/Worker4'
 
 import styles from './Social.module.css'
 import page from '../Page.module.css'
@@ -65,10 +68,10 @@ export default function Industrial() {
               </VisibilitySensor>
 
               <div className={classNames(styles.vyksa, {[styles.animated]: visible })}>
-                <div className={styles.worker_2} />
+                <Worker2 />
 
                 <div className={classNames(styles.sum_vyksa, fonts.h5)}>
-                  <CountUp decimals={1} decimal="," end={visible ? 5.7 : 0} duration={1.6} suffix=" тыс. руб."/>
+                  <CountUp decimals={1} decimal="," end={visible ? 5.7 : 0} duration={1} suffix=" тыс. руб."/>
                 </div>
 
                 <div className={classNames(styles.desc, fonts.small)}>
@@ -82,10 +85,10 @@ export default function Industrial() {
             <div className={styles.money}>
 
                 <div className={classNames(styles.nn, {[styles.animated]: visible })}>
-                  <div className={styles.worker_3} />
+                  <Worker3 />
 
                   <div className={classNames(styles.sum_nn, fonts.h5)}>
-                    <CountUp decimals={1} decimal="," end={visible ? 33.9 : 0} duration={1.6} suffix=" тыс. руб."/>
+                    <CountUp decimals={1} decimal="," end={visible ? 33.9 : 0} duration={1} suffix=" тыс. руб."/>
                   </div>
 
                   <div className={classNames(styles.desc, fonts.small)}>
@@ -95,10 +98,10 @@ export default function Industrial() {
 
 
               <div className={classNames(styles.vyksa, {[styles.animated]: visible })}>
-                <div className={styles.worker_4} />
+                <Worker4 />
 
                 <div className={classNames(styles.sum_vyksa, fonts.h5)}>
-                  <CountUp decimals={1} decimal="," end={visible ? 51.9 : 0} duration={1.6} suffix=" тыс. руб."/>
+                  <CountUp decimals={1} decimal="," end={visible ? 51.9 : 0} duration={1} suffix=" тыс. руб."/>
                 </div>
 
                 <div className={classNames(styles.desc, fonts.small)}>

@@ -14,7 +14,7 @@
   & > circle {
       stroke-dasharray: 1200;
       stroke-dashoffset: 1200;
-      animation: dash 1s linear forwards;
+      animation: dash .5s linear forwards;
       animation-play-state: paused;
     }
   }
@@ -31,7 +31,7 @@
       stroke-dasharray: 1200;
       stroke-dashoffset: 1200;
       animation: lodash 1s linear forwards;
-      animation-delay: 1s;
+      animation-delay: .5s;
       animation-play-state: paused;
     }
   }

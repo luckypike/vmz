@@ -15,7 +15,7 @@ export default function Worker () {
 
   useEffect(() => {
     if (visible) {
-      document.getElementById("anime").beginElement()
+      document.getElementById("anim").beginElement()
     }
   }, [visible])
 
@@ -26,9 +26,8 @@ export default function Worker () {
           <svg  width="90" height="279" viewBox="0 0 90 279" fill="none" xmlns="http://www.w3.org/2000/svg">
             {visible &&
               <linearGradient id="lg" x1="0.5" y1="1" x2="0.5" y2="0">
-                <stop offset="0%" stopOpacity="1" stopColor="#E8E8E8"/>
                 <stop offset="100%" stopOpacity="1" stopColor="#E8E8E8">
-                  <animate id="anime" attributeName="offset" values="0;1" dur="0.5s" begin="indefinite" />
+                  <animate id="anim" attributeName="offset" values="0;1" dur="0.5s" begin="indefinite" />
                 </stop>
                 <stop offset="0%" stopOpacity="0" stopColor="#E8E8E8"/>
               </linearGradient>

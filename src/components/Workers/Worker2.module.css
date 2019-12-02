@@ -1,0 +1,9 @@
+.worker {
+  height: 370px;
+  z-index: -1;
+  margin-left: -5%;
+
+  & > svg {
+    height: 100%;
+  }
+}
