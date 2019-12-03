@@ -3,7 +3,6 @@ import classNames from 'classnames'
 import CountUp from 'react-countup'
 import VisibilitySensor from 'react-visibility-sensor'
 
-// import page from '../Page.module.css'
 import fonts from '../Fonts.module.css'
 import styles from './Schedule.module.css'
 
@@ -172,13 +171,6 @@ export default function Schedule () {
           <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.eighth]: visible })} />
         </div>
       </div>
-
-      {/* <div className={page.block}>
-        <div className={styles.line} />
-        <div className={classNames(page.description, styles.chrono)}>
-          Инвестпроекты по хронологии с суммами
-        </div>
-      </div> */}
     </div>
   )
 }

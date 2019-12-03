@@ -169,12 +169,12 @@
 
     &.fouth {
       background-image: url('../images/spoiler/spoiler_4.jpg');
-      background-position: center;
+      background-position: center 65% ;
     }
 
     &.fifth {
       background-image: url('../images/spoiler/spoiler_5.jpg');
-      background-position: center 25%;
+      background-position: center 38%;
     }
 
     & .title {

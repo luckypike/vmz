@@ -50,80 +50,6 @@
   }
 }
 
-/* .worker_1, .worker_2, .worker_3, .worker_4 {
-  position: absolute;
-  background: url('../images/worker_1.svg');
-  background-repeat: no-repeat;
-  height: 100%;
-} */
-
-/* .placeholder {
-  grid-column: span 5;
-  position: relative;
-  margin-bottom: 16px;
-  max-width: 425px;
-
-    &:before {
-    display: block;
-    content: '';
-    padding-top: 100%;
-  }
-  @media(--l) {
-    margin: 0 calc(3 / 16 * 100%);
-
-    &:before {
-      padding-top: 80%;
-    }
-  }
-} */
-
-/* .worker_1 {
-  width: 90px;
-  top: 10%;
-  left: 25%;
-
-  @media(--l) {
-    top: 36px;
-    left: 29%;
-    width: 90px;
-  }
-}
-
-.worker_2 {
-  width: 114px;
-  top: 0;
-  right: 20%;
-  background-image: url('../images/worker_2.svg');
-
-  @media(--l) {
-    left: 50%;
-  }
-}
-
-.worker_3 {
-  width: 84px;
-  background-image: url('../images/worker_3.svg');
-  top: 10%;
-  left: 20%;
-
-  @media(--l) {
-    left: 20%;
-    top: 36px;
-  }
-}
-
-.worker_4 {
-  width: 167px;
-  background-image: url('../images/worker_4.svg');
-  top: 0;
-  right: 15%;
-
-  @media(--l) {
-    right: 23%;
-    top: 0;
-  }
-} */
-
 .money {
   display: flex;
 
@@ -152,26 +78,17 @@
 }
 
 .nn {
-  /* transform: translateY(16px); */
-  /* transition: all 1.6s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s; */
   text-align: right;
-  /* opacity: 0; */
   position: relative;
   margin-right: calc(var(--yr) * calc(var(--s2) * 2));
 
   @media(--l) {
-    /* transform: translateY(16px); */
-    /* transition: all 1.6s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s; */
     text-align: right;
     grid-column: 1 / 3;
-    /* opacity: 0; */
   }
 }
 
 .vyksa {
-  /* opacity: 0; */
-  /* transition: all 1.6s cubic-bezier(0.19, 1, 0.22, 1), transform 1.6s; */
-  /* transform: translateY(16px); */
   grid-column: 4 / 6;
 
   & .sum_vyksa {
@@ -186,19 +103,4 @@
 
 .desc {
   color: #727272;
-}
-/*
-.animated {
-  transform: translateY(0);
-  opacity: 1;
-} */
-
-.line {
-  grid-column: 5 / 13;
-  border-top: 1px solid #E8E8E8;
-  margin-bottom: 16px;
-}
-
-.chrono {
-  grid-column: 5 / 13 !important;
 }

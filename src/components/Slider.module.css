@@ -7,6 +7,12 @@
   }
 }
 
+.slide {
+  /* display: block;
+  transform: translateX(50%);
+  transition: .5s ease-out; */
+}
+
 .glide {
   margin: 0;
   @media(--l) {
@@ -147,7 +153,7 @@
 
 .text {
   color: #727272;
-  
+
   @media(--l) {
     margin-bottom: calc(var(--yr) * calc(var(--s3) * 2));
   }
@@ -171,6 +177,7 @@
   height: 1px;
   display: flex;
   margin-top: -4px;
+  align-items: flex-end;
 
   & .first, & .second, & .third,
   & .fourth, & .fifth, & .sixth,
@@ -197,4 +204,8 @@
 
 .next {
   margin-right: 16px;
+}
+
+.animated {
+  transform: translateX(0);
 }

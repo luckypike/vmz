@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 import classNames from 'classnames'
-// import AOS from 'aos'
-import VisibilitySensor from 'react-visibility-sensor'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 import Spoiler from './components/Spoiler'
 import Slider from './components/Slider'
@@ -17,22 +17,23 @@ import fonts from './Fonts.module.css'
 import logo from './images/logo.svg'
 
 export default function App() {
-  const [visible, setVisible] = useState(false)
-
-  const onVisibilityChange = isVisible => {
-    if (isVisible) {
-      setVisible(true)
-    }
-  }
+  useEffect(() => {
+    AOS.init({
+      once: true,
+    })
+  }, [])
 
   return (
     <div className={page.root}>
       <header className={styles.header}>
         <div className={styles.placeholder} />
-        <div className={page.text}>
-          Кто строит заводы
+        <div className={page.container}>
+          <div data-aos="fade-up" data-aos-duration="500">
+            Кто строит заводы
+          </div>
         </div>
       </header>
+
 
       <section>
         <div className={styles.intro}>
@@ -52,9 +53,7 @@ export default function App() {
         </div>
       </section>
 
-      <section>
-        <Slider />
-      </section>
+      <Slider />
 
       <section>
         <div className={page.block}>
@@ -168,13 +167,11 @@ export default function App() {
         </div>
       </section>
 
-      <VisibilitySensor delayedCall onChange={onVisibilityChange} offset={{ top: 50 }}>
-        <section>
-          <div className={classNames(styles.single, {[styles.animated]: visible})} >
-            <div className={styles.image} />
-          </div>
-        </section>
-      </VisibilitySensor>
+      <section>
+        <div className={styles.single} data-aos="slide-right" data-aos-duration="800" data-aos-easing="ease-out"> 
+          <div className={styles.image} />
+        </div>
+      </section>
 
       <Industrial />
 
