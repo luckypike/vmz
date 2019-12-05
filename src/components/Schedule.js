@@ -39,25 +39,6 @@ export default function Schedule () {
 
       <div className={styles.schedule}>
         <div className={classNames(styles.year, fonts.small)}>
-          2004 – 2009
-        </div>
-
-        <div className={classNames(styles.description, fonts.h5)}>
-          Модернизация производства
-        </div>
-
-        <div className={styles.indicators}>
-          <div className={classNames(styles.sum, styles.second, {[styles.animated]: visible })}>
-            <CountUp className={styles.num} decimals={1} decimal="," end={visible ? 5.7 : 0} duration={3} />
-            <div className={classNames(fonts.small, styles.rub)}>млрд руб.</div>
-          </div>
-
-          <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.second]: visible })} />
-        </div>
-      </div>
-
-      <div className={styles.schedule}>
-        <div className={classNames(styles.year, fonts.small)}>
           2005
         </div>
 
@@ -140,7 +121,7 @@ export default function Schedule () {
         </div>
 
         <div className={classNames(styles.description, fonts.h5)}>
-          Расширение мощностей по выпуску стали с 1,5 до 3 млн тонн/год
+          Развитие сталеплавильных мощностей
         </div>
 
         <div className={styles.indicators}>

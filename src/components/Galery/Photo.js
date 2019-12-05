@@ -78,7 +78,7 @@ export default function Photo () {
             <div className={classNames(styles.image, styles.fifth)} />
 
             <div className={classNames(styles.text, fonts.small)}>
-              За два года предприятие посетило более тысячи туристов российских и иностранных
+              За два года предприятие посетило более 1.5 тыс. туристов российских и иностранных
             </div>
           </div>
 

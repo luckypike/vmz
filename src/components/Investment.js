@@ -95,10 +95,10 @@ export default function Investment () {
             max: 3500,
             min: 0,
             beginAtZero: false,
-            fontColor: '#E7422E',
-            callback: function(value, index) {
-              if (value !== 0) return value;
-            }
+            fontColor: '#E7422E'
+            // callback: function(value, index) {
+            //   if (value !== 0) return value;
+            // }
           }
         }
       ]
@@ -167,7 +167,7 @@ export default function Investment () {
       <div className={styles.legend}>
         <div className={styles.indicator_p}></div>
         <div className={styles.production}>
-          Производство, тыс. тонн
+          Производство ТБД в России, тыс. тонн
         </div>
 
         <div className={styles.indicator_i}></div>

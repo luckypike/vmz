@@ -24,7 +24,7 @@ export default function Graph () {
         </div>
 
         <div className={classNames(styles.description, fonts.h5)}>
-          Реконструкция колесопрокатного комплекса ВМЗ
+          Термообезвреживание отходов смазочно-охлаждающей жидкости
         </div>
 
         <div className={styles.indicators}>
@@ -43,7 +43,7 @@ export default function Graph () {
         </div>
 
         <div className={classNames(styles.description, fonts.h5)}>
-          Модернизация производства
+          Строительство очистных сооружений
         </div>
 
         <div className={styles.indicators}>
@@ -62,7 +62,7 @@ export default function Graph () {
         </div>
 
         <div className={classNames(styles.description, fonts.h5)}>
-          Строительство сверхсовременных линий для выпуска труб большого диаметра «русского размера»
+          Участок брикетирования стружки черных металлов
         </div>
 
         <VisibilitySensor delayedCall onChange={onVisibilityChange} offset={{ top: 50 }}>
@@ -83,7 +83,7 @@ export default function Graph () {
         </div>
 
         <div className={classNames(styles.description, fonts.h5)}>
-          Строительство литейно-прокатного комплекса по производству трубной стали и проката
+          Сокращение выбросов загрязняющих веществ
         </div>
 
         <div className={styles.indicators}>
@@ -102,7 +102,7 @@ export default function Graph () {
         </div>
 
         <div className={classNames(styles.description, fonts.h5)}>
-          Запуск самого современного стана-5000 по выпуску широкого листа
+          Строительство шумозащитного экрана
         </div>
 
         <div className={styles.indicators}>

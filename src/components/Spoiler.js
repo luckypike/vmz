@@ -72,7 +72,7 @@ export default function App ({ second, third, fouth, fifth, title, text }) {
 
             <div className={styles.read}>
               <div className={styles.placeholder} data-aos="fade-right" data-aos-delay="400">
-                Читать дальше
+                Узнать больше
               </div>
             </div>
           </div>

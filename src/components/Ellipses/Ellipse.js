@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import VisibilitySensor from 'react-visibility-sensor'
 import classNames from 'classnames'
 
@@ -15,18 +15,12 @@ export default function Ellipse () {
     }
   }
 
-  useEffect(() => {
-    if (visible) {
-      document.querySelector('circle').style.animationPlayState = "running"
-    }
-  }, [visible])
-
   return(
     <>
       <VisibilitySensor delayedCall onChange={onVisibilityChange} offset={{ top: 50 }}>
         <div className={styles.ellipse1}>
           <svg width="360" height="360" viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="180" cy="180" r="176" stroke="#E8E8E8" strokeWidth="8"/>
+            <circle style={{ animationPlayState: visible ? 'running' : 'paused' }} cx="180" cy="180" r="176" stroke="#E8E8E8" strokeWidth="8"/>
           </svg>
 
           <div className={styles.ellipse2}>
