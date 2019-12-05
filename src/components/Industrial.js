@@ -68,7 +68,7 @@ export default function Industrial() {
             </VisibilitySensor>
           </div>
 
-          <div className={classNames(styles.image, {[styles.animated]: visible })} />
+          <div className={styles.image} data-aos="slide-left" data-aos-duration="800" data-aos-easing="ease-out" />
         </div>
       </section>
     </div>

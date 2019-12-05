@@ -37,7 +37,7 @@ export default function Photo () {
     <div className={classNames(styles.glide, 'glide')} ref={mount}>
       <div className="glide__track" data-glide-el="track">
         <div className={classNames('glide__slides', styles.slides)} ref={slides}>
-          <div className={classNames('glide__slide', styles.slide)}>
+          <div className={classNames('glide__slide', styles.slide)} data-aos="fade-left" data-aos-duration="500" data-aos-easing="ease-out-quad">
             <div className={classNames(styles.image, styles.first)} />
 
             <div className={classNames(styles.text, fonts.small)}>
@@ -45,7 +45,7 @@ export default function Photo () {
             </div>
           </div>
 
-          <div className={classNames('glide__slide', styles.slide)}>
+          <div className={classNames('glide__slide', styles.slide)} data-aos="fade-left" data-aos-duration="500" data-aos-easing="ease-out-quad"  data-aos-delay="200">
             <div className={classNames(styles.image, styles.second)} />
 
             <div className={classNames(styles.text, fonts.small)}>
@@ -55,7 +55,7 @@ export default function Photo () {
             </div>
           </div>
 
-          <div className={classNames('glide__slide', styles.slide)}>
+          <div className={classNames('glide__slide', styles.slide)} data-aos="fade-left" data-aos-duration="500" data-aos-easing="ease-out-quad" data-aos-delay="400">
             <div className={classNames(styles.image, styles.third)} />
 
             <div className={classNames(styles.text, fonts.small)}>

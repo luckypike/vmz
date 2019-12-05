@@ -129,21 +129,6 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-
-    &::before {
-      text-align: center;
-      border-radius: 50%;
-      align-items: center;
-      justify-content: center;
-      content: '';
-      background-color: #E7422E;
-      background-image: url('../images/plus.svg');
-      background-repeat: no-repeat;
-      background-position: center;
-      margin-right: 16px;
-      width: 40px;
-      height: 40px;
-    }
   }
 
   @media(--l) {
@@ -156,11 +141,6 @@
     border-radius: 0;
     background: url('../images/spoiler/spoiler_1.jpg') no-repeat center;
     background-size: cover;
-
-    &.second {
-      background-image: url('../images/spoiler/spoiler_2.jpg');
-      background-position: center 75%;
-    }
 
     &.third {
       background-image: url('../images/spoiler/spoiler_3.jpg');
@@ -193,21 +173,60 @@
       display: flex;
       align-items: center;
 
-      &::before {
-        text-align: center;
-        border-radius: 50%;
-        align-items: center;
-        justify-content: center;
-        content: '';
-        background-color: #E7422E;
-        background-image: url('../images/plus.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        margin-right: 16px;
-        width: 40px;
-        height: 40px;
+      &:hover {
+
+        & .circle {
+          transform: scale(1.4);
+          transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        & .read {
+          color: #E7422E;
+          transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
       }
     }
+  }
+}
+
+.circle {
+  margin-right: 16px;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
+
+  & > svg {
+    animation: scale .3s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.4);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.plus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  & > svg {
+    animation: scale .3s forwards;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
   }
 }
 
@@ -284,7 +303,6 @@
   }
 }
 
-
-.layout {
-
+.read {
+  overflow: hidden;
 }

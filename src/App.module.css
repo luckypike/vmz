@@ -333,3 +333,40 @@
   grid-column: 4 / 15;
   margin-bottom: calc(var(--yr) * calc(var(--s3) * 4));
 }
+
+.nail {
+
+}
+
+.word {
+  margin-right: 8px;
+  display: inline-block;
+  overflow: hidden;
+}
+.word2 {
+  margin-right: 8px;
+  display: inline-block;
+  overflow: hidden;
+
+}
+.word3 {
+  margin-right: 8px;
+  display: inline-block;
+  overflow: hidden;
+
+}
+.word4 {
+  margin-right: 8px;
+  display: inline-block;
+  overflow: hidden;
+
+}
+.word5 {
+  margin-right: 8px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.animated {
+  transform: translateY(0);
+}

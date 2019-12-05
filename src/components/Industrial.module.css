@@ -105,47 +105,6 @@
     margin-bottom: 8px;
   }
 
-  /* & .ellipse_1 {
-    position: relative;
-    display: block;
-    background: url('../images/ellipse_1.svg') no-repeat center;
-    background-size: contain;
-    height: 360px;
-    z-index: -1;
-    margin-bottom: calc(var(--yr) * var(--s3));
-
-    & .ellipse_2 {
-      position: absolute;
-      width: 100%;
-      display: block;
-      background: url('../images/ellipse_2.svg') no-repeat center;
-      background-size: contain;
-      height: 100%;
-      left: calc(var(--yr) * 2);
-
-      & .dues {
-        top: 50%;
-        position: absolute;
-        left: 50%;
-        transform: translateY(-50%) translateX(-50%);
-        text-align: center;
-        z-index: 2;
-      }
-
-      & .sum {
-        margin-bottom: 8px;
-        color: #E7422E;
-      }
-
-      & .taxe {
-        color: #E7422E;
-      }
-
-      & .desc {
-        margin-bottom: 32px;
-      }
-    }
-  } */
   @media(--l) {
     grid-column: 4 / 15;
     display: grid;
@@ -156,48 +115,6 @@
       text-align: center;
       margin-bottom: 8px;
     }
-
-    /* & .ellipse_1 {
-      position: relative;
-      display: block;
-      background: url('../images/ellipse_1.svg') no-repeat center;
-      background-size: contain;
-      height: 360px;
-      z-index: -1;
-      margin-bottom: calc(var(--yr) * var(--s3));
-
-      & .ellipse_2 {
-        position: absolute;
-        width: 100%;
-        display: block;
-        background: url('../images/ellipse_2.svg') no-repeat center;
-        background-size: contain;
-        height: 100%;
-        left: calc(var(--yr) * 2);
-
-        & .dues {
-          top: 50%;
-          position: absolute;
-          left: 50%;
-          transform: translateY(-50%) translateX(-50%);
-          text-align: center;
-          z-index: 2;
-        }
-
-        & .sum {
-          margin-bottom: 8px;
-          color: #E7422E;
-        }
-
-        & .taxe {
-          color: #E7422E;
-        }
-
-        & .desc {
-          margin-bottom: 32px;
-        }
-      }
-    } */
   }
 }
 
@@ -209,9 +126,6 @@
   background: url('../images/vyksa.jpg') no-repeat;
   background-size: cover;
   margin: 0 calc(-1 * var(--xr));
-  transform: translateX(100%);
-  opacity: 0;
-  transition: all 1.6s cubic-bezier(0.19, 1, 0.22, 1);
   margin-bottom: calc(var(--yr) * calc(var(--s2) * 4));
 
   &:before {
@@ -224,9 +138,4 @@
   @media(--l) {
     grid-column: 4 / 17;
   }
-}
-
-.animated {
-  transform: translateX(0);
-  opacity: 1;
 }

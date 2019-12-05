@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import classNames from 'classnames'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import CountUp from 'react-countup'
 
 import Spoiler from './components/Spoiler'
 import Slider from './components/Slider'
@@ -75,7 +76,7 @@ export default function App() {
           </div>
 
           <Spoiler
-            title='От гвоздей до международных газопроводов'
+            title={<Nail />}
             text={<Industry />}
           />
         </div>
@@ -85,12 +86,16 @@ export default function App() {
             <div className={styles.image} />
 
             <div className={styles.title}>
-              <div className={classNames(fonts.h0, styles.mln)}>12 млн</div>
+              <div className={classNames(fonts.h0, styles.mln)}>
+                <CountUp end={12} duration={2} suffix=" млн" />
+              </div>
               <div className={fonts.h5}>железнодорожных<br /> колес</div>
             </div>
 
             <div className={styles.desc}>
-              <div className={classNames(fonts.h2, styles.km)}>37 000 км</div>
+              <div className={classNames(fonts.h2, styles.km)}>
+                <CountUp end={37000} duration={1.5} suffix=" км" />
+              </div>
               <div className={fonts.h5}>длина<br /> поезда</div>
             </div>
 
@@ -103,12 +108,16 @@ export default function App() {
             <div className={styles.image} />
 
             <div className={styles.title}>
-              <div className={classNames(fonts.h0, styles.mln)}>30 млн</div>
+              <div className={classNames(fonts.h0, styles.mln)}>
+                <CountUp end={30} duration={2} suffix=" млн" />
+              </div>
               <div className={fonts.h5}>тонн<br /> труб</div>
             </div>
 
             <div className={styles.desc}>
-              <div className={classNames(fonts.h2, styles.km)}>70 000 км</div>
+              <div className={classNames(fonts.h2, styles.km)}>
+                <CountUp end={70000} duration={1.5} suffix=" км" />
+              </div>
               <div className={fonts.h5}>общая<br /> протяженность</div>
             </div>
 
@@ -168,7 +177,7 @@ export default function App() {
       </section>
 
       <section>
-        <div className={styles.single} data-aos="slide-right" data-aos-duration="800" data-aos-easing="ease-out"> 
+        <div className={styles.single} data-aos="slide-right" data-aos-duration="800" data-aos-easing="ease-out">
           <div className={styles.image} />
         </div>
       </section>
@@ -176,6 +185,38 @@ export default function App() {
       <Industrial />
 
       <Social />
+    </div>
+  )
+}
+
+function Nail() {
+  return(
+    <div className={styles.nail}>
+      <div className={styles.word}>
+        <div className={styles.layout} data-aos="fade-up" data-aos-delay="100">
+          От
+        </div>
+      </div>
+      <div className={styles.word2}>
+        <div className={styles.layout} data-aos="fade-up" data-aos-delay="100">
+          гвоздей
+        </div>
+      </div>
+      <div className={styles.word3}>
+        <div className={styles.layout} data-aos="fade-up" data-aos-delay="100">
+          до
+        </div>
+      </div>
+      <div className={styles.word4}>
+        <div className={styles.layout} data-aos="fade-up" data-aos-delay="100">
+          международных
+        </div>
+      </div>
+      <div className={styles.word5}>
+        <div className={styles.layout} data-aos="fade-up" data-aos-delay="200">
+          газопроводов
+        </div>
+      </div>
     </div>
   )
 }
