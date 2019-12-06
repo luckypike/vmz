@@ -29,9 +29,7 @@ export default function App() {
       <header className={styles.header}>
         <div className={styles.placeholder} />
         <div className={page.container}>
-          <div data-aos="fade-up" data-aos-duration="500">
-            Кто строит заводы
-          </div>
+          <Title />
         </div>
       </header>
 
@@ -164,7 +162,7 @@ export default function App() {
 
           <Spoiler
             second={2}
-            title='ОМК меняет отрасль'
+            title={<Omk />}
             text={<Gas />}
           />
 
@@ -189,31 +187,54 @@ export default function App() {
   )
 }
 
-function Nail() {
-  return(
-    <div className={styles.nail}>
+function Title () {
+  return (
+    <div className={styles.root}>
       <div className={styles.word}>
-        <div className={styles.layout} data-aos="fade-up" data-aos-delay="100">
+        <div data-aos="fade-up">
+          Кто
+        </div>
+      </div>
+      <div className={styles.word}>
+        <div data-aos="fade-up">
+          строит
+        </div>
+      </div>
+      <div className={styles.word}>
+        <div data-aos="fade-up">
+          заводы
+        </div>
+      </div>
+    </div>
+  )
+}
+
+
+function Nail () {
+  return(
+    <div className={styles.root}>
+      <div className={styles.word}>
+        <div data-aos="fade-up" data-aos-delay="100">
           От
         </div>
       </div>
-      <div className={styles.word2}>
-        <div className={styles.layout} data-aos="fade-up" data-aos-delay="100">
+      <div className={styles.word}>
+        <div data-aos="fade-up" data-aos-delay="100">
           гвоздей
         </div>
       </div>
-      <div className={styles.word3}>
-        <div className={styles.layout} data-aos="fade-up" data-aos-delay="100">
+      <div className={styles.word}>
+        <div data-aos="fade-up" data-aos-delay="100">
           до
         </div>
       </div>
-      <div className={styles.word4}>
-        <div className={styles.layout} data-aos="fade-up" data-aos-delay="100">
+      <div className={styles.word}>
+        <div data-aos="fade-up" data-aos-delay="100">
           международных
         </div>
       </div>
-      <div className={styles.word5}>
-        <div className={styles.layout} data-aos="fade-up" data-aos-delay="200">
+      <div className={styles.word}>
+        <div data-aos="fade-up" data-aos-delay="100">
           газопроводов
         </div>
       </div>
@@ -221,7 +242,29 @@ function Nail() {
   )
 }
 
-function Industry() {
+function Omk () {
+  return(
+    <div className={styles.root}>
+      <div className={styles.word}>
+        <div data-aos="fade-up" data-aos-delay="100">
+          ОМК
+        </div>
+      </div>
+      <div className={styles.word}>
+        <div data-aos="fade-up" data-aos-delay="100">
+          меняет
+        </div>
+      </div>
+      <div className={styles.word}>
+        <div data-aos="fade-up" data-aos-delay="100">
+          отрасль
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function Industry () {
   return(
     <div>
       <p>
@@ -235,7 +278,7 @@ function Industry() {
   )
 }
 
-function Gas() {
+function Gas () {
   return(
     <div>
       <p>

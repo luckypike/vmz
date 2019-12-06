@@ -136,8 +136,8 @@
 
     & .image {
       display: block;
-      background-image: url('./images/train.svg');
-      background-repeat: no-repeat;
+      background: url('./images/train.svg') no-repeat;
+      background-size: contain;
       margin-bottom: calc(var(--yr) * var(--s3));
 
       &:before {
@@ -176,6 +176,7 @@
   & .pipe {
     & .image {
       background-image: url('./images/world.svg');
+      background-size: cover;
     }
 }
 
@@ -334,35 +335,12 @@
   margin-bottom: calc(var(--yr) * calc(var(--s3) * 4));
 }
 
-.nail {
+.root {
 
 }
 
 .word {
-  margin-right: 8px;
-  display: inline-block;
-  overflow: hidden;
-}
-.word2 {
-  margin-right: 8px;
-  display: inline-block;
-  overflow: hidden;
-
-}
-.word3 {
-  margin-right: 8px;
-  display: inline-block;
-  overflow: hidden;
-
-}
-.word4 {
-  margin-right: 8px;
-  display: inline-block;
-  overflow: hidden;
-
-}
-.word5 {
-  margin-right: 8px;
+  margin-right: calc(var(--yr) * 2);
   display: inline-block;
   overflow: hidden;
 }

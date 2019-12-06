@@ -195,12 +195,13 @@
   height: 40px;
   position: relative;
   transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
-
-  & > svg {
-    animation: scale .3s;
-    animation-delay: 1s;
-    animation-timing-function: ease-in-out;
-  }
+  animation-name: scale;
+  animation-duration: .3s;
+  animation-delay: .5s;
+  transform: scale(0);
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
 }
 
 @keyframes scale {
@@ -222,19 +223,13 @@
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-
-  & > svg {
-    animation: scale .3s forwards;
-    animation-delay: 1s;
-    animation-timing-function: ease-in-out;
-  }
 }
 
 .image {
   background: url('../images/spoiler/spoiler_1.jpg') no-repeat center center;
   background-size: cover;
-  margin-bottom: 10%;
   position: relative;
+  margin-bottom: calc(var(--yr) * calc(var(--s3) * 2));
 
   &:before {
     display: block;

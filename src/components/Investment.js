@@ -56,6 +56,18 @@ export default function Investment () {
       display: false,
     },
 
+    tooltips: {
+      enabled: true,
+      callbacks: {
+        label: function(tooltipItem, data) {
+          return tooltipItem.yLabel
+        },
+        title: function(tooltipItem, data) {
+          return
+        }
+      }
+    },
+
     animation: {
       duration: 0 // general animation time
     },
@@ -145,22 +157,22 @@ export default function Investment () {
 
       dataExport[count] = datasets.export[count]
       dataImport[count] = datasets.import[count]
-      chart.update({ duration: 200, easing: 'linear' })
+      chart.update({ duration: 50, easing: 'linear' })
 
       if (count < datasets.export.length) {
-        setTimeout(next, 200)
+        setTimeout(next, 50)
       }
     }
 
     if (visible === true) {
-      setTimeout(next, 200)
+      setTimeout(next, 50)
     }
 
   }, [visible])
 
   return (
     <div className={styles.investment}>
-      <VisibilitySensor delayedCall onChange={onVisibilityChange} offset={{ top: 50 }}>
+      <VisibilitySensor onChange={onVisibilityChange} offset={{ top: 0 }}>
         <canvas className={styles.graph} ref={graphRef} margin="0" />
       </VisibilitySensor>
 

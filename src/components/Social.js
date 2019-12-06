@@ -45,7 +45,7 @@ export default function Industrial() {
 
           <Spoiler
             third={3}
-            title='Чему учат заводчан'
+            title={<Learn />}
             text={<Workers />}
            />
         </div>
@@ -83,19 +83,17 @@ export default function Industrial() {
 
           <div className={styles.salary_2019}>
             <div className={styles.money}>
+              <div className={classNames(styles.nn, {[styles.animated]: visible })}>
+                <Worker3 />
 
-                <div className={classNames(styles.nn, {[styles.animated]: visible })}>
-                  <Worker3 />
-
-                  <div className={classNames(styles.sum_nn, fonts.h5)}>
-                    <CountUp decimals={1} decimal="," end={visible ? 33.9 : 0} duration={1} suffix=" тыс. руб."/>
-                  </div>
-
-                  <div className={classNames(styles.desc, fonts.small)}>
-                    Средняя заработная плата в Нижегородской области в 2019 году
-                  </div>
+                <div className={classNames(styles.sum_nn, fonts.h5)}>
+                  <CountUp decimals={1} decimal="," end={visible ? 33.9 : 0} duration={1} suffix=" тыс. руб."/>
                 </div>
 
+                <div className={classNames(styles.desc, fonts.small)}>
+                  Средняя заработная плата в Нижегородской области в 2019 году
+                </div>
+              </div>
 
               <div className={classNames(styles.vyksa, {[styles.animated]: visible })}>
                 <Worker4 />
@@ -131,7 +129,7 @@ export default function Industrial() {
 
           <Spoiler
             fouth={4}
-            title='Заводская городская среда'
+            title={<Factory />}
             text={<Urban />}
           />
         </div>
@@ -153,7 +151,7 @@ export default function Industrial() {
 
           <Spoiler
             fifth={5}
-            title='Кто отвечает за экологичность завода'
+            title={<Answer />}
             text={<Ecology />}
           />
 
@@ -164,6 +162,82 @@ export default function Industrial() {
       <section>
         <Photo />
       </section>
+    </div>
+  )
+}
+
+function Learn () {
+  return(
+    <div className={styles.root}>
+      <div className={styles.word}>
+        <div data-aos="fade-up" data-aos-delay="100">
+          Чему
+        </div>
+      </div>
+      <div className={styles.word}>
+        <div data-aos="fade-up" data-aos-delay="100">
+          учат
+        </div>
+      </div>
+      <div className={styles.word}>
+        <div data-aos="fade-up" data-aos-delay="100">
+          заводчан
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function Factory () {
+  return(
+    <div className={styles.root}>
+      <div className={styles.word}>
+        <div data-aos="fade-up" data-aos-delay="100">
+          Заводская
+        </div>
+      </div>
+      <div className={styles.word}>
+        <div data-aos="fade-up" data-aos-delay="100">
+          городская
+        </div>
+      </div>
+      <div className={styles.word}>
+        <div data-aos="fade-up" data-aos-delay="100">
+          среда
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function Answer () {
+  return(
+    <div className={styles.root}>
+      <div className={styles.word}>
+        <div data-aos="fade-up" data-aos-delay="100">
+          Кто
+        </div>
+      </div>
+      <div className={styles.word}>
+        <div data-aos="fade-up" data-aos-delay="100">
+          отвечает
+        </div>
+      </div>
+      <div className={styles.word}>
+        <div data-aos="fade-up" data-aos-delay="100">
+          за
+        </div>
+      </div>
+      <div className={styles.word}>
+        <div data-aos="fade-up" data-aos-delay="100">
+          экологичность
+        </div>
+      </div>
+      <div className={styles.word}>
+        <div data-aos="fade-up" data-aos-delay="100">
+          завода
+        </div>
+      </div>
     </div>
   )
 }
@@ -191,9 +265,29 @@ function Workers() {
         ВМЗ стал первым металлургическим предприятием в мире, награжденным сначала бронзовой, а затем серебряной медалью Toyota Engineering за развитие производственной системы. Работа по повышению культуры производства — производственной системы — осуществляется непрерывно.
       </p>
 
-      <p>
-        С 2004 года ОМК вручает лучшим сотрудникам своих предприятий премию Фонда братьев Баташевых. Писатели и режиссеры разных эпох затрагивали тему труда и профессионального мастерства в своих произведениях. В Советском Союзе тема человека труда в литературе была особенно любимой. Она была раскрыта в книгах Бориса Полевого, Даниила Гранина, Валентина Катаева, Юрия Крымова. Потом долгое время эта тема была незаслуженно забыта. Сегодня появились долгожданные продолжатели темы соцреализма. В ноябре-декабре в издательстве «Альпина» выходит документально-публицистическая книга «Русский размер. История трубы или новая индустриализация». Главную роль в ней играет Выксунский металлургический завод. Книга написана в стиле авторского репортажа о жизни и работе выксунских металлургов.
+      <p className={styles.brothers}>
+        С 2004 года ОМК вручает лучшим сотрудникам своих предприятий премию Фонда братьев Баташевых. Писатели и режиссеры разных эпох затрагивали тему труда и профессионального мастерства в своих произведениях. В Советском Союзе тема человека труда в литературе была особенно любимой. Она была раскрыта в книгах Бориса Полевого, Даниила Гранина, Валентина Катаева, Юрия Крымова. Потом долгое время эта тема была незаслуженно забыта. Сегодня появились долгожданные продолжатели темы соцреализма.
       </p>
+
+      <div className={styles.book}>
+        <div className={styles.wrapper}>
+          <div className={styles.image} />
+
+          <div className={styles.container}>
+            <div className={classNames(styles.name, fonts.small)}>
+              Владислав Дорофеев
+            </div>
+
+            <div className={classNames(styles.title, fonts.h4)}>
+              Русский размер. История трубы, или новая индустриализация.
+            </div>
+
+            <div className={styles.text}>
+              В ноябре в издательстве «Альпина» вышла документально-публицистическая книга «Русский размер. История трубы или новая индустриализация». Главную роль в ней играет Выксунский металлургический завод. Книга написана в стиле авторского репортажа о жизни и работе выксунских металлургов.
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

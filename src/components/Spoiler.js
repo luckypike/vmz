@@ -49,26 +49,26 @@ export default function App ({ second, third, fouth, fifth, title, text }) {
 
         <div className={classNames(styles.spoiler, {[styles.second]: second, [styles.third]: third, [styles.fouth]: fouth, [styles.fifth]: fifth })}  onClick={() => [setActive(true), setSpoiler(!spoiler)]} data-aos="fade-right">
           <div className={classNames(styles.title, fonts.h3)}>
-            <div>
-              {title}
-            </div>
+            <VisibilitySensor onChange={onVisibilityChange}>
+              <div>
+                {title}
+              </div>
+            </VisibilitySensor>
           </div>
 
           <div className={styles.more}>
-            <VisibilitySensor onChange={onVisibilityChange}>
-              <div className={styles.circle}>
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="20" cy="20" r="20" fill="#E7422E"/>
-                </svg>
+            <div className={styles.circle} style={{ animationPlayState: visible ? 'running' : 'paused' }}>
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="20" fill="#E7422E"/>
+              </svg>
 
-                <div className={styles.plus}>
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 1C7 0.447715 7.44772 0 8 0C8.55228 0 9 0.447715 9 1V15C9 15.5523 8.55228 16 8 16C7.44772 16 7 15.5523 7 15V1Z" fill="#FAFAFA"/>
-                    <path d="M15 7C15.5523 7 16 7.44772 16 8C16 8.55228 15.5523 9 15 9L1 9C0.447715 9 -2.41411e-08 8.55228 0 8C2.41411e-08 7.44771 0.447715 7 1 7L15 7Z" fill="#FAFAFA"/>
-                  </svg>
-                </div>
+              <div className={styles.plus}>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 1C7 0.447715 7.44772 0 8 0C8.55228 0 9 0.447715 9 1V15C9 15.5523 8.55228 16 8 16C7.44772 16 7 15.5523 7 15V1Z" fill="#FAFAFA"/>
+                  <path d="M15 7C15.5523 7 16 7.44772 16 8C16 8.55228 15.5523 9 15 9L1 9C0.447715 9 -2.41411e-08 8.55228 0 8C2.41411e-08 7.44771 0.447715 7 1 7L15 7Z" fill="#FAFAFA"/>
+                </svg>
               </div>
-            </VisibilitySensor>
+            </div>
 
             <div className={styles.read}>
               <div className={styles.placeholder} data-aos="fade-right" data-aos-delay="400">
