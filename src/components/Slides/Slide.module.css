@@ -8,12 +8,8 @@
 }
 
 .glide {
-  margin: 0;
+  grid-column: span 16;
   margin-bottom: calc(var(--yr) * calc(var(--s2) * 4));
-
-  @media(--l) {
-    margin-bottom: 128px;
-  }
 }
 
 .image {
@@ -27,12 +23,12 @@
   }
 
   &.first {
-    background: url('../../images/galery/1.jpg') no-repeat center;
+    background: url('../../images/slides/art_1.jpg') no-repeat center;
     background-size: cover;
   }
 
   &.second {
-    background: url('../../images/galery/2.jpg') no-repeat center;
+    background: url('../../images/slides/art_2.jpg') no-repeat center;
     background-size: cover;
 
     &:before {
@@ -43,12 +39,12 @@
   }
 
   &.third {
-    background: url('../../images/galery/3.jpg') no-repeat center;
+    background: url('../../images/slides/art_3.jpg') no-repeat center;
     background-size: cover;
   }
 
   &.fourth {
-    background: url('../../images/galery/4.jpg') no-repeat center;
+    background: url('../../images/slides/art_4.jpg') no-repeat center;
     background-size: cover;
 
     &:before {
@@ -59,12 +55,12 @@
   }
 
   &.fifth {
-    background: url('../../images/galery/5.jpg') no-repeat center;
+    background: url('../../images/slides/art_5.jpg') no-repeat center;
     background-size: cover;
   }
 
   &.sixth {
-    background: url('../../images/galery/6.jpg') no-repeat center;
+    background: url('../../images/slides/art_6.jpg') no-repeat center;
     background-size: cover;
 
     &:before {
@@ -75,12 +71,12 @@
   }
 
   &.seventh {
-    background: url('../../images/galery/7.jpg') no-repeat center;
+    background: url('../../images/slides/art_7.jpg') no-repeat center;
     background-size: cover;
   }
 
   &.eighth {
-    background: url('../../images/galery/8.jpg') no-repeat center;
+    background: url('../../images/slides/art_8.jpg') no-repeat center;
     background-size: cover;
 
     &:before {
@@ -91,12 +87,12 @@
   }
 
   &.ninth {
-    background: url('../../images/galery/9.jpg') no-repeat center;
+    background: url('../../images/slides/art_9.jpg') no-repeat center;
     background-size: cover;
   }
 
   &.tenth {
-    background: url('../../images/galery/10.jpg') no-repeat center;
+    background: url('../../images/slides/art_10.jpg') no-repeat center;
     background-size: cover;
 
     &:before {
@@ -107,7 +103,7 @@
   }
 
   &.eleventh {
-    background: url('../../images/galery/11.jpg') no-repeat center;
+    background: url('../../images/slides/art_11.jpg') no-repeat center;
     background-size: cover;
   }
 }

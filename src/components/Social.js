@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import classNames from 'classnames'
 
+import Slide from './Slides/Slide'
 import Photo from './Galery/Photo'
 import Spoiler from './Spoiler'
 import Graph from './Graph'
@@ -132,6 +133,8 @@ export default function Industrial() {
             title={<Factory />}
             text={<Urban />}
           />
+
+          <Slide />
         </div>
 
         <div className={page.block}>

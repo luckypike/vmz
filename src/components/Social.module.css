@@ -58,25 +58,6 @@
   }
 }
 
-/* .worker_1, .worker_2, .worker_3, .worker_4 {
-  background: url('../images/worker_1.svg') no-repeat;
-  background-position: right;
-  height: 370px;
-}
-
-.worker_2 {
-  background: url('../images/worker_2.svg') no-repeat;
-}
-
-.worker_3 {
-  background: url('../images/worker_3.svg') no-repeat;
-  background-position: right;
-}
-
-.worker_4 {
-  background: url('../images/worker_4.svg') no-repeat;
-} */
-
 .nn {
   text-align: right;
   position: relative;
@@ -122,10 +103,6 @@
     & .container {
       & .name {
         margin-bottom: calc(var(--yr) * var(--s2));
-      }
-
-      & .text {
-        /* margin-bottom: 0; */
       }
     }
 
