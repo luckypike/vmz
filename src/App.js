@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import classNames from 'classnames'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import CountUp from 'react-countup'
+import VisibilitySensor from 'react-visibility-sensor'
 
 import Spoiler from './components/Spoiler'
 import Slider from './components/Slider'
@@ -23,6 +24,14 @@ export default function App() {
       once: true,
     })
   }, [])
+
+  const [visible, setVisible] = useState(false)
+
+  const onVisibilityChange = isVisible => {
+    if (isVisible) {
+      setVisible(true)
+    }
+  }
 
   return (
     <div className={page.root}>
@@ -84,15 +93,17 @@ export default function App() {
             <div className={styles.image} />
 
             <div className={styles.title}>
-              <div className={classNames(fonts.h0, styles.mln)}>
-                <CountUp end={12} duration={2} suffix=" млн" />
-              </div>
+              <VisibilitySensor onChange={onVisibilityChange}>
+                <div className={classNames(fonts.h0, styles.mln)}>
+                  <CountUp end={visible ? 12 : 0} duration={2} suffix=" млн" />
+                </div>
+              </VisibilitySensor>
               <div className={fonts.h5}>железнодорожных<br /> колес</div>
             </div>
 
             <div className={styles.desc}>
               <div className={classNames(fonts.h2, styles.km)}>
-                <CountUp end={37000} duration={1.5} suffix=" км" />
+                <CountUp end={visible ? 37000 : 0} duration={1} suffix=" км" />
               </div>
               <div className={fonts.h5}>длина<br /> поезда</div>
             </div>
@@ -107,14 +118,14 @@ export default function App() {
 
             <div className={styles.title}>
               <div className={classNames(fonts.h0, styles.mln)}>
-                <CountUp end={30} duration={2} suffix=" млн" />
+                <CountUp end={visible ? 30 : 0} duration={2} suffix=" млн" />
               </div>
               <div className={fonts.h5}>тонн<br /> труб</div>
             </div>
 
             <div className={styles.desc}>
               <div className={classNames(fonts.h2, styles.km)}>
-                <CountUp end={70000} duration={1.5} suffix=" км" />
+                <CountUp end={visible ? 70000 : 0} duration={1} suffix=" км" />
               </div>
               <div className={fonts.h5}>общая<br /> протяженность</div>
             </div>
