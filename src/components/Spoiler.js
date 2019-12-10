@@ -28,7 +28,7 @@ export default function App ({ second, third, fouth, fifth, title, text }) {
 
       <div className={classNames(styles.modal, styles.effect, {[styles.show]: spoiler})}>
         <div className={classNames(styles.content)}>
-          <div className={classNames(styles.image, {[styles.second]: second, [styles.third]: third, [styles.fouth]: fouth, [styles.fifth]: fifth })}>
+          <div className={classNames(styles.modal_image, {[styles.second]: second, [styles.third]: third, [styles.fouth]: fouth, [styles.fifth]: fifth })}>
             <div className={styles.close} onClick={() => [setActive(false), setSpoiler(false)]}>
               <svg viewBox="0 0 16 16">
                 <line x1="1" y1="1" x2="15" y2="15" />
@@ -47,7 +47,9 @@ export default function App ({ second, third, fouth, fifth, title, text }) {
         </div>
       </div>
 
-        <div className={classNames(styles.spoiler, {[styles.second]: second, [styles.third]: third, [styles.fouth]: fouth, [styles.fifth]: fifth })}  onClick={() => [setActive(true), setSpoiler(!spoiler)]} data-aos="fade-right">
+        <div className={styles.spoiler} onClick={() => [setActive(true), setSpoiler(!spoiler)]} data-aos="fade-right">
+          <div className={classNames(styles.image, {[styles.second]: second, [styles.third]: third, [styles.fouth]: fouth, [styles.fifth]: fifth })} />
+
           <div className={classNames(styles.title, fonts.h3)}>
             <VisibilitySensor onChange={onVisibilityChange}>
               <div>

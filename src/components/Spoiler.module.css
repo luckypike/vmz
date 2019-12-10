@@ -86,43 +86,56 @@
   display: block;
   color: #FAFAFA;
   margin-bottom: calc(var(--yr) * var(--s3));
-  background-color: #FAFAFA;
   height: 468px;
-  background: url('../images/spoiler/spoiler_1.jpg') no-repeat bottom;
-  background-size: cover;
   cursor: pointer;
   width: 100%;
-  border-radius: 10px;
   padding: 178px 20px 25px 20px;
   position: relative;
+  overflow: hidden;
 
-  &.second {
-    background-image: url('../images/spoiler/spoiler_2.jpg');
-    background-position: center 75%;
-  }
+  & .image {
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    display: block;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url('../images/spoiler/spoiler_1.jpg') no-repeat center;
+    background-size: cover;
+    transform: scale(1);
+    transition: transform 2s cubic-bezier(0.19, 1, 0.22, 1);
 
-  &.third {
-    background-image: url('../images/spoiler/spoiler_3.jpg');
-    background-position: center 15%;
-  }
+    &.second {
+      background-image: url('../images/spoiler/spoiler_2.jpg');
+      background-position: center 75%;
+    }
 
-  &.fouth {
-    background-image: url('../images/spoiler/spoiler_4.jpg');
-    background-position: center;
-  }
+    &.third {
+      background-image: url('../images/spoiler/spoiler_3.jpg');
+      background-position: center 15%;
+    }
 
-  &.fifth {
-    background-image: url('../images/spoiler/spoiler_5.jpg');
-    background-position: center 25%;
+    &.fouth {
+      background-image: url('../images/spoiler/spoiler_4.jpg');
+      background-position: center;
+    }
+
+    &.fifth {
+      background-image: url('../images/spoiler/spoiler_5.jpg');
+      background-position: center 25%;
+    }
   }
 
   & .title {
     position: absolute;
     bottom: calc(var(--yr) * calc(var(--s4) * 4));
     max-width: 300px;
+    z-index: 1;
   }
 
   & .more {
+    z-index: 1;
     position: absolute;
     bottom: calc(var(--yr) * calc(var(--s4) * 2));
     margin-left: auto;
@@ -139,22 +152,24 @@
     display: flex;
     align-items: flex-end;
     border-radius: 0;
-    background: url('../images/spoiler/spoiler_1.jpg') no-repeat center;
-    background-size: cover;
 
-    &.third {
-      background-image: url('../images/spoiler/spoiler_3.jpg');
-      background-position: center 25%;
-    }
+    & .image {
+      border-radius: 0;
 
-    &.fouth {
-      background-image: url('../images/spoiler/spoiler_4.jpg');
-      background-position: center 65% ;
-    }
+      &.third {
+        background-image: url('../images/spoiler/spoiler_3.jpg');
+        background-position: center 25%;
+      }
 
-    &.fifth {
-      background-image: url('../images/spoiler/spoiler_5.jpg');
-      background-position: center 38%;
+      &.fouth {
+        background-image: url('../images/spoiler/spoiler_4.jpg');
+        background-position: center 65% ;
+      }
+
+      &.fifth {
+        background-image: url('../images/spoiler/spoiler_5.jpg');
+        background-position: center 38%;
+      }
     }
 
     & .title {
@@ -177,14 +192,18 @@
         & .circle {
           & > svg {
             transform: scale(1.4);
-            transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
           }
         }
 
         & .read {
           color: #E7422E;
-          transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
+          transition: color .3s cubic-bezier(0.19, 1, 0.22, 1);
         }
+      }
+    }
+    &:hover {
+      & .image {
+        transform: scale(1.05);
       }
     }
   }
@@ -195,7 +214,6 @@
   width: 40px;
   height: 40px;
   position: relative;
-  transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
   animation-name: scale;
   animation-duration: .3s;
   animation-delay: .5s;
@@ -203,6 +221,11 @@
   animation-timing-function: ease;
   animation-fill-mode: forwards;
   animation-play-state: paused;
+
+  & > svg {
+    transform: scale(1);
+    transition: transform .3s cubic-bezier(0.19, 1, 0.22, 1);
+  }
 }
 
 @keyframes scale {
@@ -226,7 +249,7 @@
   transform: translateX(-50%) translateY(-50%);
 }
 
-.image {
+.modal_image {
   background: url('../images/spoiler/spoiler_1.jpg') no-repeat center center;
   background-size: cover;
   position: relative;
@@ -301,4 +324,5 @@
 
 .read {
   overflow: hidden;
+  transition: color .3s cubic-bezier(0.19, 1, 0.22, 1);
 }
