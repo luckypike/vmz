@@ -174,10 +174,11 @@
       align-items: center;
 
       &:hover {
-
         & .circle {
-          transform: scale(1.4);
-          transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
+          & > svg {
+            transform: scale(1.4);
+            transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
+          }
         }
 
         & .read {

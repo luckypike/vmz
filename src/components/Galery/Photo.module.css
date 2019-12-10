@@ -110,6 +110,49 @@
     background: url('../../images/galery/11.jpg') no-repeat center;
     background-size: cover;
   }
+
+  &.twelfth {
+    background: url('../../images/galery/12.jpg') no-repeat center;
+    background-size: cover;
+
+    &:before {
+      display: block;
+      content: '';
+      padding-top: calc(4 / 5 * 100%);
+    }
+  }
+
+  &.thirteenth {
+    background: url('../../images/galery/13.jpg') no-repeat center;
+    background-size: cover;
+  }
+
+  &.fourteenth {
+    background: url('../../images/galery/14.jpg') no-repeat center;
+    background-size: cover;
+
+    &:before {
+      display: block;
+      content: '';
+      padding-top: calc(4 / 5 * 100%);
+    }
+  }
+
+  &.fifteenth {
+    background: url('../../images/galery/15.jpg') no-repeat center;
+    background-size: cover;
+  }
+
+  &.sixteenth {
+    background: url('../../images/galery/16.jpg') no-repeat center;
+    background-size: cover;
+
+    &:before {
+      display: block;
+      content: '';
+      padding-top: calc(4 / 5 * 100%);
+    }
+  }
 }
 
 .title {

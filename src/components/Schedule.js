@@ -29,7 +29,7 @@ export default function Schedule () {
 
         <div className={styles.indicators}>
           <div className={classNames(styles.sum, styles.first, {[styles.animated]: visible })}>
-            <CountUp className={classNames(fonts.h5, styles.num)} decimals={1} decimal="," end={visible ? 1.6 : 0} />
+            <CountUp className={classNames(fonts.h5, styles.num)} decimals={1} decimal="," end={visible ? 1.6 : 0} duration={2} />
             <div className={classNames(fonts.h5, styles.rub)}>млрд руб.</div>
           </div>
 
@@ -37,16 +37,6 @@ export default function Schedule () {
         </div>
 
         <div className={classNames(styles.indicator, {[styles.animated]: visible, [styles.first]: visible })} />
-      </div>
-
-      <div className={styles.title}>
-        <div className={styles.l} />
-
-        <div className={classNames(styles.text, fonts.small)}>
-          Открытие производства труб большого диаметра на Выксунском заводе в 2005 г. — наиболее яркий пример промышленного импортозамещения в России
-        </div>
-
-        <div className={styles.r} />
       </div>
 
       <div className={styles.schedule}>
@@ -86,7 +76,7 @@ export default function Schedule () {
               <div className={classNames(fonts.h5, styles.rub)}>млрд руб.</div>
             </div>
           </VisibilitySensor>
-          
+
           <div className={classNames(styles.indicator_m, {[styles.animated]: visible, [styles.fourth]: visible })} />
         </div>
 

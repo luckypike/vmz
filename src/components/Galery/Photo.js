@@ -49,7 +49,7 @@ export default function Photo () {
             <div className={classNames(styles.image, styles.second)} />
 
             <div className={classNames(styles.text, fonts.small)}>
-              С 2011 года в Выксе проводится фестиваль современного искусства «Арт-овраг». В
+              С 2011 года в Выксе ОМК и фонд «ОМК-Участие» проводят фестиваль «Арт-овраг». В
               первый же год мероприятие собрало 5 тыс. гостей. В 2019 году на площадке находилось
               уже 22 тыс. человек
             </div>
@@ -137,6 +137,26 @@ export default function Photo () {
               Такое событие не осталось незамеченным — перфоманс получил приз «Проект года»
               государственной премии в области современного искусства «Инновация-2019»
             </div>
+          </div>
+
+          <div className={classNames('glide__slide', styles.slide)}>
+            <div className={classNames(styles.image, styles.twelfth)} />
+          </div>
+
+          <div className={classNames('glide__slide', styles.slide)}>
+            <div className={classNames(styles.image, styles.thirteenth)} />
+          </div>
+
+          <div className={classNames('glide__slide', styles.slide)}>
+            <div className={classNames(styles.image, styles.fourteenth)} />
+          </div>
+
+          <div className={classNames('glide__slide', styles.slide)}>
+            <div className={classNames(styles.image, styles.fifteenth)} />
+          </div>
+
+          <div className={classNames('glide__slide', styles.slide)}>
+            <div className={classNames(styles.image, styles.sixteenth)} />
           </div>
         </div>
 

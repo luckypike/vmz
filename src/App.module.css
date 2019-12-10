@@ -2,9 +2,8 @@
   position: relative;
   background-color: #f1f1f1;
   height: 560px;
-  background-image: url('./images/top.jpg');
-  background-repeat: no-repeat;
-  background-position: 90%;
+  background: url('./images/top.jpg') no-repeat;
+  background-position: center 25%;
   background-size: cover;
   margin: 0 calc(-1 * var(--xr));
 
@@ -333,6 +332,17 @@
 .investment {
   grid-column: 4 / 15;
   margin-bottom: calc(var(--yr) * calc(var(--s3) * 4));
+
+  & .title {
+    display: none;
+  }
+
+  @media(--l) {
+    & .title {
+      display: block;
+      margin-left: calc(1 / 16 * 100%);
+    }
+  }
 }
 
 .root {

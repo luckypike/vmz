@@ -30,7 +30,7 @@ export default function Graph () {
         <div className={styles.indicators}>
           <div className={classNames(styles.sum, styles.first, {[styles.animated]: visible })}>
             <CountUp className={classNames(styles.num, fonts.h5)} end={visible ? 80 : 0} duration={2} />
-            <div className={classNames(fonts.h5, styles.rub)}>млрд руб.</div>
+            <div className={classNames(fonts.h5, styles.rub)}>млн руб.</div>
           </div>
 
           <div className={classNames(styles.indicator_m, {[styles.animated]: visible, [styles.first]: visible })} />
@@ -51,7 +51,7 @@ export default function Graph () {
         <div className={styles.indicators}>
           <div className={classNames(styles.sum, styles.second, {[styles.animated]: visible })}>
             <CountUp className={classNames(styles.num, fonts.h5)} decimals={1} decimal="," end={visible ? 244.5 : 0} duration={1.5} />
-            <div className={classNames(fonts.h5, styles.rub)}>млрд руб.</div>
+            <div className={classNames(fonts.h5, styles.rub)}>млн руб.</div>
           </div>
 
           <div className={classNames(styles.indicator_m, {[styles.animated]: visible, [styles.second]: visible })} />
@@ -73,7 +73,7 @@ export default function Graph () {
           <div className={styles.indicators}>
             <div className={classNames(styles.sum, styles.third, {[styles.animated]: visible })}>
               <CountUp className={classNames(styles.num, fonts.h5)} end={visible ? 199 : 0} duration={2} />
-              <div className={classNames(fonts.h5, styles.rub)}>млрд руб.</div>
+              <div className={classNames(fonts.h5, styles.rub)}>млн руб.</div>
             </div>
 
             <div className={classNames(styles.indicator_m, {[styles.animated]: visible, [styles.third]: visible })} />
@@ -95,7 +95,7 @@ export default function Graph () {
         <div className={styles.indicators}>
           <div className={classNames(styles.sum, styles.fourth, {[styles.animated]: visible })}>
             <CountUp className={classNames(styles.num, fonts.h5)} end={visible ? 35 : 0} duration={2} />
-            <div className={classNames(fonts.h5, styles.rub)}>млрд руб.</div>
+            <div className={classNames(fonts.h5, styles.rub)}>млн руб.</div>
           </div>
 
           <div className={classNames(styles.indicator_m, {[styles.animated]: visible, [styles.fourth]: visible })} />
@@ -116,7 +116,7 @@ export default function Graph () {
         <div className={styles.indicators}>
           <div className={classNames(styles.sum, styles.fifth, {[styles.animated]: visible })}>
             <CountUp className={classNames(styles.num, fonts.h5)} end={visible ? 13 : 0} duration={2} />
-            <div className={classNames(fonts.h5, styles.rub)}>млрд руб.</div>
+            <div className={classNames(fonts.h5, styles.rub)}>млн руб.</div>
           </div>
 
           <div className={classNames(styles.indicator_m, {[styles.animated]: visible, [styles.fifth]: visible })} />
