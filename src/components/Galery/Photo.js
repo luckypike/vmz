@@ -141,22 +141,42 @@ export default function Photo () {
 
           <div className={classNames('glide__slide', styles.slide)}>
             <div className={classNames(styles.image, styles.twelfth)} />
+
+            <div className={classNames(styles.text, fonts.small)}>
+              Литейно-прокатный комплекс ВМЗ — первое металлургическое предприятие, построенное в современной России
+            </div>
           </div>
 
           <div className={classNames('glide__slide', styles.slide)}>
             <div className={classNames(styles.image, styles.thirteenth)} />
+
+            <div className={classNames(styles.text, fonts.small)}>
+              Стан-5000 полностью обеспечивает отечественным листом из российской стали производство труб большого диаметра ОМК
+            </div>
           </div>
 
           <div className={classNames('glide__slide', styles.slide)}>
             <div className={classNames(styles.image, styles.fourteenth)} />
+
+            <div className={classNames(styles.text, fonts.small)}>
+              Открытый в 2018 году корпоративный университет отвечает за формирование корпоративной культуры и дополнительное обучение персонала ОМК
+            </div>
           </div>
 
           <div className={classNames('glide__slide', styles.slide)}>
             <div className={classNames(styles.image, styles.fifteenth)} />
+
+            <div className={classNames(styles.text, fonts.small)}>
+              На участке нанесения антикоррозионного покрытия ВМЗ
+            </div>
           </div>
 
           <div className={classNames('glide__slide', styles.slide)}>
             <div className={classNames(styles.image, styles.sixteenth)} />
+
+            <div className={classNames(styles.text, fonts.small)}>
+              Мощность колесопрокатного комплекса ОМК в Выксе — 860 тыс. колес в год
+            </div>
           </div>
         </div>
 
