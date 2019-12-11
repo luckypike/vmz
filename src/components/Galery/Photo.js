@@ -206,6 +206,11 @@ export default function Photo () {
             <div className={classNames(styles.bar, {[styles.ninth]: index === 9})} />
             <div className={classNames(styles.bar, {[styles.tenth]: index === 10})} />
             <div className={classNames(styles.bar, {[styles.eleventh]: index === 11})} />
+            <div className={classNames(styles.bar, {[styles.eleventh]: index === 12})} />
+            <div className={classNames(styles.bar, {[styles.eleventh]: index === 13})} />
+            <div className={classNames(styles.bar, {[styles.eleventh]: index === 14})} />
+            <div className={classNames(styles.bar, {[styles.eleventh]: index === 15})} />
+            <div className={classNames(styles.bar, {[styles.eleventh]: index === 16})} />
           </div>
         </div>
       </div>
