@@ -287,7 +287,8 @@
 .text {
   color: #000;
   padding: 0 calc(1 / 16 * 100%);
-  margin: calc(var(--yr) * calc(var(--s3) * 2)) 0;
+  margin-top: calc(var(--yr) * calc(var(--s3) * 2));
+  margin-bottom: calc(var(--yr) * calc(var(--s3) * 4));
 
   @media(--l) {
     color: #000;
@@ -296,7 +297,7 @@
 }
 
 .close {
-  position: absolute;
+  position: fixed;
   height: 36px;
   width: 36px;
   background: #fff;
@@ -305,7 +306,9 @@
   transform: translateY(100%);
   transition: 0s;
   cursor: pointer;
-  top: 0;
+  top: calc(1 / 16 * 100%);
+  z-index: 1;
+  transition: .3s background;
 
   & svg {
     display: block;
@@ -317,8 +320,12 @@
     transform: translateX(-50%) translateY(-50%);
 
     & line {
+      transition: .3s stroke;
       stroke: #000;
     }
+  }
+  @media(--l) {
+    top: 0;
   }
 }
 

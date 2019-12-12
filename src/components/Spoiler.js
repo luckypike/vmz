@@ -26,22 +26,22 @@ export default function App ({ second, third, fouth, fifth, title, text }) {
     <div className={styles.root}>
       <div className={classNames(styles.overlay, { [styles.active]: active })} onClick={() => [setActive(false), setSpoiler(false)]} />
 
-      <div className={classNames(styles.modal, styles.effect, {[styles.show]: spoiler})}>
+      <div className={classNames(styles.modal, {[styles.show]: spoiler})}>
+        <div className={styles.close} onClick={() => [setActive(false), setSpoiler(false)]}>
+          <svg viewBox="0 0 16 16">
+            <line x1="1" y1="1" x2="15" y2="15" />
+            <line x1="1" y1="15" x2="15" y2="1" />
+          </svg>
+        </div>
+
         <div className={classNames(styles.content)}>
           <div className={classNames(styles.modal_image, {[styles.second]: second, [styles.third]: third, [styles.fouth]: fouth, [styles.fifth]: fifth })}>
-            <div className={styles.close} onClick={() => [setActive(false), setSpoiler(false)]}>
-              <svg viewBox="0 0 16 16">
-                <line x1="1" y1="1" x2="15" y2="15" />
-                <line x1="1" y1="15" x2="15" y2="1" />
-              </svg>
-            </div>
-
             <div className={classNames(styles.title, fonts.h2)}>
               {title}
             </div>
           </div>
 
-          <div className={classNames(styles.text)}>
+          <div className={styles.text}>
             {text}
           </div>
         </div>
