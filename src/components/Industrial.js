@@ -20,7 +20,6 @@ export default function Industrial() {
   return (
     <div>
       <div className={page.block}>
-        <div className={page.index}>02</div>
         <div className={page.description}>
           Передовики производства
         </div>

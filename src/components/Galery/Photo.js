@@ -69,7 +69,7 @@ export default function Photo () {
             <div className={classNames(styles.image, styles.fourth)} />
 
             <div className={classNames(styles.text, fonts.small)}>
-              А для привлечения туристов ВМЗ запустило промышленные экскурсии по
+              А для привлечения туристов ВМЗ запустил промышленные экскурсии по
               предприятию. Посмотреть, как работает завод, может любой желающий
             </div>
           </div>
