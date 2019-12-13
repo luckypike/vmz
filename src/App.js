@@ -4,6 +4,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import CountUp from 'react-countup'
 import VisibilitySensor from 'react-visibility-sensor'
+import LazyLoad from 'react-lazyload'
 
 import Spoiler from './components/Spoiler'
 import Slider from './components/Slider'
@@ -194,9 +195,13 @@ export default function App() {
         </div>
       </section>
 
-      <Industrial />
+      <LazyLoad height={200} offset={100}>
+        <Industrial />
+      </LazyLoad>
 
-      <Social />
+      <LazyLoad height={200} offset={100}>
+        <Social />
+      </LazyLoad>
     </div>
   )
 }
